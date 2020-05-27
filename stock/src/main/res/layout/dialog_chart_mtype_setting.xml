@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/img_dialog_bg"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="#ff4a4a4a"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="指标设置" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:background="@drawable/img_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <com.cvicse.base.widget.ExtendedRadioGroup
+        android:id="@+id/erdg_right_type"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="VOL"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="DDX"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="DDY"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="DDZ"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="大单金额"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="ratioBS"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="资金博弈"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="成交单数"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="大单净量"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnl_vol_ratio"
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="量比"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.cvicse.base.widget.ExtendedRadioGroup>
+
+    <View
+        style="@style/dialog_ktype_line" />
+    <TextView
+        android:id="@+id/tev_sure"
+        android:textSize="16sp"
+        android:textColor="#ff0074e1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="确定"/>
+</LinearLayout>
