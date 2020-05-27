@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/toolsbar_bg_color"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:textSize="14dip"
+            android:textColor="@drawable/toolsbar_txt_color"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_chn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-1dip" />
+        <TextView
+            android:textSize="11dip"
+            android:textColor="@drawable/toolsbar_txt_color"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dip" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/smallRedDot"
+        android:background="@drawable/personal_newsubject_remind"
+        android:visibility="invisible"
+        android:layout_width="@dimen/personal_circle_newSubjectRemind_width"
+        android:layout_height="@dimen/personal_circle_newSubjectRemind_width"
+        android:layout_marginTop="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

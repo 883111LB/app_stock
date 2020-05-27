@@ -71,6 +71,62 @@
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
+    <!--//20205013添加-->
+    <RelativeLayout
+        android:id="@+id/rel_tworefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="2秒"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_two"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <!--//20205013添加-->
+    <RelativeLayout
+        android:id="@+id/rel_threerefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="3秒"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_three"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rel_fivesecondrefresh"

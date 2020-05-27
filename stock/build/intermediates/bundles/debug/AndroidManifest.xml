@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.haitong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--
+    網路定位 & GPS定位權限
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- log權限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--
+      <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ChangeQuoteSample" />
+        <activity android:name=".ChangeChartSample" />
+        <activity android:name=".ChangeOHLCSample" />
+        <activity android:name=".ChangeEventSample" />
+        <activity android:name=".BonusFinanceSample" />
+        <activity android:name=".CompanyInfoSample" />
+        <activity android:name=".CoreBusinessSample" />
+        <activity android:name=".ForecastRatingSample" />
+        <activity android:name=".ForecastyearSample" />
+        <activity android:name=".ImportantnoticeSample" />
+        <activity android:name=".LeaderPersonInfoSample" />
+        <activity android:name=".MainfinadatanasSample" />
+        <activity android:name=".MainFinaIndexNasSample" />
+        <activity android:name=".NewIndexSample" />
+        <activity android:name=".StockShareChangeInfoSample" />
+        <activity android:name=".StockShareInfoSample" />
+        <activity android:name=".TradeDetailInfoSample" />
+        &lt;!&ndash;&ndash;&gt;
+        <activity android:name=".ShareHolderHistoryInfoSample" />
+        <activity android:name=".TopLiquidShareHolderSample" />
+        <activity android:name=".TopShareHolderSample" />
+        <activity android:name=".FundShareHolderSample" />
+        <activity android:name=".StockBulletinListSample" />
+        <activity android:name=".StockBulletinSample" />
+        <activity android:name=".StockNewsListSample" />
+        <activity android:name=".StockNewsSample" />
+        <activity android:name=".StockReportListSample" />
+        <activity android:name=".StockReportSample" />
+        <activity android:name=".NewsListSample" />
+        <activity android:name=".NewsSample" />
+        <activity android:name=".FinInfoImageSample" />
+        <activity android:name=".CheckVersionSample" />
+        <activity android:name=".GetAppSourceSample" />
+        <activity android:name=".GetAppSourceClassSample" />
+        <activity android:name=".GetAppMenuSample" />
+        <activity android:name=".EchoSample" />
+        <activity android:name=".AnnouncementSample" />
+        <activity android:name=".MarketingSample" />
+        <activity android:name=".MarketinfoSample" />
+        <activity android:name=".CatequoteSample" />
+        <activity android:name=".CateRankingSample" />
+        <activity android:name=".OptionListSample" />
+        <activity android:name=".OptionExpireSample" />
+        <activity android:name=".OptionTQuoteSample" />
+        <activity android:name=".OptionQuoteSample" />
+        <activity android:name=".BankuaiRankingSample" />
+        <activity android:name=".SearchSample" />
+        <activity android:name=".BrokerInfoSample" />
+        <activity android:name=".CateTypeSample" />
+        <activity android:name=".HKStockInfoSample" />
+        <activity android:name=".DetailSample" />
+        <activity android:name=".MorePriceSample" />
+        <activity android:name=".OrderQuantitySample" />
+        <activity android:name=".CalendarSample" />
+        <activity android:name=".HolidaySample" />
+        <activity android:name=".NewShareListSample" />
+        <activity android:name=".NewShareDetailSample" />
+        <activity android:name=".TickDetailSample" />
+        <activity android:name=".TcpPushSample" />
+        <activity android:name=".StockInfoSample" />
+        <activity android:name=".HKMarInfoSample" />
+    </application>
+    -->
+    <application>
+
+        <!-- 谷歌地图 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBaNzwgCaN1R_aSe6P3YGevJ2theIdz-d4" />
+    </application>
+
+</manifest>

@@ -8,10 +8,13 @@ import com.cvicse.stock.http.loop.RunTaskState;
 import com.cvicse.stock.markets.presenter.contract.AHQuoteListContract;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.AHQuoteItem;
+import com.mitake.core.bean.log.ErrorInfo;
 import com.mitake.core.request.AHQuoteListRequest;
 import com.mitake.core.request.QuoteDetailRequest;
+import com.mitake.core.request.SearchRequest;
 import com.mitake.core.response.AHQuoteListResponse;
 import com.mitake.core.response.AHQuoteResponse;
+import com.mitake.core.response.IResponseInfoCallback;
 import com.mitake.core.response.QuoteResponse;
 import com.mitake.core.response.Response;
 

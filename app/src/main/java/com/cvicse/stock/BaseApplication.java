@@ -29,6 +29,7 @@ import com.cvicse.stock.skin.TintTabLayoutHelper;
 import com.cvicse.stock.skin.ToolBarHelper;
 import com.cvicse.stock.utils.CrashHandler;
 import com.cvicse.stock.view.ColorImageView;
+import com.mitake.core.AppInfo;
 import com.mitake.core.listener.SSEActivityLifeCycleCallback;
 import com.mitake.core.network.NetworkManager;
 import com.mitake.variable.object.CommonInfo;
@@ -75,7 +76,7 @@ public class BaseApplication extends com.cvicse.base.ui.BaseApplication  impleme
         CrashReport.initCrashReport(getApplicationContext(), "aa22f95151", true);
 
         // 全真的key
-//        appKey = "gzreyQFcje5eWB8m+MSnRZKty3Ibsytt6fAfd2RCqAg=";
+//        appKey = "gzreyQFcje5eWB8m+MSnRZKty3Ibsytt6fAfd2RCqAg=";  //生产
         appKey = "J6IPlk5AEU+2/Yi59rfYnsFQtdtOgAo9GAzysx8ciOM=";
 
         // 初始化注册
@@ -96,18 +97,15 @@ public class BaseApplication extends com.cvicse.base.ui.BaseApplication  impleme
             }
         });
         // SDK设置前后台状态监听
-        registerActivityLifecycleCallbacks(new SSEActivityLifeCycleCallback());
+//        registerActivityLifecycleCallbacks(new SSEActivityLifeCycleCallback());
     }
-
     /**
      * 初始化注册
      */
     private void initStockConfig() {
         StockConfig.init(this,appKey);
-        StockConfig.initPermissions(Setting.getLevel(),Setting.getCffLevel(),Setting.getHKMode(),
-                Setting.getHKZSMode(), Setting.getDCELevel(),Setting.getZCELevel(),Setting.getSHFELevel(),
-                Setting.getINELevel(),"","",
-                Setting.getOLL1(), Setting.getOLSHL1(), Setting.getOLSZL1(), Setting.getOLSHL2(), Setting.getOLSZL2());
+
+        StockConfig.initPermissions(Setting.getLevel(),Setting.getCffLevel(),Setting.getHKMode(), Setting.getHKZSMode(), Setting.getDCELevel(),Setting.getZCELevel(),Setting.getSHFELevel(),Setting.getINELevel(),"","");
         StockConfig.setListener(30000, new StockConfig.Listener() {
             @Override
             public void onRespone(int type) {
@@ -189,11 +187,7 @@ public class BaseApplication extends com.cvicse.base.ui.BaseApplication  impleme
      * 权限更新
      */
     public void notifiPermission(){
-        StockConfig.initPermissions(Setting.getLevel(),Setting.getCffLevel(),Setting.getHKMode(),
-                Setting.getHKZSMode(), Setting.getDCELevel(),Setting.getZCELevel(),
-                Setting.getSHFELevel(),Setting.getINELevel(),Setting.getFELevel(),
-                Setting.getGILevel(), Setting.getOLL1(), Setting.getOLSHL1(), Setting.getOLSZL1(),
-                Setting.getOLSHL2(), Setting.getOLSZL2());
+        StockConfig.initPermissions(Setting.getLevel(),Setting.getCffLevel(),Setting.getHKMode(), Setting.getHKZSMode(), Setting.getDCELevel(),Setting.getZCELevel(),Setting.getSHFELevel(),Setting.getINELevel(),Setting.getFELevel(),Setting.getGILevel());
     }
 
     /**

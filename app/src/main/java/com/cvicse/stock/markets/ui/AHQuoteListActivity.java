@@ -19,6 +19,7 @@ import com.cvicse.stock.pulltorefresh.PullToRefreshHSListView;
 import com.cvicse.stock.seachstock.SearchHistoryActivity;
 import com.cvicse.stock.view.CHScrollView;
 import com.cvicse.stock.view.HVListView;
+import com.mitake.core.AppInfo;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.AHQuoteItem;
 

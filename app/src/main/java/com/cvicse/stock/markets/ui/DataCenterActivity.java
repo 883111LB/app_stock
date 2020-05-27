@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 
 import com.cvicse.stock.R;
 import com.cvicse.stock.base.PBaseActivity;
+import com.cvicse.stock.markets.ui.ztsorting.ZTSortingListActivity;
 import com.cvicse.stock.markets.ui.stockdetail.MarginTradingActivity;
 import com.cvicse.stock.markets.ui.stockdetail.PriceAnalysisActivity;
 import com.cvicse.stock.markets.ui.stockdetail.ReplayActivity;
@@ -30,6 +31,8 @@ public class DataCenterActivity extends PBaseActivity {
     LinearLayout lly_cxg;//次新股
     @BindView(R.id.lly_cxz)
     LinearLayout lly_cxz;//次新债
+    @BindView(R.id.lly_ztzt)
+    LinearLayout lly_ztzt;//涨停专题
 
     @Override
     protected int getLayoutId() {
@@ -71,6 +74,13 @@ public class DataCenterActivity extends PBaseActivity {
             public void onClick(View v) {
                 //跳转到次新债界面
                 SubNewBondStockActivity.actionStart(DataCenterActivity.this);
+            }
+        });
+        lly_ztzt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到涨停专题界面
+                ZTSortingListActivity.actionStart(DataCenterActivity.this);
             }
         });
     }

@@ -44,7 +44,7 @@ public class BaseTest {
         /**
          * 填入所申请的key
          */
-//        AppInfo.appKey = "gzreyQFcje5eWB8m+MSnRZKty3Ibsytt6fAfd2RCqAg=";
+//        AppInfo.appKey = "gzreyQFcje5eWB8m+MSnRZKty3Ibsytt6fAfd2RCqAg=";  //生产
         AppInfo.appKey = "J6IPlk5AEU+2/Yi59rfYnsFQtdtOgAo9GAzysx8ciOM=";
         AppInfo.setLevel("1");
         /**

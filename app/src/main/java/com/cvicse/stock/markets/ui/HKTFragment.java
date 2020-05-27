@@ -1,6 +1,5 @@
 package com.cvicse.stock.markets.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +13,9 @@ import com.cvicse.stock.base.PBaseFragment;
 import com.cvicse.stock.markets.adapter.HKTAdapter;
 import com.cvicse.stock.markets.helper.HKTAmountHelper;
 import com.cvicse.stock.markets.presenter.contract.HKTContract;
-import com.cvicse.stock.markets.ui.hkt.HKTAvtivity;
 import com.cvicse.stock.pulltorefresh.PullToRefreshBase;
 import com.cvicse.stock.pulltorefresh.PullToRefreshExpandableListView;
+import com.mitake.core.AppInfo;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.HSAmountItem;
 import com.mitake.core.response.HKMarInfoResponse;
@@ -88,13 +87,6 @@ public class HKTFragment extends PBaseFragment implements HKTContract.View {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 StockDetailActivity.startActivity(getActivity(), (ArrayList<QuoteItem>) hktAdapter.getGroup(groupPosition), childPosition);
                 return false;
-            }
-        });
-
-        headerView.findViewById(R.id.frl_amount_more).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), HKTAvtivity.class));
             }
         });
     }

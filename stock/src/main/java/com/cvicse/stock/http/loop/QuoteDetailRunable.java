@@ -3,7 +3,11 @@ package com.cvicse.stock.http.loop;
 import com.cvicse.base.utils.StringUtils;
 import com.mitake.core.AppInfo;
 import com.mitake.core.QuoteItem;
+import com.mitake.core.bean.log.ErrorInfo;
+import com.mitake.core.request.AHQuoteRequest;
 import com.mitake.core.request.QuoteDetailRequest;
+import com.mitake.core.response.AHQuoteResponse;
+import com.mitake.core.response.IResponseInfoCallback;
 import com.mitake.core.response.QuoteResponse;
 import com.mitake.core.response.Response;
 
@@ -51,6 +55,7 @@ public abstract class QuoteDetailRunable extends RunTaskState<QuoteResponse> {
 
     @Override
     public void runInner() {
+
         QuoteDetailRequest quoteDetailRequest = new QuoteDetailRequest();
         this.setRequest(quoteDetailRequest);
         if( isCff ){

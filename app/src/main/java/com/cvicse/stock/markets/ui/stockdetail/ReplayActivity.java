@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -38,7 +39,6 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.compound.CompoundUpDownBean;
 import com.mitake.core.request.compound.CompoundUpDownRequest;
@@ -425,37 +425,37 @@ public class ReplayActivity extends PBaseActivity  implements View.OnClickListen
                 lineData.setDrawValues(false);//是否绘制线条上的文字
                 line_zdfb.setData(lineData);
                 line_zdfb.invalidate();
-//                line_zdfb.setOnTouchListener(new View.OnTouchListener() {
-//                        @Override
-//                        public boolean onTouch(View v, MotionEvent event) {
-//                                Highlight h = line_zdfb.getHighlightByTouchPoint(event.getX(), event.getY());
-//                                if (null != highlight && highlight.equalTo(h)) {
-//                                        return false;
-//                                }
-//                                highlight = h;
-//                                CompoundUpDownBean touchBean = list.get((int)h.getX());
-//                                tev_zdfx_time.setText(datatimeFormat(touchBean.dateTime));
-//                                tev_zdfx_down.setText("涨家数 " + touchBean.fallCount + "家");
-//                                tev_zdfx_up.setText("跌家数 " + touchBean.riseCount + "家");
-//                                return false;
-//                        }
-//                });
-                line_zdfb.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+                line_zdfb.setOnTouchListener(new View.OnTouchListener() {
                         @Override
-                        public void onValueSelected(Entry e, Highlight h) {
-                                if (null != h) {
-                                        CompoundUpDownBean touchBean = list.get((int)h.getX());
-                                        tev_zdfx_time.setText(datatimeFormat(touchBean.dateTime));
-                                        tev_zdfx_down.setText("涨家数 " + touchBean.fallCount + "家");
-                                        tev_zdfx_up.setText("跌家数 " + touchBean.riseCount + "家");
+                        public boolean onTouch(View v, MotionEvent event) {
+                                Highlight h = line_zdfb.getHighlightByTouchPoint(event.getX(), event.getY());
+                                if (null != highlight && highlight.equalTo(h)) {
+                                        return false;
                                 }
-                        }
-
-                        @Override
-                        public void onNothingSelected() {
-
+                                highlight = h;
+                                CompoundUpDownBean touchBean = list.get((int)h.getX());
+                                tev_zdfx_time.setText(datatimeFormat(touchBean.dateTime));
+                                tev_zdfx_down.setText("涨家数 " + touchBean.fallCount + "家");
+                                tev_zdfx_up.setText("跌家数 " + touchBean.riseCount + "家");
+                                return false;
                         }
                 });
+//                line_zdfb.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+//                        @Override
+//                        public void onValueSelected(Entry e, Highlight h) {
+//                                if (null != h) {
+//                                        CompoundUpDownBean touchBean = list.get((int)h.getX());
+//                                        tev_zdfx_time.setText(datatimeFormat(touchBean.dateTime));
+//                                        tev_zdfx_down.setText("涨家数 " + touchBean.fallCount + "家");
+//                                        tev_zdfx_up.setText("跌家数 " + touchBean.riseCount + "家");
+//                                }
+//                        }
+//
+//                        @Override
+//                        public void onNothingSelected() {
+//
+//                        }
+//                });
         }
 
         /**
@@ -577,8 +577,8 @@ public class ReplayActivity extends PBaseActivity  implements View.OnClickListen
                 line_zdfb.setTouchEnabled(true);
                 line_zdfb.setSelected(true);
                 line_zdfb.setEnabled(true);
-                // 允许拖动
-                line_zdfb.setDragEnabled(true);
+                // 不允许拖动
+                line_zdfb.setDragEnabled(false);
                 // 不允许缩放
                 line_zdfb.setPinchZoom(false);// 挤压缩放
                 line_zdfb.setScaleXEnabled(false);// x轴

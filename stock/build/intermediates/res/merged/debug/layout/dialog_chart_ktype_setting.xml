@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_gray"
+        >
+        <!--android:background="@drawable/img_dialog_bg"-->
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="#ff4a4a4a"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="指标设置" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:background="@drawable/img_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <com.cvicse.base.widget.ExtendedRadioGroup
+        android:id="@+id/erdg_right_type"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="VOL"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="MACD"
+                    style="@style/dialog_ktype_text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="KDJ"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="DMA"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="BOLL"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="RSI"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="WR"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="VR"
+                    style="@style/dialog_ktype_text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="#ff4a4a4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="CR" />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="DMI"
+                    style="@style/dialog_ktype_text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="BIAS"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="OBV"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="BBI"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="AMO"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="CCI"
+                    style="@style/dialog_ktype_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="MTM"
+                    style="@style/dialog_ktype_text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="#ff4a4a4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="ROC" />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="BRAR"
+                    style="@style/dialog_ktype_text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            style="@style/dialog_ktype_line" />
+
+        <LinearLayout
+            style="@style/dialog_ktype_linearlayout">
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="#ff4a4a4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="NVI/PVI" />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/dialog_ktype_linearlayout1">
+                <ImageView
+                    android:background="@drawable/bg_chose_selector"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" />
+                <TextView
+                    android:text="PSY"
+                    style="@style/dialog_ktype_text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </com.cvicse.base.widget.ExtendedRadioGroup>
+
+    <View
+        style="@style/dialog_ktype_line" />
+
+    <TextView
+        android:id="@+id/tev_sure"
+        android:textSize="16sp"
+        android:textColor="#ff0074e1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="确定"/>
+
+</LinearLayout>

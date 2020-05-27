@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\70dd74667d0039a304c5dd33378df17d267343a7\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\70dd74667d0039a304c5dd33378df17d267343a7\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_top.xml",
+        "source": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\base\\build\\intermediates\\bundles\\default\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\70dd74667d0039a304c5dd33378df17d267343a7\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\base\\build\\intermediates\\bundles\\default\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\70dd74667d0039a304c5dd33378df17d267343a7\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\70dd74667d0039a304c5dd33378df17d267343a7\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\70dd74667d0039a304c5dd33378df17d267343a7\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_top.xml",
+        "source": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\base\\build\\intermediates\\bundles\\default\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\liu_bin\\.android\\build-cache\\225cf821713fd60b10aaf9eb861109d168e588b6\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\stock\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "D:\\Asworkplace\\app_stock\\Stock3.4.0.001\\Stock\\base\\build\\intermediates\\bundles\\default\\res\\anim\\slide_in_from_bottom.xml"
+    }
+]

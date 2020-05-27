@@ -23,7 +23,10 @@ import com.mitake.core.CacheChartOneDay;
 import com.mitake.core.OHLCItem;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.TickItem;
+import com.mitake.core.listener.LinePush;
 import com.mitake.core.network.Network;
+import com.mitake.core.network.NetworkManager;
+import com.mitake.core.network.TCPManager;
 import com.mitake.core.request.ChartType;
 import com.mitake.core.response.ChartResponse;
 import com.mitake.core.response.ChartSubResponse;
@@ -96,33 +99,50 @@ public class StockDayPresenter extends BasePresenter implements StockDayContract
      */
     @Override
     public void requestChart() {
-        //清除缓存
-//         CacheChartOneDay.getInstance().removeCache(quoteItem.id);
-        RequestManager.cancel(requestSign);
-        requestSign = RequestManager.request(new ChartRunnable(quoteItem.id, chartType) {
+        //20200527修改
+        TCPManager.getInstance().subScribeLines(quoteItem,chartType);
+        NetworkManager.getInstance().addIPush(new LinePush() {
+
             @Override
-            public void onBack(ChartResponse response) {
-                CopyOnWriteArrayList<OHLCItem> ohlcItems = response.historyItems;
-           /* if(!checkNew(ohlcItems)){  // 2018.3.22
-                return;
-            }*/
+            public void pushLine(ChartResponse chartResponse, String s, String s1) {
                 CacheChartOneDay.getInstance().removeCache(quoteItem.id);
                 CacheChartFiveDay.getInstance().removeCache(quoteItem.id);
-
                 // 处理时间
-                TimezoneUtils.setTimezoneEntity(response,quoteItem);
-                if (response.historyItems==null){
+                TimezoneUtils.setTimezoneEntity(chartResponse,quoteItem);
+                if (chartResponse.historyItems==null){
                     view.onRequestChartSuccess(null);
                 }else {
-                    view.onRequestChartSuccess(response);
+                    view.onRequestChartSuccess(chartResponse);
                 }
-//                view.onRequestChartSuccess(convert(ohlcItems));  // old 2018-8-8
-            }
-
-            @Override
-            public void onError(int i, String error) {
             }
         });
+//        //清除缓存
+////         CacheChartOneDay.getInstance().removeCache(quoteItem.id);
+//        RequestManager.cancel(requestSign);
+//        requestSign = RequestManager.request(new ChartRunnable(quoteItem.id, chartType) {
+//            @Override
+//            public void onBack(ChartResponse response) {
+//                CopyOnWriteArrayList<OHLCItem> ohlcItems = response.historyItems;
+//           /* if(!checkNew(ohlcItems)){  // 2018.3.22
+//                return;
+//            }*/
+//                CacheChartOneDay.getInstance().removeCache(quoteItem.id);
+//                CacheChartFiveDay.getInstance().removeCache(quoteItem.id);
+//
+//                // 处理时间
+//                TimezoneUtils.setTimezoneEntity(response,quoteItem);
+//                if (response.historyItems==null){
+//                    view.onRequestChartSuccess(null);
+//                }else {
+//                    view.onRequestChartSuccess(response);
+//                }
+////                view.onRequestChartSuccess(convert(ohlcItems));  // old 2018-8-8
+//            }
+//
+//            @Override
+//            public void onError(int i, String error) {
+//            }
+//        });
 
     }
 
@@ -178,6 +198,7 @@ public class StockDayPresenter extends BasePresenter implements StockDayContract
 
         mTickItemBos = new ArrayList<>();
         RequestManager.cancel(requestTickSign);
+
         requestTickSign =  RequestManager.request(new DetailRunnable(quoteItem.id,page,
                 quoteItem.market, quoteItem.subtype) {
             @Override

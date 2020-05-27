@@ -44,9 +44,6 @@ public class SettingDetailActivity extends PBaseActivity implements View.OnClick
     @BindView(R.id.tev_requestmode) TextView mTevMode;
     @BindView(R.id.rel_requestmode) RelativeLayout mRelRequestmode;
 
-    @BindView(R.id.tev_ollevel) TextView tev_ollevel;// 境外权限设置
-    @BindView(R.id.rel_ollevel) RelativeLayout rel_ollevel;// 境外权限设置
-
     @BindView(R.id.tev_timeout_reminder) TextView mTevTimeoutReminder;
     @BindView(R.id.rel_timeout_reminder) RelativeLayout mRelTimeoutReminder;
 
@@ -116,7 +113,6 @@ public class SettingDetailActivity extends PBaseActivity implements View.OnClick
     public static final int SHFE_LEVEL_REQUEST_CODE = 11;
     public static final int INE_LEVEL_REQUEST_CODE = 12;
     public static final int HKZS_LEVEL_REQUEST_CODE = 13;// 港股指数
-    public static final int OLLEVEL_REQUEST_CODE = 14;// 境外权限
 
     private String tevModeString;//存在SharedPreferences中默认选择
     private String tevTimeoutReminderStr;
@@ -139,7 +135,6 @@ public class SettingDetailActivity extends PBaseActivity implements View.OnClick
     protected void initViews(Bundle savedInstanceState) {
         mRelRefreshrate.setOnClickListener(this);
         mRelRequestmode.setOnClickListener(this);
-        rel_ollevel.setOnClickListener(this);// 境外权限
 
         mRelTimeoutReminder.setOnClickListener(this);
         mRelPushTime.setOnClickListener(this);
@@ -205,11 +200,6 @@ public class SettingDetailActivity extends PBaseActivity implements View.OnClick
             case R.id.rel_requestmode:
                 Intent intentMode = new Intent(this, SettingRequestModeActivity.class);
                 startActivityForResult(intentMode, LEV_REQUEST_CODE);
-                break;
-            // 境外权限设置
-            case R.id.rel_ollevel:
-                Intent intentoll = new Intent(this, SettingOLLActivity.class);
-                startActivityForResult(intentoll, OLLEVEL_REQUEST_CODE);
                 break;
 
             //超时提醒
@@ -384,39 +374,6 @@ public class SettingDetailActivity extends PBaseActivity implements View.OnClick
             hkzs = "无权限";
         }
         tevHkzsLevelmode.setText(hkzs);
-        // 境外权限
-        String ollevel = "";
-        boolean chooseFlag = false;// 是否有权限被选中（如果没有的话就默认选中oll1）
-        if(Setting.isOLL1()){
-            chooseFlag = true;
-            ollevel = Permissions.OL_LEVEL_1 + ",";
-        } else {
-            if(Setting.isOLSHL1()){
-                chooseFlag = true;
-                ollevel = ollevel + Permissions.OL_SH_LEVEL_1 + ",";
-            }
-            if(Setting.isOLSZL1()){
-                chooseFlag = true;
-                ollevel = ollevel + Permissions.OL_SZ_LEVEL_1 + ",";
-            }
-        }
-        if(Setting.isOLSHL2()){
-            chooseFlag = true;
-            ollevel = ollevel + Permissions.OL_SH_LEVEL_2 + ",";
-        }
-        if(Setting.isOLSZL2()){
-            chooseFlag = true;
-            ollevel = ollevel + Permissions.OL_SZ_LEVEL_2;
-        }
-        // 是否有权限被选中（如果没有的话就默认选中oll1）
-        if (!chooseFlag) {
-            ollevel = Permissions.OL_LEVEL_1;
-        } else {
-            if (ollevel.endsWith(",")) {
-                ollevel = ollevel.substring(0, ollevel.length() - 1);
-            }
-        }
-        tev_ollevel.setText(ollevel);
     }
 
     /***************************************

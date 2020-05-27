@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#ff3897db</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="light_gray">#ffF0EFF5</color>
+    <color name="marker_bg">#1C232E</color>
+    <color name="menubarbackground">#ff1d2228</color>
+    <color name="minute_black">#101419</color>
+    <color name="minute_blue">#00D0FC</color>
+    <color name="minute_grayLine">#2D3945</color>
+    <color name="minute_green">#41e125</color>
+    <color name="minute_jizhun">#7F9976</color>
+    <color name="minute_yellow">#E7B448</color>
+    <color name="minute_zhoutv">#858D93</color>
+    <color name="text_blue">#ff4a90e2</color>
+    <color name="text_dark">#ff4f4f4f</color>
+    <color name="text_gray">#ff808080</color>
+    <color name="text_num_gray">#ff333333</color>
+    <color name="v">#FFFF0097</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="bottom_chart" type="id"/>
+    <item name="top_chart" type="id"/>
+    <string name="app_name">元件使用范例</string>
+    <string name="hq_account">成交额</string>
+    <string name="hq_browser">最近浏览</string>
+    <string name="hq_lastprice">最新价</string>
+    <string name="hq_name">名称</string>
+    <string name="hq_news">新闻公告</string>
+    <string name="hq_report">研究报告</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">上拉加载</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">正在加载...</string>
+    <string name="pull_to_refresh_from_bottom_release_label">释放加载更多</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_refreshing_label">更新中...</string>
+    <string name="pull_to_refresh_release_label">释放刷新</string>
+    <string name="title">请点选API实体类:</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="dialog_ktype_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#ffdbdbdb</item>
+    </style>
+    <style name="dialog_ktype_linearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="dialog_ktype_linearlayout1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:tag">1_2_1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="dialog_ktype_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff4a4a4a</item>
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:layout_marginLeft">5.0dp</item>
+    </style>
+</resources>

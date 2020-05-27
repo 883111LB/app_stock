@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Asworkplace\app_stock\Stock3.4.0.001\Stock\stock\src\main\assets"/><source path="D:\Asworkplace\app_stock\Stock3.4.0.001\Stock\stock\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="D:\Asworkplace\app_stock\Stock3.4.0.001\Stock\stock\src\release\assets"/></dataSet></merger>

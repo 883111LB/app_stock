@@ -195,7 +195,7 @@ public class StockConfig {
     private static void initSelf(final Context context, final String key) {
         // 初始化元件註冊所需資訊
         AppInfo.build(context);
-
+        AppInfo.refreshTime=5*1000;
         //进行认证
         sendRegister(context,key);
 
@@ -285,14 +285,12 @@ public class StockConfig {
         });
     }
 
-    public static void initPermissions(String level,String cffLevel,String hkLevel,String hkzsLevel,
-                String dceLevel,String zceLevel,String shfeLevel,String ineLevel,String feLevel,String giLevel,
-                String oll1, String olshl1, String olszl1, String olshl2, String olszl2){
+    public static void initPermissions(String level,String cffLevel,String hkLevel,String hkzsLevel, String dceLevel,String zceLevel,String shfeLevel,String ineLevel,String feLevel,String giLevel){
        // 清除港股权限
         SseSdk.permission().clearHkPermission();
         //权限配置
         SseSdk.permission().setLevel(level)      //此处配置沪深权限
-                .addHkPermission(hkLevel) //添加港股权限
+                .addHkPermission(hkLevel)  //添加港股权限
                 .setCffLevel(cffLevel);    //中金所权限
         SseSdk.permission().setDceLevel(dceLevel);
         SseSdk.permission().setCzceLevel(zceLevel);
@@ -302,42 +300,6 @@ public class StockConfig {
         SseSdk.permission().setGILevel(giLevel);
         if (null != hkzsLevel && !"".equals(hkzsLevel)) {
             SseSdk.permission().addHkPermission(hkzsLevel);
-        }
-        // 境外权限
-        boolean flag = false;
-        if (null != olshl1 && !"".equals(olshl1)) {
-            flag = true;
-            SseSdk.permission().addShSzOverseaPermission(olshl1);
-        } else {
-            SseSdk.permission().removeHkPermission(olshl1);
-        }
-        if (null != olszl1 && !"".equals(olszl1)) {
-            flag = true;
-            SseSdk.permission().addShSzOverseaPermission(olszl1);
-        } else {
-            SseSdk.permission().removeHkPermission(olszl1);
-        }
-        if (null != oll1 && !"".equals(oll1)) {
-            flag = true;
-            SseSdk.permission().addShSzOverseaPermission(oll1);
-        } else {
-            SseSdk.permission().removeHkPermission(oll1);
-        }
-        if (null != olshl2 && !"".equals(olshl2)) {
-            flag = true;
-            SseSdk.permission().addShSzOverseaPermission(olshl2);
-        } else {
-            SseSdk.permission().removeHkPermission(olshl2);
-        }
-        if (null != olszl2 && !"".equals(olszl2)) {
-            flag = true;
-            SseSdk.permission().addShSzOverseaPermission(olszl2);
-        } else {
-            SseSdk.permission().removeHkPermission(olszl2);
-        }
-        // 如果境外权限没有设置的话，默认为oll1
-        if (!flag) {
-            SseSdk.permission().addShSzOverseaPermission(oll1);
         }
     }
 

@@ -121,18 +121,7 @@ public class StockTurnoverFragment extends PBaseFragment implements StockPKContr
          // 查询
         final String[] ids = {stockId};
         List<StockTurnoverBo> list = StockTurnoverDBDao.getInstance().query(ids);
-        String params = "";
-        if (null != list) {
-            for (int i = 0; i < list.size(); i++) {
-                params = params + list.get(i).getCode() + ",";
-            }
-            if (params.endsWith(",")) {
-                params = params.substring(0, params.length() - 1);
-            }
-        } else {
-            params = null;
-        }
-        presenter.requestBankuaiQuote(stockId, params);
+        presenter.requestBankuaiQuote(stockId, null);
     }
 
     /**
@@ -231,13 +220,12 @@ public class StockTurnoverFragment extends PBaseFragment implements StockPKContr
                         String params = "";
                         for (int i = 0; i < allList.size(); i++) {
                             if (itemsIsChecked[i]) {
-                                params = params + allList.get(i) + ",";
+                                params = params + allList.get(i);
                                 StockTurnoverDBDao.getInstance().insert(new StockTurnoverBo(stockId, allList.get(i)));
                             }
                         }
-                        if (params.endsWith(",")) {
-                            params = params.substring(0, params.length() - 1);
-                        }
+                        // 取到保存在本地数据库的list
+                        List<StockTurnoverBo> list = StockTurnoverDBDao.getInstance().query(ids);
                         // 更新所属板块列表
                         presenter.requestBankuaiQuote(stockId, params);
                     }

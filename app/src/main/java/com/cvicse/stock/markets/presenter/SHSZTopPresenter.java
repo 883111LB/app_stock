@@ -84,11 +84,11 @@ public class SHSZTopPresenter extends BasePresenter implements SHSZTopContract.P
                     view.onIndexTcp(quoteItem);
                 }
             }
+//20200512换生产后改
+            @Override
+            public void pushHttp(QuoteResponse quoteResponse) {
 
-//            @Override
-//            public void pushHttp(QuoteResponse quoteResponse) {
-//
-//            }
+            }
         });
         TCPManager.getInstance().subscribe(subscribeArray);
     }

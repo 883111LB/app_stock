@@ -110,45 +110,7 @@
                     android:id="@+id/textView3"/>
 
             </RelativeLayout>
-            <!-- 境外权限设置 -->
-            <RelativeLayout
-                android:id="@+id/rel_ollevel"
-                android:background="?attr/setting_item_bg"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_marginTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="45dp">
 
-                <ImageView
-                    android:id="@+id/img_ollevel"
-                    android:src="@drawable/ic_right_indicator"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/tev_ollevel"
-                    android:layout_marginRight="15dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/img_ollevel"
-                    tools:text="oll1"
-                    android:textColor="?attr/setting_item_text_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="境外权限设置"
-                    android:textColor="?attr/setting_item_text_color"
-                    android:layout_alignBaseline="@+id/tev_ollevel"
-                    android:layout_alignBottom="@+id/tev_ollevel"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
-
-            </RelativeLayout>
             <!--F10 数据源-->
             <RelativeLayout
                 android:id="@+id/rel_datasource"

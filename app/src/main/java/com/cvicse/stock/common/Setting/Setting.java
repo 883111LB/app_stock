@@ -22,67 +22,6 @@ public class Setting {
         return LevelSetting.isLevel2();
     }
 
-    public static boolean isOLL1(){
-        return LevelSetting.isOLL1();
-    }
-    public static String getOLL1(){
-        return LevelSetting.getOLL1();
-    }
-    public static void setOLL1(){
-        LevelSetting.setOLL1();
-    }
-    public static void removeOLL1(){
-        LevelSetting.removeOLL1();
-    }
-    public static boolean isOLSHL1(){
-        return LevelSetting.isOLSHL1();
-    }
-    public static String getOLSHL1(){
-        return LevelSetting.getOLSHL1();
-    }
-    public static void setOLSHL1(){
-        LevelSetting.setOLSHL1();
-    }
-    public static void removeOLSHL1(){
-        LevelSetting.removeOLSHL1();
-    }
-    public static boolean isOLSZL1(){
-        return LevelSetting.isOLSZL1();
-    }
-    public static String getOLSZL1(){
-        return LevelSetting.getOLSZL1();
-    }
-    public static void setOLSZL1(){
-        LevelSetting.setOLSZL1();
-    }
-    public static void removeOLSZL1(){
-        LevelSetting.removeOLSZL1();
-    }
-    public static boolean isOLSHL2(){
-        return LevelSetting.isOLSHL2();
-    }
-    public static String getOLSHL2(){
-        return LevelSetting.getOLSHL2();
-    }
-    public static void setOLSHL2(){
-        LevelSetting.setOLSHL2();
-    }
-    public static void removeOLSHL2(){
-        LevelSetting.removeOLSHL2();
-    }
-    public static boolean isOLSZL2(){
-        return LevelSetting.isOLSZL2();
-    }
-    public static String getOLSZL2(){
-        return LevelSetting.getOLSZL2();
-    }
-    public static void setOLSZL2(){
-        LevelSetting.setOLSZL2();
-    }
-    public static void removeOLSZL2(){
-        LevelSetting.removeOLSZL2();
-    }
-
     public static String getSkinType(){
         return SkinSetting.getSkinType();
     }

@@ -8,6 +8,7 @@ import com.cvicse.stock.http.loop.RequestManager;
 import com.cvicse.stock.http.loop.RunTaskState;
 import com.cvicse.stock.markets.data.TickItemBo;
 import com.cvicse.stock.markets.presenter.contract.StockTradeContract;
+import com.mitake.core.AppInfo;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.TickItem;
 import com.mitake.core.request.TickRequest;

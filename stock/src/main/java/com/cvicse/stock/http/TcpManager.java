@@ -21,11 +21,11 @@ public class TcpManager {
             iPush.push(quoteItem,arrayList,arrayList1);
             }
         }
+        //20200512换生产后改
+        @Override
+        public void pushHttp(QuoteResponse quoteResponse) {
 
-//        @Override
-//        public void pushHttp(QuoteResponse quoteResponse) {
-//
-//        }
+        }
     };
 
     static {

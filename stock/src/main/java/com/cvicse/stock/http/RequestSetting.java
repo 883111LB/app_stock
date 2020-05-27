@@ -43,6 +43,14 @@ public class RequestSetting {
             case 0:
                 str = "实时刷新";
                 break;
+            //20205013添加
+            case 2:
+                str = "2秒";
+                break;
+
+            case 3:
+                str = "3秒";
+                break;
 
             case 5:
                 str = "5秒";

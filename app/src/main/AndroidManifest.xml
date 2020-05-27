@@ -189,10 +189,8 @@
         android:theme="@style/dialog_style"/>
         <!-- 排序（全部字段） -->
         <activity android:name=".markets.ui.RankingListAllActivity" />
-        <!-- 境外权限设置 -->
-        <activity android:name=".personal.SettingOLLActivity" />
-        <!-- 沪深港通 -->
-        <activity android:name=".markets.ui.hkt.HKTAvtivity" />
+        <!--涨停专题-->
+        <activity android:name=".markets.ui.ztsorting.ZTSortingListActivity"></activity>
     </application>
 
 </manifest>

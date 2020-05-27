@@ -22,6 +22,7 @@ import com.mitake.core.QuoteItem;
 import com.mitake.core.bean.UpdownsItem;
 import com.mitake.core.bean.quote.ConvertibleBoundItem;
 import com.mitake.core.network.NetworkManager;
+import com.mitake.core.network.TCPManager;
 import com.mitake.core.request.AHQuoteRequest;
 import com.mitake.core.request.ConvertibleDebtRequest;
 import com.mitake.core.request.HKStockInfoRequest;
@@ -293,53 +294,87 @@ public class MarketDetailPresenter extends BasePresenter implements MarketDetail
 
     @Override
     public void requestQuote(String code) {
-        QuoteDetailRequest quoteDetailRequest = new QuoteDetailRequest();
-        quoteDetailRequest.send(code, new ResponseCallback(quoteDetailRequest) {
+        //20200521修改
+        TCPManager.getInstance().subscribe(code);
+        NetworkManager.getInstance().addIPush(new NetworkManager.IPush() {
+
             @Override
-            public void onBack(Response response) {
-                QuoteResponse quoteResponse = (QuoteResponse) response;
-                if( null == quoteResponse || null == quoteResponse.quoteItems || quoteResponse.quoteItems.isEmpty() ){
-                    return;
-                }
-              view.requestQuoteDetail(quoteResponse.quoteItems);
+            public void push(QuoteItem quoteItem, ArrayList<OrderQuantityItem> arrayList, ArrayList<OrderQuantityItem> arrayList1) {
+                ArrayList<QuoteItem> quoteItems=new ArrayList<>();
+                quoteItems.add(quoteItem);
+                view.requestQuoteDetail(quoteItems);
             }
 
             @Override
-            public void onError(int i, String s) {
+            public void pushHttp(QuoteResponse quoteResponse) {
 
             }
         });
+//        QuoteDetailRequest quoteDetailRequest = new QuoteDetailRequest();
+//        quoteDetailRequest.send(code, new ResponseCallback(quoteDetailRequest) {
+//            @Override
+//            public void onBack(Response response) {
+//                QuoteResponse quoteResponse = (QuoteResponse) response;
+//                if( null == quoteResponse || null == quoteResponse.quoteItems || quoteResponse.quoteItems.isEmpty() ){
+//                    return;
+//                }
+//              view.requestQuoteDetail(quoteResponse.quoteItems);
+//            }
+//
+//            @Override
+//            public void onError(int i, String s) {
+//
+//            }
+//        });
     }
 
     /**
      * 查询股票行情快照，实时刷新
      */
     private void queryQuote() {
-        RequestManager.cancel(requestSign);
-        requestSign = RequestManager.request(new QuoteDetailRunable(quoteItem.id) {
+        //20200521修改
+        TCPManager.getInstance().subscribe(quoteItem.id);
+        NetworkManager.getInstance().addIPush(new NetworkManager.IPush() {
+
             @Override
-            public void onBack(QuoteResponse response) {
-//                if(response != null){
-//                    mQuoteResponse = response;
-//                }  // old
-
-                // TODO: 2018/2/4  为什么http要保证数据的完整性，TCP推送没有
-                QuoteItem quote = response.quoteItems.get(0);
-                quoteItem = DataConvert.copy(quoteItem,quote);
-                response.quoteItems.set(0, quoteItem);
-                // new 保存补全后的response
-                if( null!=response ){
-                    mQuoteResponse = response;
-                }
-
+            public void push(QuoteItem quoteItem, ArrayList<OrderQuantityItem> arrayList, ArrayList<OrderQuantityItem> arrayList1) {
+                QuoteResponse response = new QuoteResponse();
+                ArrayList<QuoteItem>  quoteItems = new ArrayList<>();
+                quoteItems.add(quoteItem);
+                response.quoteItems = quoteItems;
                 view.onQuoteSuccess(response);
             }
 
             @Override
-            public void onError(int i, String error) {
+            public void pushHttp(QuoteResponse quoteResponse) {
 
             }
         });
+//        RequestManager.cancel(requestSign);
+//        requestSign = RequestManager.request(new QuoteDetailRunable(quoteItem.id) {
+//            @Override
+//            public void onBack(QuoteResponse response) {
+////                if(response != null){
+////                    mQuoteResponse = response;
+////                }  // old
+//
+//                // TODO: 2018/2/4  为什么http要保证数据的完整性，TCP推送没有
+//                QuoteItem quote = response.quoteItems.get(0);
+//                quoteItem = DataConvert.copy(quoteItem,quote);
+//                response.quoteItems.set(0, quoteItem);
+//                // new 保存补全后的response
+//                if( null!=response ){
+//                    mQuoteResponse = response;
+//                }
+//
+//                view.onQuoteSuccess(response);
+//            }
+//
+//            @Override
+//            public void onError(int i, String error) {
+//
+//            }
+//        });
     }
 
     @Override
@@ -399,10 +434,10 @@ public class MarketDetailPresenter extends BasePresenter implements MarketDetail
             */
         }
     }
+//20200512换生产后改
+    @Override
+    public void pushHttp(QuoteResponse quoteResponse) {
 
-//    @Override
-//    public void pushHttp(QuoteResponse quoteResponse) {
-//
-//    }
+    }
 
 }

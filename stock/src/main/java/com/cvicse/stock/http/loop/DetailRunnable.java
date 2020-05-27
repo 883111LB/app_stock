@@ -1,6 +1,11 @@
 package com.cvicse.stock.http.loop;
 
+import com.mitake.core.AppInfo;
+import com.mitake.core.bean.log.ErrorInfo;
+import com.mitake.core.request.AHQuoteRequest;
 import com.mitake.core.request.TickRequest;
+import com.mitake.core.response.AHQuoteResponse;
+import com.mitake.core.response.IResponseInfoCallback;
 import com.mitake.core.response.TickResponse;
 
 /**

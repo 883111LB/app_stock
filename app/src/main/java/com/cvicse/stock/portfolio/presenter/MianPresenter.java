@@ -15,6 +15,7 @@ import com.mitake.core.OrderQuantityItem;
 import com.mitake.core.QuoteItem;
 import com.mitake.core.StockInfoListItem;
 import com.mitake.core.network.NetworkManager;
+import com.mitake.core.network.TCPManager;
 import com.mitake.core.request.QuoteRequest;
 import com.mitake.core.request.StockInfoRequest;
 import com.mitake.core.response.QuoteResponse;
@@ -55,37 +56,62 @@ public class MianPresenter extends BasePresenter implements MianConstract.Presen
     private void queryIndex() {
         // 获取所有存储在本地的股票名
         String stockCode = MyStocksUtils.getSelectCode();
-        RequestManager.cancel(indexSign);
+        //20200521修改
+        selects = getSelectCodes();
+        String[] codes1=(quoteIndex+","+stockCode).split(",");
+        TCPManager.getInstance().subscribe(codes1);
+        NetworkManager.getInstance().addIPush(new NetworkManager.IPush() {
 
-        indexSign = RequestManager.request(new QuoteRunable(quoteIndex+","+stockCode,null) {
             @Override
-            public void onBack(QuoteResponse response) {
-
-                ArrayList<QuoteItem> list = response.quoteItems;
-                quoteItemSeleteds.clear();
-                if(null !=list ){
-                    for(int j = 0;j < array.length;j++){
-                        //取出指数的值
-                        if(list.get(j) != null && array[j].equals(list.get(j).id)){
-                            view.onIndexTcp(list.get(j));
-                        }
-                    }
-                    //quoteItemSeleteds 赋值
-                    ListUtils.copy(list, array.length, quoteItemSeleteds, list.size(), new ListUtils.Filter<QuoteItem>() {
-                        @Override
-                        public boolean filter(QuoteItem quoteItem) {
-                            return quoteItem != null && quoteItem.id != null;
-                        }
-                    });
-                    view.onSelectedSuccess(DataConvert.QuoteItemList(quoteItemSeleteds));
+            public void push(QuoteItem quoteItem, ArrayList<OrderQuantityItem> arrayList, ArrayList<OrderQuantityItem> arrayList1) {
+                if(isBounds(quoteItem,array)){
+                    view.onIndexTcp(quoteItem);
+                }
+                if(isBounds(quoteItem,selects)){
+                    QuoteResponse response = new QuoteResponse();
+                    ArrayList<QuoteItem>  quoteItems = new ArrayList<>();
+                    quoteItems.add(quoteItem);
+                    response.quoteItems = quoteItems;
+                    view.onSelectedSuccess(DataConvert.QuoteItemList(response.quoteItems));
                 }
             }
 
             @Override
-            public void onError(int i, String error) {
+            public void pushHttp(QuoteResponse quoteResponse) {
 
             }
         });
+//        RequestManager.cancel(indexSign);
+//
+//        indexSign = RequestManager.request(new QuoteRunable(quoteIndex+","+stockCode,null) {
+//            @Override
+//            public void onBack(QuoteResponse response) {
+//
+//                ArrayList<QuoteItem> list = response.quoteItems;
+//                quoteItemSeleteds.clear();
+//                if(null !=list ){
+//                    for(int j = 0;j < array.length;j++){
+//                        //取出指数的值
+//                        if(list.get(j) != null && array[j].equals(list.get(j).id)){
+//                            view.onIndexTcp(list.get(j));
+//                        }
+//                    }
+//                    //quoteItemSeleteds 赋值
+//                    ListUtils.copy(list, array.length, quoteItemSeleteds, list.size(), new ListUtils.Filter<QuoteItem>() {
+//                        @Override
+//                        public boolean filter(QuoteItem quoteItem) {
+//                            return quoteItem != null && quoteItem.id != null;
+//                        }
+//                    });
+//                    view.onSelectedSuccess(DataConvert.QuoteItemList(quoteItemSeleteds));
+//                }
+//            }
+//
+//            @Override
+//            public void onError(int i, String error) {
+//
+//            }
+//        });
     }
 
     /**
@@ -152,11 +178,11 @@ public class MianPresenter extends BasePresenter implements MianConstract.Presen
             view.onSelectTcp(DataConvert.QuoteItem(quoteItem));
         }
     }
+//20200512换生产后改
+    @Override
+    public void pushHttp(QuoteResponse quoteResponse) {
 
-//    @Override
-//    public void pushHttp(QuoteResponse quoteResponse) {
-//
-//    }
+    }
 
     /**
      * 请求个股静态数据
@@ -201,21 +227,39 @@ public class MianPresenter extends BasePresenter implements MianConstract.Presen
            return;
        }
         requestStockInfo(selects,null);
-        QuoteRequest request = new QuoteRequest();
         String[] codd = selects.split(",");
-        request.send(codd, new ResponseCallback(request) {
-//        request.send(new String[]{selects}, new ResponseCallback(request) {
+        //20200520修改
+        TCPManager.getInstance().subscribe(codd);
+        NetworkManager.getInstance().addIPush(new NetworkManager.IPush() {
+
             @Override
-            public void onBack(Response response) {
-                QuoteResponse reponse = (QuoteResponse) response;
-                view.onSelectedSuccess(DataConvert.QuoteItemList(reponse.quoteItems));
+            public void push(QuoteItem quoteItem, ArrayList<OrderQuantityItem> arrayList, ArrayList<OrderQuantityItem> arrayList1) {
+                QuoteResponse response = new QuoteResponse();
+                ArrayList<QuoteItem>  quoteItems = new ArrayList<>();
+                quoteItems.add(quoteItem);
+                response.quoteItems = quoteItems;
+                view.onSelectedSuccess(DataConvert.QuoteItemList(response.quoteItems));
             }
 
             @Override
-            public void onError(int i, String s) {
-                LogUtils.e(TAG,"code = "+i+"  ,message = "+s);
+            public void pushHttp(QuoteResponse quoteResponse) {
+
             }
         });
+//        QuoteRequest request = new QuoteRequest();
+//        request.send(codd, new ResponseCallback(request) {
+////        request.send(new String[]{selects}, new ResponseCallback(request) {
+//            @Override
+//            public void onBack(Response response) {
+//                QuoteResponse reponse = (QuoteResponse) response;
+//                view.onSelectedSuccess(DataConvert.QuoteItemList(reponse.quoteItems));
+//            }
+//
+//            @Override
+//            public void onError(int i, String s) {
+//                LogUtils.e(TAG,"code = "+i+"  ,message = "+s);
+//            }
+//        });
     }
 
    /* *//**
