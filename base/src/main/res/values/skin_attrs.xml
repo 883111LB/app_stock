@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Skin_change">
+        <attr name="android:textColor" />
+        <attr name="android:background" />
+        <attr name="android:src" />
+        <attr name="android:button"/>
+    </declare-styleable>
+
+
+</resources>
