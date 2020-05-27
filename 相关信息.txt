@@ -1,0 +1,9 @@
+stock.jks 密码都为123456789
+
+功能：k线图十字线图（开盘价与收盘价相同）颜色变化显示
+修改源码：CandleStickChartRenderer
+by tang_xqing
+
+2018.4.26 功能：x轴标签换行展示
+          修改源码 ： XAxisRenderer.drawLabel
+          by tang_xqing
