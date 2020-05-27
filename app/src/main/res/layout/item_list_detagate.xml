@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tev_sell_1"
+        android:gravity="left"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/font_14"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tev_sell_2"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/font_14"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tev_sell_3"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/font_14"
+        android:gravity="right"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tev_buy_1"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/font_14"
+        android:gravity="left"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tev_buy_2"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/font_14"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tev_buy_3"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/font_14"
+        android:gravity="right"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cvicse.base.widget.FixedListView
+        android:id="@+id/lv_stock_indexranking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tev_loadmore"
+        android:padding="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="点击刷新"
+        android:textColor="?attr/text_withe_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

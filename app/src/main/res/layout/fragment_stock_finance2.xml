@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout"
+    android:padding="5.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mainFinaIndexTitle"
+        android:text="财务指标"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:id="@+id/tev_mainFinaIndexDate"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/f10_finance_line1"
+        android:layout_below="@id/tev_mainFinaIndexDate"
+        style="@style/f10_underline" />
+
+    <TextView
+        android:id="@+id/indextitle0"
+        android:text="每股指标"
+        android:layout_below="@id/f10_finance_line1"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:id="@+id/indextitle1"
+        android:layout_marginLeft="10dp"
+        android:text="每股收益"
+        android:layout_below="@id/indextitle0"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_basiceps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle1"
+        android:layout_below="@id/indextitle0"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle2"
+        android:layout_marginLeft="10dp"
+        android:text="每股公积金"
+        android:layout_below="@id/indextitle1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_reserveps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle2"
+        android:layout_below="@id/indextitle1"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle3"
+        android:layout_marginLeft="10dp"
+        android:text="每股净资产"
+        android:layout_below="@id/indextitle2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_bvps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle3"
+        android:layout_below="@id/indextitle2"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle4"
+        android:layout_marginLeft="10dp"
+        android:text="每股营业收入"
+        android:layout_below="@id/indextitle3"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_totaloperincomeps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle4"
+        android:layout_below="@id/indextitle3"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle5"
+        android:layout_marginLeft="10dp"
+        android:text="每股息税前利润"
+        android:layout_below="@id/indextitle4"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_ebitps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle5"
+        android:layout_below="@id/indextitle4"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle6"
+        android:layout_marginLeft="10dp"
+        android:text="每股未分配利润"
+        android:layout_below="@id/indextitle5"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_retainedearningps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle6"
+        android:layout_below="@id/indextitle5"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle7"
+        android:layout_marginLeft="10dp"
+        android:text="每股经营性现金流"
+        android:layout_below="@id/indextitle6"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netcashflowoperps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle7"
+        android:layout_below="@id/indextitle6"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle8"
+        android:layout_marginLeft="10dp"
+        android:text="每股经营性现金流量净额"
+        android:layout_below="@id/indextitle7"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netcashflowps"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle8"
+        android:layout_below="@id/indextitle7"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle9"
+        android:text="盈利能力"
+        android:layout_below="@id/indextitle8"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/stock_f10_content_text_color"
+        android:gravity="right"
+        android:id="@+id/indexContent9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5.0dp"
+        android:layout_toRightOf="@id/indextitle9"
+        android:layout_below="@id/indextitle8"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/indextitle10"
+        android:layout_marginLeft="10dp"
+        android:text="净资产收益率"
+        android:layout_below="@id/indextitle9"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_weightedroe"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle10"
+        android:layout_below="@id/indextitle9"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle11"
+        android:layout_marginLeft="10dp"
+        android:text="总资产报酬率"
+        android:layout_below="@id/indextitle10"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_roa_ebit"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle11"
+        android:layout_below="@id/indextitle10"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle12"
+        android:layout_marginLeft="10dp"
+        android:text="销售毛利率"
+        android:layout_below="@id/indextitle11"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_grossprofitmargin_"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle12"
+        android:layout_below="@id/indextitle11"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle13"
+        android:layout_marginLeft="10dp"
+        android:text="销售净利率"
+        android:layout_below="@id/indextitle12"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_profitmargin_"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle13"
+        android:layout_below="@id/indextitle12"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle14"
+        android:text="资本结构"
+        android:layout_below="@id/indextitle13"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:textSize="14.0dp"
+        android:textColor="@color/stock_f10_content_text_color"
+        android:gravity="right"
+        android:id="@+id/indexContent14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5.0dp"
+        android:layout_toRightOf="@id/indextitle14"
+        android:layout_below="@id/indextitle13"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/indextitle15"
+        android:layout_marginLeft="10dp"
+        android:text="资产负债率"
+        android:layout_below="@id/indextitle14"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_tltota"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle15"
+        android:layout_below="@id/indextitle14"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle16"
+        android:layout_marginLeft="10dp"
+        android:text="权益乘数"
+        android:layout_below="@id/indextitle15"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_tatoshe"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle16"
+        android:layout_below="@id/indextitle15"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle17"
+        android:text="偿债能力"
+        android:layout_below="@id/indextitle16"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:textSize="14.0dp"
+        android:textColor="@color/stock_f10_content_text_color"
+        android:gravity="right"
+        android:id="@+id/indexContent17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5.0dp"
+        android:layout_toRightOf="@id/indextitle17"
+        android:layout_below="@id/indextitle16"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/indextitle18"
+        android:layout_marginLeft="10dp"
+        android:text="流动比率"
+        android:layout_below="@id/indextitle17"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_currentratio"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle18"
+        android:layout_below="@id/indextitle17"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle19"
+        android:layout_marginLeft="10dp"
+        android:text="速动比率"
+        android:layout_below="@id/indextitle18"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_quickratio"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle19"
+        android:layout_below="@id/indextitle18"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle20"
+        android:layout_marginLeft="10dp"
+        android:text="利息保障倍数"
+        android:layout_below="@id/indextitle19"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_ebittoie"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle20"
+        android:layout_below="@id/indextitle19"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle21"
+        android:text="营运能力"
+        android:layout_below="@id/indextitle20"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:textSize="14.0dp"
+        android:textColor="@color/stock_f10_content_text_color"
+        android:gravity="right"
+        android:id="@+id/indexContent21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5.0dp"
+        android:layout_toRightOf="@id/indextitle20"
+        android:layout_below="@id/indextitle20"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/indextitle22"
+        android:layout_marginLeft="10dp"
+        android:text="存货周转率"
+        android:layout_below="@id/indextitle21"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_inventoryturnover"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle22"
+        android:layout_below="@id/indextitle21"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle23"
+        android:layout_marginLeft="10dp"
+        android:text="应收帐款周转率"
+        android:layout_below="@id/indextitle22"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_accountrecturnover"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle22"
+        android:layout_below="@id/indextitle22"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle24"
+        android:layout_marginLeft="10dp"
+        android:text="固定资产周转率"
+        android:layout_below="@id/indextitle23"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_fixedassetturnover"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle23"
+        android:layout_below="@id/indextitle23"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle25"
+        android:layout_marginLeft="10dp"
+        android:text="总资产周转率"
+        android:layout_below="@id/indextitle24"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_totalassetturnover"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle24"
+        android:layout_below="@id/indextitle24"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle26"
+        android:text="@string/grow"
+        android:layout_below="@id/indextitle25"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:textSize="14.0dp"
+        android:textColor="@color/stock_f10_content_text_color"
+        android:gravity="right"
+        android:id="@+id/indexContent26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5.0dp"
+        android:layout_toRightOf="@id/indextitle25"
+        android:layout_below="@id/indextitle25"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/indextitle27"
+        android:layout_marginLeft="10dp"
+        android:text="营业收入同比增长"
+        android:layout_below="@id/indextitle26"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_operrevenueyoy_"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle27"
+        android:layout_below="@id/indextitle26"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle28"
+        android:layout_marginLeft="10dp"
+        android:text="营业利润同比增长"
+        android:layout_below="@id/indextitle27"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_operprofityoy"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle28"
+        android:layout_below="@id/indextitle27"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle29"
+        android:layout_marginLeft="10dp"
+        android:text="净利润同比增长"
+        android:layout_below="@id/indextitle28"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netprofitparentcomyoy_"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle29"
+        android:layout_below="@id/indextitle28"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle30"
+        android:layout_marginLeft="10dp"
+        android:text="经营活动现金流量净额同比增长"
+        android:layout_below="@id/indextitle29"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netcashflowoperyoy"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle30"
+        android:layout_below="@id/indextitle29"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle31"
+        android:layout_marginLeft="10dp"
+        android:text="净资产收益(摊薄)同比增长"
+        android:layout_below="@id/indextitle30"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_roeyoy"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle31"
+        android:layout_below="@id/indextitle30"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle32"
+        android:layout_marginLeft="10dp"
+        android:text="净资产同比增长"
+        android:layout_below="@id/indextitle31"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netassetyoy"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle32"
+        android:layout_below="@id/indextitle31"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/indextitle33"
+        android:layout_marginLeft="10dp"
+        android:text="总资产同比增长"
+        android:layout_below="@id/indextitle32"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_totalassetyoy"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/indextitle33"
+        android:layout_below="@id/indextitle32"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+
+</RelativeLayout>

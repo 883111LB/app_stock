@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cvicse.stock.view.PressedLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+     android:background="@drawable/item_bg_recently_selector"
+     android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/stock_name"
+            android:textColor="@color/bg_gray"
+            android:layout_marginLeft="8dp"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/stock_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/bg_black_light"
+            android:textSize="@dimen/font_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <com.cvicse.stock.view.CHScrollView
+        android:id="@+id/item_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:scrollbars="none">
+
+        <com.cvicse.stock.view.PressedLinearLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:id="@+id/lastprice"
+                android:text="最新"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/changerate"
+                android:text="涨幅"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/change"
+                android:text="涨跌"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/buyprice"
+                android:text="买价"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/sellprice"
+                android:text="卖价"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/volume"
+                android:text="总量"
+                android:gravity="center"
+                android:textColor="@color/text_blue2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:text="金额"
+                android:gravity="center"
+                android:textColor="@color/text_blue2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/peninterest"
+                android:text="持仓量"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+
+        </com.cvicse.stock.view.PressedLinearLayout>
+    </com.cvicse.stock.view.CHScrollView>
+
+</com.cvicse.stock.view.PressedLinearLayout>

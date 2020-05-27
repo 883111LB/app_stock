@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background_color">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="登录IP"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+
+    <TextView
+        android:id="@+id/tev_sh_ip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+    <TextView
+        android:id="@+id/tev_sz_ip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+    <TextView
+        android:id="@+id/tev_hk_ip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+    <TextView
+        android:id="@+id/tev_pb_ip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+
+    <TextView
+        android:id="@+id/tev_nf_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+    <TextView
+        android:id="@+id/tev_sh_tcp_ip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+
+    <TextView
+        android:id="@+id/tev_sz_tcp_ip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="192.168.132.159"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_item_text_color"
+        android:background="?attr/setting_item_bg"/>
+
+</LinearLayout>

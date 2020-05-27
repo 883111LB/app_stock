@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingTop="28dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:paddingLeft="26dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_sell_flag"
+                        android:layout_gravity="center_vertical"
+                        android:text="卖一"
+                        android:textColor="@color/text_green"
+                        android:textSize="@dimen/font_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:gravity="right"
+                        android:paddingLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tev_sell_price"
+                            tools:text="--"
+                            android:textSize="@dimen/font_13"
+                            android:textColor="?attr/item_context_text_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tev_sell_volume"
+                            android:paddingTop="19dp"
+                            tools:text="--"
+                            android:textColor="?attr/item_context_text_color"
+                            android:textSize="@dimen/font_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:textColor="?attr/item_context_text_color"
+                    android:paddingTop="22dp"
+                    android:text="前50笔委托卖出"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:paddingLeft="20dp"
+                    android:paddingRight="26dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_buy_flag"
+                        android:layout_gravity="center_vertical"
+                        android:text="买一"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/font_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:gravity="right"
+                        android:paddingLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="?attr/item_context_text_color"
+                            android:id="@+id/tev_buy_price"
+                            tools:text="--"
+                            android:textSize="@dimen/font_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textColor="?attr/item_context_text_color"
+                            android:id="@+id/tev_buy_volume"
+                            android:paddingTop="19dp"
+                            tools:text="--"
+                            android:textSize="@dimen/font_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:textColor="?attr/item_context_text_color"
+                    android:paddingTop="22dp"
+                    android:text="前50笔委托买入"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+       <com.cvicse.base.widget.FixedListView
+           android:id="@+id/flv_detegate"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+    </LinearLayout>
+</ScrollView>

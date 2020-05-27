@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_market_key">
+        <item name="android:textSize">12.5dip</item>
+        <item name="android:textColor">?attr/style_market_key_text_color</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dip</item>
+    </style>
+    <style name="style_market_value">
+        <item name="android:textSize">12.5dip</item>
+        <item name="android:textColor">?attr/style_market_value_text_color</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">20dip</item>
+    </style>
+
+    <style name="style_market_value_top">
+        <item name="android:textSize">12.5dip</item>
+        <item name="android:textColor">?attr/style_market_value_text_color</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dip</item>
+    </style>
+
+    <style name="style_market_pk">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/bg_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="f10_content_text" parent="@style/f10_title_text">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">?attr/f10_content_text_color</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+
+    <style name="f10_date_text" parent="@style/f10_title_text">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">?attr/text_withe_black</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="f10_date_text2" parent="@style/f10_title_text">
+        <item name="android:textSize">@dimen/font_13</item>
+        <item name="android:textColor">?attr/text_withe_black</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="f10_title_text">
+        <item name="android:textSize">@dimen/font_14</item>
+        <!--<item name="android:textColor">@color/stock_f10_title_text_color</item>-->
+        <item name="android:textColor">?attr/text_withe_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="f10_underline">
+        <item name="android:background">#ff909090</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:layout_marginTop">2dip</item>
+    </style>
+
+    <!-- 设置成交模块 -->
+    <style name="f10_pk_underline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:background">?attr/f10_content_text_color</item>
+        <item name="android:layout_marginBottom">1dip</item>
+        </style>
+
+    <style name="Text_gray_12">
+        <item name="android:textSize">@dimen/font_12</item>
+        <item name="android:textColor">#ff646a6d</item>
+        <item name="android:fromAlpha">0</item>
+        <item name="android:toAlpha">0</item>
+    </style>
+    <style name="Text_white_15">
+        <item name="android:textSize">@dimen/font_15</item>
+        <item name="android:textColor">?attr/Text_white_15_text_color</item>
+        <item name="android:fromAlpha">0</item>
+        <item name="android:toAlpha">0</item>
+    </style>
+
+    <style name="stock_mode_radio_button">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/five_detail_textcolor_selector</item>
+        <item name="android:background">?attr/stock_radio_button_bg</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="stock_mode_radio_group">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#ff494949</item>
+        <item name="android:padding">1px</item>
+    </style>
+
+    <style name="Trade_Text_gray_14">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">#ff696969</item>
+        <item name="android:fromAlpha">0</item>
+        <item name="android:toAlpha">0</item>
+    </style>
+
+    <style name="Text_gray_14">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">#ff646a6d</item>
+        <item name="android:fromAlpha">0.0</item>
+        <item name="android:toAlpha">0.0</item>
+    </style>
+
+    <style name="Text_gary2_14">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">#ff929397</item>
+        <item name="android:fromAlpha">0.0</item>
+        <item name="android:toAlpha">0.0</item>
+    </style>
+
+    <style name="Text_white_14">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fromAlpha">0.0</item>
+        <item name="android:toAlpha">0.0</item>
+    </style>
+    <style name="Text_stock_more">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">--</item>
+        <item name="android:textSize">@dimen/font_13</item>
+        <item name="android:textColor">?attr/Text_stock_more_text_color</item>
+    </style>
+
+    <style name="Text_gray_16">
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:fromAlpha">0</item>
+        <item name="android:toAlpha">0</item>
+    </style>
+
+    <style name="SZ_more_text">
+        <item name="android:textColor">?attr/style_market_value_text_color</item>
+        <item name="android:textSize">@dimen/font_11</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 只有上边框 -->
+
+    <!-- 左、上边框线 -->
+    <style name="Text_bg">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/shape_tev_bg</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">?attr/f10_content_text_color</item>
+        </style>
+
+    <!--只有上边框-->
+    <style name="Text_bg_tl" parent="Text_bg">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@drawable/shape_tev_bg1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text_bg_tl2" parent="Text_bg">
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+    <!-- 左、上、右边框线 -->
+    <!--<item name="android:background">@drawable/shape_tev_bg2</item>-->
+    <style name="Text_bg_tl3" parent="Text_bg">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+
+    <!-- 左、上、下边框线 -->
+    <style name="Text_bg_ltrb" parent="Text_bg">
+        <item name="android:background">@drawable/shape_tev_bg3</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text_bg_ltrb2" parent="Text_bg_ltrb">
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <!-- 左、上、右、下边框线 -->
+    <style name="Text_bg_ltrb3" parent="Text_bg_ltrb">
+        <item name="android:background">@drawable/shape_btn_bg_gray</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="Text_cash_flow">
+        <item  name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/f10_content_text_color</item>
+    </style>
+
+</resources>

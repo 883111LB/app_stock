@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tev_setcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="科"
+            android:textColor="@color/bg_orange"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tev_company"
+            tools:text="N贝斯特"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color"/>
+
+        <TextView
+            android:id="@+id/tev_code"
+            tools:text="300580"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text_gray_11"
+            android:textColor="?attr/item_sub_text_color"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tev_price"
+        tools:text="13.81"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="?attr/item_context_text_color"
+        android:textSize="@dimen/font_21"
+        />
+
+    <TextView
+        android:id="@+id/tev_percent"
+        android:text="--"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/font_16"
+        android:textColor="?attr/item_context_text_color"/>
+
+    <TextView
+        android:id="@+id/tev_common"
+        tools:text="--"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/font_16"
+        android:textColor="?attr/item_context_text_color"/>
+
+</LinearLayout>

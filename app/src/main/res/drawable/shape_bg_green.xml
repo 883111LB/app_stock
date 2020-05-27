@@ -1,0 +1,12 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#2d7c2d" /> <!--设置填充颜色-->
+    <!--设置描边颜色-->
+    <stroke android:width="2.0dip"
+    android:color="#2d7c2d"
+    android:dashWidth="3.0dip"
+    android:dashGap="0.0dip" />
+    <corners android:radius="3dp" />  <!--设置圆角-->
+</shape>

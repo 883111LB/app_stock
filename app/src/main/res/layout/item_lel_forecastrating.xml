@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_organization"
+        android:text="一"
+        android:paddingRight="15dp"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp" />
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_new_rate"
+        android:text="一"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_last_rate"
+        android:text="一"
+        android:paddingRight="15dp"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp" />
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_time"
+        android:text="一"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+</LinearLayout>

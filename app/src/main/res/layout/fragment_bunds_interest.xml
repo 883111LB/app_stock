@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/basic"
+        android:text="付息情况"
+        style="@style/f10_title_text" />
+    <TextView
+        android:layout_toRightOf="@id/basic"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line1"
+        android:layout_below="@id/basic"
+        style="@style/f10_underline" />
+    <TextView
+        android:id="@+id/boundsname"
+        android:text="债券名称"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_boundsname"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/boundsname"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/abbreviation"
+        android:text="债券简称"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_boundsname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_abbreviation"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/abbreviation"
+        android:layout_below="@id/tev_boundsname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/code"
+        android:text="债券代码"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_abbreviation"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_code"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/code"
+        android:layout_below="@id/tev_abbreviation"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/interest_rate_year"
+        android:text="付息年度"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_code"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_interest_rate_year"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/interest_rate_year"
+        android:layout_below="@id/tev_code"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/hundred_interest"
+        android:text="每百元面值所得利息"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_interest_rate_year"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_hundred_interest"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/hundred_interest"
+        android:layout_below="@id/tev_interest_rate_year"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/period_interest"
+        android:text="本期利率(%)"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_hundred_interest"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_period_interest"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/period_interest"
+        android:layout_below="@id/tev_hundred_interest"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/registration_date"
+        android:text="债券登记日"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_period_interest"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_registration_date"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/registration_date"
+        android:layout_below="@id/tev_period_interest"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/payment_day"
+        android:text="利息支付日"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tev_registration_date"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_payment_day"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/payment_day"
+        android:layout_below="@id/tev_registration_date"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/base_date"
+        android:text="除息基准日"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_payment_day"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_base_date"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/base_date"
+        android:layout_below="@id/tev_payment_day"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/redemption_date"
+        android:text="集中兑付期"
+        android:layout_alignRight="@+id/hundred_interest"
+        android:layout_alignEnd="@+id/hundred_interest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_base_date"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_redemption_date"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/redemption_date"
+        android:layout_below="@id/tev_base_date"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+</RelativeLayout>

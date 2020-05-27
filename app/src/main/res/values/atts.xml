@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="filtercolor" format="color|reference"/>
+    <attr name="is_back" format="boolean"/>
+    <attr name="src_left" format="reference"/>
+    <attr name="src_right_1" format="reference"/>
+    <attr name="src_right_2" format="reference"/>
+    <attr name="text_left" format="reference|string"/>
+    <attr name="textColor_left" format="reference|color"/>
+    <attr name="textSize_left" format="reference|dimension"/>
+    <attr name="text_title" format="reference|string"/>
+    <attr name="textColor_title" format="reference|color"/>
+    <attr name="textSize_title" format="reference|dimension"/>
+    <declare-styleable name="ToolBar">
+        <attr name="is_back" />
+        <attr name="src_left" />
+        <attr name="src_right_1" />
+        <attr name="src_right_2" />
+        <attr name="text_left" />
+        <attr name="textColor_left" />
+        <attr name="textSize_left" />
+        <attr name="text_title" />
+        <attr name="textColor_title" />
+        <attr name="textSize_title" />
+        <attr name="filtercolor" />
+    </declare-styleable>
+
+    <attr name="normalTextColor" format="color" />
+    <attr name="normalTextSize" format="dimension" />
+    <attr name="selectedTextColor" format="color" />
+    <attr name="selectedTextSize" format="dimension" />
+    <attr name="unitHight" format="dimension" />
+    <attr name="itemNumber" format="integer"/>
+    <attr name="lineColor" format="color" />
+    <attr name="bottomLineColor" format="color" />
+    <attr name="lineHeight" format="dimension" />
+    <attr name="firstLineAndSecondLineSpace" format="dimension" />
+    <attr name="maskHight" format="dimension"/>
+    <attr name="noEmpty" format="boolean"/>
+    <attr name="isEnable" format="boolean"/>
+
+    <declare-styleable name="WheelView">
+        <attr name="normalTextColor" />
+        <attr name="normalTextSize"  />
+        <attr name="selectedTextColor"  />
+        <attr name="selectedTextSize" />
+        <attr name="unitHight" />
+        <attr name="itemNumber" />
+        <attr name="lineColor" />
+        <attr name="bottomLineColor" />
+        <attr name="lineHeight"  />
+        <attr name="firstLineAndSecondLineSpace"  />
+        <attr name="maskHight" />
+        <attr name="noEmpty" />
+        <attr name="isEnable" />
+    </declare-styleable>
+
+    <!-- 吸顶 -->
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+
+    <!-- 吸顶 -->
+    <declare-styleable name="ColorImageView">
+        <attr name="filtercolor" />
+    </declare-styleable>
+    <declare-styleable name="AutofitTextView">
+        <!-- Minimum size of the text. -->
+        <attr name="minTextSize" format="dimension" />
+        <!-- Amount of precision used to calculate the correct text size to fit within its
+        bounds. Lower precision is more precise and takes more time. -->
+        <attr name="precision" format="float" />
+        <!-- Defines whether to automatically resize text to fit to the view's bounds. -->
+        <attr name="sizeToFit" format="boolean" />
+    </declare-styleable>
+    
+    <!--<declare-styleable name="HSUpDownChartStyle">-->
+        <!--<attr name="chartTitle" format="string"></attr>-->
+        <!--<attr name="xchartName" format="string"></attr>-->
+        <!--<attr name="ychartName" format="string"></attr>-->
+        <!--<attr name="chartTextSize" format="dimension|integer"></attr>-->
+        <!--<attr name="chartTextColor" format="color|integer"></attr>-->
+    <!--</declare-styleable>-->
+</resources>

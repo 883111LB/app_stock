@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background_color"
+    android:orientation="vertical"
+    tools:context="com.cvicse.stock.markets.ui.DataCenterActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="?attr/bg_toolbar"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:text_title="数据中心" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip">
+        <LinearLayout
+            android:id="@+id/lly_margin_trading"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="1">
+
+            <com.cvicse.stock.view.ColorImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rzrq_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:text="融资融券"
+                android:textColor="?attr/text_withe_black"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lly_price_analysis"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="1">
+
+            <com.cvicse.stock.view.ColorImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zdfx_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:text="涨跌分析"
+                android:textColor="?attr/text_withe_black"
+                android:textSize="14dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lly_replay"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="1">
+
+            <com.cvicse.stock.view.ColorImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fpzd_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:text="复盘涨跌"
+                android:textColor="?attr/text_withe_black"
+                android:textSize="14dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lly_cxg"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="1">
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="新"
+                android:textColor="@color/withe"
+                android:textSize="22sp"
+                android:background="@drawable/bg_circle_orange"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:text="次新股"
+                android:textColor="?attr/text_withe_black"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip">
+        <LinearLayout
+            android:id="@+id/lly_cxz"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="1">
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="新"
+                android:textColor="@color/withe"
+                android:textSize="22sp"
+                android:background="@drawable/bg_circle_orange"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dip"
+                android:text="次新债"
+                android:textColor="?attr/text_withe_black"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="1">
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

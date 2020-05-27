@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout"
+    android:padding="5.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/indexTitle"
+        android:text="最新指标"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:id="@+id/tev_indexdate"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/f10_underline"
+        android:layout_below="@id/tev_indexdate"
+        style="@style/f10_underline" />
+
+    <TextView
+        android:id="@+id/basiceps"
+        android:text="每股收益"
+        android:layout_below="@id/f10_underline"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_basiceps"
+        android:text="一"
+        android:layout_below="@id/f10_underline"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/cutbasiceps"
+        android:text="扣非每股收益"
+        android:layout_below="@id/basiceps"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_cutbasiceps"
+        android:text="一"
+        android:layout_below="@id/tev_basiceps"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/bvps"
+        android:text="每股净资产"
+        android:layout_below="@id/cutbasiceps"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_bvps"
+        android:text="一"
+        android:layout_below="@id/tev_cutbasiceps"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/reserveps"
+        android:text="每股资本公积金"
+        android:layout_below="@id/bvps"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_reserveps"
+        android:text="一"
+        android:layout_below="@id/tev_bvps"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/netcashflowoperps"
+        android:text="每股经营性现金流"
+        android:layout_below="@id/reserveps"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_netcashflowoperps"
+        android:text="一"
+        android:layout_below="@id/tev_reserveps"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/retainedearningps"
+        android:text="每股未分配利润"
+        android:layout_below="@id/netcashflowoperps"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_retainedearningps"
+        android:text="一"
+        android:layout_below="@id/tev_netcashflowoperps"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/annuroe"
+        android:text="净资产收益率"
+        android:layout_below="@id/retainedearningps"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_annuroe"
+        android:text="一"
+        android:layout_below="@id/tev_retainedearningps"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/grossprofitmargin"
+        android:text="毛利率（％）"
+        android:layout_below="@id/annuroe"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_grossprofitmargin"
+        android:text="一"
+        android:layout_below="@id/tev_annuroe"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/operrevenue"
+        android:text="营业收入"
+        android:layout_below="@id/grossprofitmargin"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_operrevenue"
+        android:text="一"
+        android:layout_below="@id/tev_grossprofitmargin"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/operrevenueyoy"
+        android:text="营收同比增"
+        android:layout_below="@id/operrevenue"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_operrevenueyoy"
+        android:text="一"
+        android:layout_below="@id/tev_operrevenue"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/netprofitparentcom"
+        android:text="净利润"
+        android:layout_below="@id/operrevenueyoy"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_netprofitparentcom"
+        android:text="一"
+        android:layout_below="@id/tev_operrevenueyoy"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/netprofitparentcomyoy"
+        android:text="净利润同比增"
+        android:layout_below="@id/netprofitparentcom"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_netprofitparentcomyoy"
+        android:text="一"
+        android:layout_below="@id/tev_netprofitparentcom"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/netprofitcutparentcom"
+        android:text="扣非净利润"
+        android:layout_below="@id/netprofitparentcomyoy"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_netprofitcutparentcom"
+        android:text="一"
+        android:layout_below="@id/tev_netprofitparentcomyoy"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/netprofitcutparentcomyoy"
+        android:text="扣非净利润同比增"
+        android:layout_below="@id/netprofitcutparentcom"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_netprofitcutparentcomyoy"
+        android:text="一"
+        android:layout_below="@id/tev_netprofitcutparentcom"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/totalshare"
+        android:text="总股本"
+        android:layout_below="@id/netprofitcutparentcomyoy"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_totalshare"
+        android:text="一"
+        android:layout_below="@id/tev_netprofitcutparentcomyoy"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/totalsharel"
+        android:visibility="gone"
+        android:text="流通股份合计"
+        android:layout_below="@id/totalshare"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_totalsharel"
+        android:visibility="gone"
+        android:text="一"
+        android:layout_below="@id/totalshare"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/bigEvent"
+        android:layout_marginTop="5dp"
+        android:text="大事提醒"
+        android:visibility="gone"
+        android:layout_below="@id/totalshare"
+        style="@style/f10_title_text" />
+
+    <View
+        android:id="@+id/bigEvent_underline"
+        android:visibility="gone"
+        android:layout_below="@id/bigEvent"
+        style="@style/f10_underline" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_bigEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10.0dp"
+        android:visibility="gone"
+        android:layout_below="@id/bigEvent_underline" />
+
+    <TextView
+        android:id="@+id/abstract1"
+        android:layout_marginTop="5dp"
+        android:text="分红配送"
+        android:layout_below="@id/lel_bigEvent"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:id="@+id/abstract2"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/abstract1"
+        android:layout_below="@id/lel_bigEvent"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/abstract3"
+        android:layout_below="@id/abstract2"
+        style="@style/f10_underline" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/abstract4"
+        android:text="公布日期"
+        android:layout_below="@id/abstract3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/abstract5"
+        android:text="分红扩股方案"
+        android:layout_toRightOf="@id/abstract4"
+        android:layout_below="@id/abstract3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/abstract6"
+        android:text="除权息日"
+        android:layout_toRightOf="@id/abstract5"
+        android:layout_below="@id/abstract3"
+        style="@style/f10_date_text" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_dividends_distribution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abstract4" />
+</RelativeLayout>

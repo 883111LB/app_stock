@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="?attr/background_color"
+              tools:context=".portfolio.activity.RecentlyActivity">
+ <com.cvicse.stock.base.ToolBar
+     android:id="@+id/topbar"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     app:text_title="最近浏览"
+     app:filtercolor="?attr/filtercolor_toolbar"
+     app:textColor_title="?attr/text_toolbar_title_color"
+     app:src_left="@drawable/common_return_back_arrow"
+     app:src_right_1="@drawable/navigationbar_button_search"
+     android:background="?attr/bg_toolbar" />
+
+ <LinearLayout
+     android:id="@+id/lel_list"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+
+  <LinearLayout
+      android:id="@+id/item_scroll_title"
+      android:layout_width="fill_parent"
+      android:layout_height="50dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal" >
+
+   <TextView
+       android:layout_width="100dp"
+       android:layout_height="fill_parent"
+       android:textColor="@color/colorPrimary"
+       android:gravity="center"
+       android:text="名称"
+       android:id="@+id/textView"/>
+
+   <com.cvicse.stock.view.CHScrollView
+       android:layout_width="wrap_content"
+       android:layout_gravity="center_vertical"
+       android:layout_height="50dp"
+       android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+     <TextView
+         android:text="最新"
+         android:id="@+id/stock_lastPrice"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+     <TextView
+         android:text="涨幅"
+         android:id="@+id/stock_changeRate"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"
+         />
+
+     <TextView
+         android:id="@+id/stock_change"
+         android:text="涨跌"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+
+     <TextView
+         android:id="@+id/stock_nowVolume"
+         android:text="成交量"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+
+     <TextView
+         android:id="@+id/stock_amount"
+         android:text="成交额"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+
+     <TextView
+         android:id="@+id/stock_turnoverRate"
+         android:text="换手率"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+
+     <TextView
+         android:id="@+id/stock_volumeRatio"
+         android:text="量比"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+
+     <TextView
+         android:id="@+id/stock_amplitudeRate"
+         android:text="振幅"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+
+     <TextView
+         android:id="@+id/stock_highPrice"
+         android:text="最高"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+
+     <TextView
+         android:id="@+id/stock_lowPrice"
+         android:text="最低"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+
+     <TextView
+         android:id="@+id/stock_kaipan"
+         android:text="开盘"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+
+     <TextView
+         android:id="@+id/stock_preClosePrice"
+         android:text="昨收"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+
+     <TextView
+         android:id="@+id/tev_pe"
+         android:text="市盈(动)"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+     <TextView
+         android:id="@+id/tev_pe2"
+         android:text="市盈(静)"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+     <TextView
+         android:id="@+id/tev_pb_ip"
+         android:text="市净率"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18" />
+     <TextView
+         android:id="@+id/tev_orderRatio"
+         android:text="委比"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+     <TextView
+         android:id="@+id/tev_totalValue"
+         android:text="总市值"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"/>
+     <TextView
+         android:id="@+id/tev_flowValue"
+         android:text="流通值"
+         android:textColor="@color/appoint_font_color_gray"
+         android:textSize="@dimen/font_14"
+         style="@style/rankging_text_18"
+         />
+    </LinearLayout>
+   </com.cvicse.stock.view.CHScrollView>
+
+  </LinearLayout>
+
+  <com.cvicse.stock.view.HVListView
+      android:id="@+id/scroll_list"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:divider="@null"
+      android:cacheColorHint="@android:color/transparent"
+      android:scrollbars="none" >
+  </com.cvicse.stock.view.HVListView>
+
+ </LinearLayout>
+
+ <TextView
+     android:id="@+id/tev_content"
+     android:gravity="center"
+     android:text="暂无浏览"
+     android:textSize="16sp"
+     android:visibility="gone"
+     android:textColor="@color/tev_content"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+ </TextView>
+
+</LinearLayout>

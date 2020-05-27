@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="?attr/markert_detail_top_bg"
+    android:padding="5dip"
+    android:layout_width="match_parent"
+    android:layout_height="100dip">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6">
+        <com.cvicse.stock.view.AutofitTextView
+            android:textSize="30dp"
+            android:gravity="center"
+            android:id="@+id/tev_lastPrice"
+            android:textColor="?attr/text_withe_black"
+            android:paddingRight="5dip"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            />
+
+        <TextView
+            android:textSize="@dimen/font_14"
+            android:layout_gravity="center"
+            android:id="@+id/tev_changeRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingRight="5dp"
+            android:textColor="?attr/text_withe_black"
+            android:singleLine="true"
+            android:layout_below="@id/tev_lastPrice"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:textSize="@dimen/font_14"
+            android:layout_gravity="center"
+            android:id="@+id/tev_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="?attr/text_withe_black"
+            android:layout_toLeftOf="@+id/tev_changeRate"
+            android:layout_below="@id/tev_lastPrice"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:text="最高"
+            style="@style/style_market_key" />
+        <TextView
+            android:id="@+id/tev_max_high"
+            style="@style/style_market_value_top" />
+        <TextView
+            android:text="最低"
+            style="@style/style_market_key" />
+        <TextView
+            android:id="@+id/tev_max_low"
+            style="@style/style_market_value_top" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:text="今开"
+            style="@style/style_market_key" />
+        <TextView
+            android:id="@+id/tev_open"
+            style="@style/style_market_value_top" />
+        <TextView
+            android:id="@+id/tev_rateClose"
+            android:text="换手率"
+            style="@style/style_market_key" />
+        <TextView
+            android:id="@+id/tev_turnover_rate"
+            style="@style/style_market_value_top" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="成交量"
+                style="@style/style_market_key" />
+            <TextView
+                android:id="@+id/tev_volume"
+                style="@style/style_market_value_top" />
+            <TextView
+                android:text="成交额"
+                style="@style/style_market_key" />
+            <TextView
+                android:id="@+id/tev_turnover"
+                style="@style/style_market_value_top" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/frl_hidevalue"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_hideshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_tobottom"
+                android:scaleType="fitCenter" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
+
+    <!--android:text="&#45;&#45;"-->

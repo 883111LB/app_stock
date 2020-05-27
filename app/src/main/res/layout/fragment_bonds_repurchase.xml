@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/basic"
+        android:text="债券回购"
+        style="@style/f10_title_text" />
+    <TextView
+        android:layout_toRightOf="@id/basic"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line1"
+        android:layout_below="@id/basic"
+        style="@style/f10_underline" />
+    <TextView
+        android:id="@+id/boundsname"
+        android:text="债券名称"
+        android:layout_alignRight="@+id/exchange_period"
+        android:layout_alignEnd="@+id/exchange_period"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_boundsname"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/boundsname"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/abbreviation"
+        android:text="债券简称"
+        android:layout_alignRight="@+id/exchange_period"
+        android:layout_alignEnd="@+id/exchange_period"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_boundsname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_abbreviation"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/abbreviation"
+        android:layout_below="@id/tev_boundsname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/code"
+        android:text="债券代码"
+        android:layout_alignRight="@+id/exchange_period"
+        android:layout_alignEnd="@+id/exchange_period"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_abbreviation"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_code"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/code"
+        android:layout_below="@id/tev_abbreviation"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/adjust_day"
+        android:text="调整日"
+        android:layout_alignRight="@+id/exchange_period"
+        android:layout_alignEnd="@+id/exchange_period"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_code"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_adjust_day"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/adjust_day"
+        android:layout_below="@id/tev_code"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/current_denomination"
+        android:text="现券面额"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@id/adjust_day"
+        android:layout_below="@id/tev_adjust_day"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_current_denomination"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/current_denomination"
+        android:layout_below="@id/tev_adjust_day"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/conversion_ratio"
+        android:text="折算比率(%)"
+        android:layout_alignRight="@+id/exchange_period"
+        android:layout_alignEnd="@+id/exchange_period"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_current_denomination"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_conversion_ratio"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/conversion_ratio"
+        android:layout_below="@id/tev_current_denomination"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/discounted_price"
+        android:text="折换价"
+        android:layout_alignRight="@+id/exchange_period"
+        android:layout_alignEnd="@+id/exchange_period"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_conversion_ratio"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_discounted_price"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/discounted_price"
+        android:layout_below="@id/tev_conversion_ratio"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/exchange_period"
+        android:text="集中兑付期(启始-截止)"
+        android:layout_below="@id/discounted_price"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_exchange_period"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/exchange_period"
+        android:layout_below="@id/tev_discounted_price"
+        style="@style/f10_content_text" />
+
+</RelativeLayout>

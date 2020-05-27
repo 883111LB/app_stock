@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingLeft="33dp"
+    android:paddingRight="33dp"
+    android:paddingTop="11dp"
+    android:paddingBottom="11dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tev_more_price"
+        android:textColor="?attr/item_sub_text_color"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <com.cvicse.stock.view.CustomProgressBar
+        android:id="@+id/pgb_more_price"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tev_more_volume"
+        android:gravity="right"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="?attr/item_main_text_color"
+        android:layout_height="wrap_content" />
+</LinearLayout>

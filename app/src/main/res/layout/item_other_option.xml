@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:descendantFocusability="blocksDescendants"
+     android:orientation="horizontal"
+     android:tag="1">
+
+    <LinearLayout
+        android:id="@+id/lnl_name"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tev_name"
+            android:textColor="?attr/item_main_text_color"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text_white_16"/>
+
+        <TextView
+            android:id="@+id/tev_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnl_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tev_lastPrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_changeRate"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_change"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 均价 -->
+            <TextView
+                android:id="@+id/tev_averageValue"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 今收价 -->
+            <TextView
+                android:id="@+id/tev_close"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 今虚实度 -->
+            <TextView
+                android:id="@+id/tev_currDelta"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 执行价格 -->
+            <TextView
+                android:id="@+id/tev_exePrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 最低价 -->
+            <TextView
+                android:id="@+id/tev_lowPrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 今开价 -->
+            <TextView
+                android:id="@+id/tev_openPrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 昨虚实度 -->
+            <TextView
+                android:id="@+id/tev_preDelta"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 昨结算 -->
+            <TextView
+                android:id="@+id/tev_preSettlement"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 前结算价 -->
+            <TextView
+                android:id="@+id/tev_presetPrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 今结算价 -->
+            <TextView
+                android:id="@+id/tev_settlement"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 期货品种 -->
+            <TextView
+                android:id="@+id/tev_en"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 跌停价 -->
+            <TextView
+                android:id="@+id/tev_limitDown"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 涨停价 -->
+            <TextView
+                android:id="@+id/tev_limitUp"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+            <!-- 昨收价 -->
+            <TextView
+                android:id="@+id/tev_preClosePrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+</LinearLayout>

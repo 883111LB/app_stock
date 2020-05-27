@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    tools:context=".portfolio.activity.RecentlyActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="最近浏览"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:src_right_1="@drawable/navigationbar_button_search"
+        android:background="@color/bg_toolbar_color" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:text="名称" />
+
+        <com.cvicse.stock.view.CHScrollView
+            android:id="@+id/item_scroll_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="50dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/stock_lastPrice"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tev_lastPrice"
+                    android:text="最新"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+                    <ImageView
+                        android:id="@+id/img__lastPrice"
+                        android:layout_toRightOf="@+id/tev_lastPrice"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_changeRate"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tev_changeRate"
+                    android:text="涨幅"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_changeRate"
+                        android:layout_toRightOf="@+id/tev_changeRate"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_change"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tev_change"
+                    android:text="涨跌"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_change"
+                        android:layout_toRightOf="@+id/tev_change"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_nowVolume"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_volume"
+                        android:text="成交量"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_nowVolume"
+                        android:layout_toRightOf="@+id/tev_volume"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_amount"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_amount"
+                        android:text="成交额"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_amount"
+                        android:layout_toRightOf="@+id/tev_amount"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_turnoverRate"
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tev_turnoverRate"
+                        android:text="换手率"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_turnoverRate"
+                        android:layout_toRightOf="@+id/tev_turnoverRate"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_volumeRatio"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_volumeRatio"
+                        android:text="量比"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_volumeRatio"
+                        android:layout_toRightOf="@+id/tev_volumeRatio"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_amplitudeRate"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_amplitudeRate"
+                        android:text="振幅"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_vamplitudeRate"
+                        android:layout_toRightOf="@+id/tev_amplitudeRate"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_highPrice"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_highPrice"
+                        android:text="最高"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_highPrice"
+                        android:layout_toRightOf="@+id/tev_highPrice"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_lowPrice"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_lowPrice"
+                        android:text="最低"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_lowPrice"
+                        android:layout_toRightOf="@+id/tev_lowPrice"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_kaipan"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_kaipan"
+                        android:text="开盘"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_kaipan"
+                        android:layout_toRightOf="@+id/tev_kaipan"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_preClosePrice"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_preClosePrice"
+                        android:text="昨收"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_preClosePrice"
+                        android:layout_toRightOf="@+id/tev_preClosePrice"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_pe"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                         android:id="@+id/tev_pe"
+                        android:text="市盈率"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_pe"
+                        android:layout_toRightOf="@+id/tev_pe"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/stock_orderRatio"
+                    android:layout_width="78dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tev_orderRatio"
+                        android:text="委比"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/appoint_font_color_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_orderRatio"
+                        android:layout_toRightOf="@+id/tev_orderRatio"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.cvicse.stock.view.CHScrollView>
+
+    </LinearLayout>
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshListView
+        android:id="@+id/scroll_list"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:listSelector="@color/bg_white"
+        android:cacheColorHint="@android:color/transparent">
+    </com.cvicse.stock.pulltorefresh.PullToRefreshListView>
+</LinearLayout>

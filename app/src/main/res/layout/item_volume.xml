@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:tag="1"
+    >
+    <!--android:background="@drawable/item_bg_recently_selector"-->
+<!-- 分量列表item -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--<TextView-->
+            <!--android:id="@+id/tev_volumes"-->
+            <!--style="@style/rankging_text_18"-->
+            <!--android:textSize="@dimen/font_12"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_weight="1"/>-->
+
+        <TextView
+            android:id="@+id/tev_buyvolumes"
+            style="@style/rankging_text_18"
+            android:textSize="@dimen/font_12"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tev_qj"
+            style="@style/rankging_text_18"
+            android:textSize="@dimen/font_12"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tev_sellvolumes"
+            style="@style/rankging_text_18"
+            android:textSize="@dimen/font_12"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/basic"
+        android:text="债券概况"
+        style="@style/f10_title_text" />
+    <TextView
+        android:layout_toRightOf="@id/basic"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line1"
+        android:layout_below="@id/basic"
+        style="@style/f10_underline" />
+    <TextView
+        android:id="@+id/boundsname"
+        android:text="债券名称"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_boundsname"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/boundsname"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/abbreviation"
+        android:text="债券简称"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_boundsname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_abbreviation"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/abbreviation"
+        android:layout_below="@id/tev_boundsname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/code"
+        android:text="债券代码"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_abbreviation"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_code"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/code"
+        android:layout_below="@id/tev_abbreviation"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/bond_properties"
+        android:text="债券性质"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_code"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_bond_properties"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/bond_properties"
+        android:layout_below="@id/tev_code"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/credit_rating"
+        android:text="债券信用评级"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_bond_properties"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_credit_rating"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/credit_rating"
+        android:layout_below="@id/tev_bond_properties"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/denomination"
+        android:text="债券面额"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_credit_rating"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_denomination"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/denomination"
+        android:layout_below="@id/tev_credit_rating"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/yearlimit"
+        android:text="债券年限"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_denomination"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_yearlimit"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/yearlimit"
+        android:layout_below="@id/tev_denomination"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/benchmark_interest_rate"
+        android:text="债券基准利率(%)"
+        android:layout_below="@id/tev_yearlimit"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_benchmark_interest_rate"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/benchmark_interest_rate"
+        android:layout_below="@id/tev_yearlimit"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/interest_rate_method"
+        android:text="计息方式"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_benchmark_interest_rate"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_interest_rate_method"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/interest_rate_method"
+        android:layout_below="@id/tev_benchmark_interest_rate"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/way_interest"
+        android:text="付息方式"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_interest_rate_method"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_way_interest"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/way_interest"
+        android:layout_below="@id/tev_interest_rate_method"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/listingdate"
+        android:text="上市日期"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_way_interest"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_listingdate"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/listingdate"
+        android:layout_below="@id/tev_way_interest"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/market"
+        android:text="市场"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_listingdate"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_market"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/market"
+        android:layout_below="@id/tev_listingdate"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/listing_status"
+        android:text="上市状态"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_market"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_listing_status"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/listing_status"
+        android:layout_below="@id/tev_market"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/exchangeday"
+        android:text="兑付日"
+        android:layout_alignRight="@+id/benchmark_interest_rate"
+        android:layout_alignEnd="@+id/benchmark_interest_rate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tev_listing_status"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_exchangeday"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/exchangeday"
+        android:layout_below="@id/tev_listing_status"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+</RelativeLayout>

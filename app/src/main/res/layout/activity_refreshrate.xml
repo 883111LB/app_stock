@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:background="?attr/background_color"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="刷新频率"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:is_back="false"
+        android:background="?attr/bg_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rel_norefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="不刷新"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_norefresh"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_realtime_refresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="实时刷新"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_realtime_refresh"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_fivesecondrefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="5秒"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_five"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_fifteenrefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="15秒"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_fifteen"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_thirtyrefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="30秒"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_thirty"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_sixtyrefresh"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="60秒"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_sixty"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="?attr/setting_item_text_color"
+        android:text="据港交所要求,港股免费实时行情需点击刷新获取最新报价"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

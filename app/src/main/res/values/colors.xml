@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#303F9F</color><!--状态栏-->
+    <color name="colorPrimary">#3F51B5</color><!--actionbar的颜色-->
+    <color name="colorAccent">#FF4081</color>
+
+    <!--背景-->
+    <color name="background_black_color">#0f1418</color>
+    <color name="bg_black_light_color">#ff1d2228</color>
+    <color name="bg_toolbar_color">#ff101419</color>
+    <color name="bg_gray">#f2f2f2</color>
+    <color name="bg_gray_dark">#ececec</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="bg_cyan_dark">#00acb5</color>
+    <color name="bg_blue">#4DAEFF</color>
+    <color name="bg_blue_light">#efb9cff2</color>
+    <color name="bg_black_light">#999999</color>
+    <color name="bg_orange">#FE6400</color>
+    <color name="bg_gray_task_tracking">#f5f5f5</color>
+    <color name="bg_section">#161A20</color>
+    <color name="bg_item_section">#101419</color>
+    <color name="bg_more_item">#101419</color>
+    <color name="bg_line">#ff161a20</color>
+    <color name="bg_titlebarbackground">#ff161a20</color>
+    <color name="bg_pressed">#ff2e2e2e</color>
+    <color name="bg_shqq_selected">#182128</color>
+    <color name="bg_shqq_unselected">#000000</color>
+    <color name="bg_shqq">#414548</color>
+    <color name="bg_shqq_q">#282828</color>
+    <color name="bg_shqq_p">#202020</color>
+    <color name="dialog">#424242</color>
+
+    <color name="bg_news">#1D2228</color>
+
+    <color name="bg_black">#ff192028</color>
+
+    <!--文字颜色-->
+    <color name="withe">#ffffff</color>
+    <color name="text_cyan_dark">#00acb5</color>
+    <color name="text_green">#2d7c2d</color>
+    <color name="text_black">#666666</color>
+    <color name="text_black_light">#999999</color>
+    <color name="text_black_dark">#333333</color>
+    <color name="text_orange">#fe6400</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_blue">#ff3897db</color>
+    <color name="text_yellow">#ffcc00</color>
+    <color name="text_red">#ffdd0000</color>
+    <color name="text_white_light">#fcfcfc</color>
+    <color name="text_gray_light">#A5A9AD</color>
+    <color name="text_gray">#959595</color>
+    <color name="text_gray_alpha">#d3dfe8</color>
+    <color name="text_blue2">#54728E</color>
+
+    <color name="stock_f10_content_text_color">#fff7fbff</color>
+    <color name="stock_f10_date_text_color">#ff8c8f94</color>
+    <color name="stock_f10_title_text_color">#ff0d99e5</color>
+
+
+    <color name="pressed">#ff2e2e2e</color>
+    <color name="unpressed3">#ff161a20</color>
+    <color name="appoint_font_color_gray">#B1B1B1</color>
+    <color name="font_color_white">#ffffff</color>
+    <color name="tev_content">#A3A4A6</color>
+
+    <color name="tev_shqq">#b4b4b4</color>
+
+    <color name="calendar_disable_color">#DDDDDD</color>
+    <color name="calendar_enable_color">#8E8E8E</color>
+    <color name="calendar_threeday_color">#FA383A</color>
+    <color name="white">#fff</color>
+
+    <color name="stock_total_red1">#FFd90302</color>
+    <color name="stock_total_red2">#FFB00306</color>
+    <color name="stock_total_red3">#FF8B0303</color>
+    <color name="stock_total_red4">#FF5A0402</color>
+    <color name="stock_total_green1">#FF04A903</color>
+    <color name="stock_total_green2">#FF038A04</color>
+    <color name="stock_total_green3">#FF026705</color>
+    <color name="stock_total_green4">#FF054502</color>
+
+    <color name="listview_divier">#DDDDDD</color>
+
+    <color name="bar_legend_one">#79bdfe</color>
+    <color name="bar_legend_two">#34a3fe</color>
+    <color name="bar_legend_three">#0281fe</color>
+    <color name="bar_legend_four">#025dfe</color>
+    <color name="line_color">#025dfe</color>
+    <color name="markview_color">#848E8E8E</color>
+
+</resources>

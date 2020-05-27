@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout_hk"
+        android:background="?attr/markert_tablayout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        ptr:tabTextColor="?attr/tablayout_tabTextColor"
+        ptr:tabIndicatorColor="?attr/tablayout_tabIndicatorColor"
+        ptr:tabSelectedTextColor="?attr/tablayout_tabSelectedTextColor" />
+    <LinearLayout
+        android:id="@+id/lel_btokerinfo"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tev_btokerinfo_1"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_2"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_3"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_4"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_5"
+                style="@style/SZ_more_text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tev_btokerinfo_6"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_7"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_8"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_9"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_10"
+                style="@style/SZ_more_text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tev_btokerinfo_11"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_12"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_13"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_14"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_15"
+                style="@style/SZ_more_text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tev_btokerinfo_16"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_17"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_18"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:id="@+id/tev_btokerinfo_19"
+                style="@style/SZ_more_text" />
+            <TextView
+                android:tag="1"
+                android:id="@+id/tev_btokerinfo_20"
+                style="@style/SZ_more_text" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

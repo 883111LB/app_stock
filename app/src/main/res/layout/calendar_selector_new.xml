@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/background_color"
+        android:orientation="vertical" >
+
+        <com.cvicse.stock.base.ToolBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:text_title="新股日历"
+            app:filtercolor="?attr/filtercolor_toolbar"
+            app:textColor_title="?attr/text_toolbar_title_color"
+            app:src_left="@drawable/common_return_back_arrow"
+            android:background="?attr/bg_toolbar" />
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight = "1"
+                android:textSize = "18sp"
+                android:gravity="center"
+                android:textColor="@color/text_black_light"
+                android:text="@string/sunday" />
+
+            <TextView
+                style="@style/calendar_week_item_style"
+                android:text="@string/monday" />
+
+            <TextView
+                style="@style/calendar_week_item_style"
+                android:text="@string/tuesday" />
+
+            <TextView
+                style="@style/calendar_week_item_style"
+                android:text="@string/wednesday" />
+
+            <TextView
+                style="@style/calendar_week_item_style"
+                android:text="@string/thursday" />
+
+            <TextView
+                style="@style/calendar_week_item_style"
+                android:text="@string/friday" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight = "1"
+                android:textSize = "18sp"
+                android:gravity="center"
+                android:textColor="@color/text_black_light"
+                android:text="@string/saturday" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginBottom="2dp"/>
+        <ScrollView
+            android:id="@+id/pull_scl_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                  android:id="@+id/lel_main"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical" >
+            </LinearLayout>
+
+        </ScrollView>
+-->
+
+    <FrameLayout
+        android:id="@+id/fry_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </LinearLayout>
+

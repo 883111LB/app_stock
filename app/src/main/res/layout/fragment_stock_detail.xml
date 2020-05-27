@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/psv_market"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrMode="both"
+        ptr:ptrAnimationStyle="flip">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_market_top_detail"/>
+            <ViewStub
+                android:id="@+id/vsb_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/layout_market_second_detail"/>
+            <ViewStub
+                android:id="@+id/vsb_threen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/layout_market_three_detail"
+                />
+
+            <!-- AH股模块 -->
+            <LinearLayout
+                android:id="@+id/lly_ah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2"
+                android:background="?attr/markert_detail_top_bg"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/tev_ah_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="--股报价"
+                    />
+                <TextView
+                    android:id="@+id/tev_ah_changeRate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="--"
+                    />
+                <TextView
+                    android:id="@+id/tev_ah_premium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:drawablePadding="@dimen/default_5"
+                    android:textSize="@dimen/font_12"
+                    android:drawableRight="@drawable/short_right"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="溢价(H/A)"
+                    />
+            </LinearLayout>
+            <!-- DR模块 -->
+            <LinearLayout
+                android:id="@+id/lly_dr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_2"
+                android:background="?attr/markert_detail_top_bg"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/tev_dr_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="DR股报价"
+                    />
+                <TextView
+                    android:id="@+id/tev_dr_changeRate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="--"
+                    />
+                <TextView
+                    android:id="@+id/tev_dr_premium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:drawablePadding="@dimen/default_5"
+                    android:textSize="@dimen/font_12"
+                    android:drawableRight="@drawable/short_right"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="溢价(DR/A)"
+                    />
+            </LinearLayout>
+
+            <!-- 可转债模块 -->
+            <LinearLayout
+                android:id="@+id/lly_bond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2"
+                android:background="?attr/markert_detail_top_bg"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/tev_bond_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="--"
+                    />
+                <TextView
+                    android:id="@+id/tev_bond_changeRate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="--"
+                    />
+                <TextView
+                    android:id="@+id/tev_bond_premium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:drawablePadding="@dimen/default_5"
+                    android:textSize="@dimen/font_12"
+                    android:drawableRight="@drawable/short_right"
+                    android:textColor="?attr/style_market_key_text_color"
+                    android:text="溢价 --"
+                    />
+            </LinearLayout>
+
+            <!-- 线图模块 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2"
+                >
+                <include layout="@layout/layout_chart_top_type"/>
+                <FrameLayout
+                    android:id="@+id/content_frame_tick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ViewStub
+                android:id="@+id/vsb_hk_stockinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/layout_hk_stockinfo"
+                />
+            <!--uk独有-->
+            <ViewStub
+                android:id="@+id/vsb_uk_stockinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/layout_uk_stockinfo"/>
+            <!-- F10模块 -->
+            <LinearLayout
+                android:tag="sticky"
+                android:layout_width="match_parent"
+                android:layout_height="40dip">
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:background="?attr/markert_tablayout_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    ptr:tabTextColor="?attr/tablayout_tabTextColor"
+                    ptr:tabIndicatorColor="?attr/tablayout_tabIndicatorColor"
+                    ptr:tabSelectedTextColor="?attr/tablayout_tabSelectedTextColor" />
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/frl_market_related"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </com.cvicse.stock.pulltorefresh.PullToRefreshScrollView>
+</FrameLayout>

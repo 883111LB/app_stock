@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:layout_marginRight="4dp"
+        android:id="@+id/img_important"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="100dp"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我国首个国家级航空发动机研究院成立"
+            android:textColor="?attr/item_main_text_color"
+            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="?attr/item_sub_text_color"
+                android:text="证券时报网"/>
+
+            <TextView
+                android:layout_gravity="right"
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="?attr/item_time_text_color"
+                android:text="12月28日"/>
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

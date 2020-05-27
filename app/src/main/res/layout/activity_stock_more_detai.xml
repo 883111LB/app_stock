@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ptr:text_title="自选"
+        ptr:src_left="@drawable/common_return_back_arrow"
+        ptr:textColor_title="?attr/text_toolbar_title_color"
+        ptr:src_right_1="@drawable/navigationbar_button_search"
+        ptr:filtercolor="?attr/filtercolor_toolbar"
+        android:background="?attr/bg_toolbar" />
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:background="?attr/markert_tablayout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        ptr:tabTextColor="?attr/tablayout_tabTextColor"
+        ptr:tabIndicatorColor="?attr/tablayout_tabIndicatorColor"
+        ptr:tabSelectedTextColor="?attr/tablayout_tabSelectedTextColor" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_stockdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

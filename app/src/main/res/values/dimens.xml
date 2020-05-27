@@ -1,0 +1,57 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="default_gap">16dp</dimen>
+    <dimen name="activity_toolbar">50dp</dimen>
+    <dimen name="default_40">40dp</dimen>
+    <dimen name="default_25">25dp</dimen>
+    <dimen name="default_30">30dp</dimen>
+    <dimen name="default_50">50dp</dimen>
+    <dimen name="default_60">60dp</dimen>
+    <dimen name="default_80">80dp</dimen>
+    <dimen name="default_90">90dp</dimen>
+    <dimen name="default_100">100dp</dimen>
+    <dimen name="default_10">10dp</dimen>
+    <dimen name="default_5">5dp</dimen>
+    <dimen name="default_15">15dp</dimen>
+    <dimen name="default_2">2dp</dimen>
+
+    <dimen name="font_larger">22sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_11">11sp</dimen>
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_19">19sp</dimen>
+    <dimen name="font_20">19sp</dimen>
+    <dimen name="font_21">19sp</dimen>
+    <dimen name="font_22">19sp</dimen>
+    <dimen name="font_23">19sp</dimen>
+    <dimen name="font_24">19sp</dimen>
+    <dimen name="font_25">19sp</dimen>
+    <dimen name="font_26">19sp</dimen>
+    <dimen name="font_27">19sp</dimen>
+    <dimen name="font_28">28sp</dimen>
+    <dimen name="font_38">38dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_44">44dp</dimen>
+
+    <dimen name="calendar_item_order_day_size">3.5sp</dimen>
+    <dimen name="calendar_item_nonorder_day_size">5sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

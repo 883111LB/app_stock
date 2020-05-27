@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/topbar"
+    android:layout_marginTop="@dimen/dimen_10"
+    >
+    <TextView
+        android:id="@+id/tev_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_30"
+        android:paddingLeft="@dimen/default_15"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/titlebar_vip_bg_img"
+        android:drawablePadding="8dp"
+        android:layout_below="@id/topbar"
+        android:textSize="@dimen/font_15"
+        android:textColor="?attr/item_context_text_color"
+        android:text="大事提醒"
+        />
+
+    <RadioGroup
+        android:id="@+id/rdg_big_event"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_30"
+        android:layout_below="@id/topbar"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/default_15"
+        >
+
+        <RadioButton
+            android:id="@+id/rdb_date"
+            android:layout_width="@dimen/default_60"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/default_10"
+            android:gravity="center"
+            android:button="@null"
+            android:checked="true"
+            android:background="@drawable/selector_rdb"
+            android:textColor="@color/finance_textcolor_selector"
+            android:text="按时间"
+            />
+        <RadioButton
+            android:id="@+id/rdb_title"
+            android:layout_width="@dimen/default_60"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/selector_rdb"
+            android:textColor="@color/finance_textcolor_selector"
+            android:text="按栏目"
+            />
+    </RadioGroup>
+    <View
+        android:id="@+id/line_big_event"
+        android:layout_below="@id/rdg_big_event"
+        android:layout_marginLeft="@dimen/default_15"
+        android:layout_marginRight="@dimen/default_15"
+        android:layout_marginTop="@dimen/default_5"
+        android:layout_marginBottom="@dimen/default_10"
+        style="@style/f10_underline"
+        />
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lv_big_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line_big_event"
+        android:divider="@null"
+        >
+
+    </com.cvicse.stock.pulltorefresh.PullToRefreshListView>
+
+    <TextView
+        android:id="@+id/tev_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="?attr/text_withe_black"
+        android:layout_below="@id/line_big_event"
+        android:text="无相关信息"
+        />
+
+</RelativeLayout>

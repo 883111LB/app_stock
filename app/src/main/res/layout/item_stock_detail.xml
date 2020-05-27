@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:orientation="horizontal"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+    android:minHeight="30dp"
+    >
+
+    <TextView
+        android:id="@+id/tev_title"
+        android:layout_width="0dp"
+        android:paddingLeft="16dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_gravity="bottom"
+        tools:text="中签号公布日"
+        android:textColor="@color/text_gray"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tev_data"
+        android:layout_width="0dp"
+        tools:text="拉芳家化"
+        android:layout_gravity="bottom"
+        android:textColor="?attr/text_withe_black"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_weight="2"/>
+
+</LinearLayout>

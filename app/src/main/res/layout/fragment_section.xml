@@ -1,0 +1,440 @@
+<com.cvicse.stock.pulltorefresh.PullToRefreshScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ptr_section"
+    android:background="?attr/markert_fragment_bg"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       >
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_industry"
+             android:text="热门行业"
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_industry_add"
+             android:tag="1"
+             android:clickable="true"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_industry_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_industry"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent"
+          >
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+         <TextView
+             android:id="@+id/tev_concept"
+             android:text="热门概念"
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_concept_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_concept_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_concept"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp">
+
+         <TextView
+             android:id="@+id/tev_area"
+             android:text="热门地域"
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_area_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_area_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_area"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <!-- 方正行业 -->
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp">
+
+         <TextView
+             android:id="@+id/tev_fz"
+             android:text="方正行业"
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_fz_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_fz_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_fz"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_hk_trade"
+             android:text="港股行业"
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_hk_trade_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_hk_trade_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_hk_trade"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_trade_sw1"
+             android:text=" 申万一级行业 "
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_trade_sw1_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_trade_sw1_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_trade_sw1"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_trade_sw2"
+             android:text=" 申万二级行业 "
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_trade_sw2_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_trade_sw2_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_trade_sw2"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_trade_szyp"
+             android:text=" 优品行业 "
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_trade_szyp_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_trade_szyp_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_trade_szyp"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_area_szyp"
+             android:text=" 优品地区 "
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_area_szyp_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_area_szyp_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_area_szyp"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+      <RelativeLayout
+          android:background="?attr/markert_group_bg"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:paddingLeft="10dp"
+          >
+
+         <TextView
+             android:id="@+id/tev_notion_szyp"
+             android:text=" 优品概念 "
+             android:textColor="?attr/markert_group_text_color"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/frm_notion_szyp_add"
+             android:clickable="true"
+             android:tag="1"
+             android:layout_gravity="right"
+             android:layout_alignParentRight="true"
+             android:layout_width="60dp"
+             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_notion_szyp_add"
+                android:src="@drawable/img_stock_more"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"/>
+         </FrameLayout>
+      </RelativeLayout>
+      <com.cvicse.stock.view.MyGridView
+          android:id="@+id/grd_notion_szyp"
+          android:background="?attr/markert_group_bg"
+          android:numColumns="3"
+          android:horizontalSpacing="2dp"
+          android:verticalSpacing="2dp"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent">
+      </com.cvicse.stock.view.MyGridView>
+
+   </LinearLayout>
+</com.cvicse.stock.pulltorefresh.PullToRefreshScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="资讯"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="@color/text_white"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tev_title"
+                    tools:text="title"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tev_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="汇通网"/>
+
+                    <TextView
+                        android:id="@+id/tev_date"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2017-01-09 07:46"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginTop="5dp"
+                    android:background="#818181"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/img_news"
+                    android:visibility="gone"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"/>
+
+                <WebView
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/wev_newscontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </WebView>
+            </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

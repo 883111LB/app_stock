@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="新股日历"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:src_right_1="@drawable/navigationbar_button_search"
+        android:background="?attr/bg_toolbar" />
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/pull_scl_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="今日申购"
+                    android:gravity="left|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_blue"/>
+
+            </RelativeLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:id="@+id/lsv_sg"
+                android:divider="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.cvicse.stock.view.ListViewForScrollView>
+
+            <TextView
+                android:id="@+id/tev_sg_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="暂无"
+                android:gravity="center"
+                android:textColor="?attr/text_withe_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="今日上市"
+                    android:gravity="left|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_blue"/>
+
+            </RelativeLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:id="@+id/lsv_ss"
+                android:divider="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.cvicse.stock.view.ListViewForScrollView>
+
+            <TextView
+                android:id="@+id/tev_ss_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="暂无"
+                android:gravity="center"
+                android:textColor="?attr/text_withe_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="今日公布中签"
+                    android:gravity="left|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_blue"/>
+
+            </RelativeLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:id="@+id/lsv_zq"
+                android:layout_width="match_parent"
+                android:divider="@android:color/transparent"
+                android:layout_height="wrap_content">
+            </com.cvicse.stock.view.ListViewForScrollView>
+
+            <TextView
+                android:id="@+id/tev_zq_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="暂无"
+                android:gravity="center"
+                android:textColor="?attr/text_withe_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="即将发行"
+                    android:gravity="left|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_blue"/>
+
+            </RelativeLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:id="@+id/lsv_jjfx"
+                android:layout_width="match_parent"
+                android:divider="@android:color/transparent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tev_jjfx_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="暂无"
+                android:gravity="center"
+                android:textColor="?attr/text_withe_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="未上市"
+                    android:gravity="left|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_blue"/>
+
+            </RelativeLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:id="@+id/lsv_wss"
+                android:layout_width="match_parent"
+                android:divider="@android:color/transparent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tev_wss_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="暂无"
+                android:gravity="center"
+                android:textColor="?attr/text_withe_black"/>
+
+      </LinearLayout>
+    </com.cvicse.stock.pulltorefresh.PullToRefreshScrollView>
+</LinearLayout>

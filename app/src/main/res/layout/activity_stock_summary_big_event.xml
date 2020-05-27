@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_stock_summary_big_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/background_color"
+    tools:context="com.cvicse.stock.markets.ui.stockdetail.StockSummaryBigEventActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_toolbar"
+        ptr:text_title="浦发银行-大事提醒"
+        ptr:src_left="@drawable/common_return_back_arrow"
+        ptr:textColor_title="?attr/text_toolbar_title_color"
+        ptr:filtercolor="?attr/filtercolor_toolbar"
+        android:background="?attr/bg_toolbar" />
+
+    <ViewStub
+        android:id="@+id/vs_big_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_big_event"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_below="@id/topbar"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_block_trade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_block_trade"
+        android:layout_below="@id/topbar"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_chart_buy_sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_buy_sell"
+        android:layout_below="@id/topbar"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_stock_margintrade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_stock_margintrade"
+        android:layout_below="@id/topbar"
+        />
+    <ViewStub
+        android:id="@+id/vs_stock_intearactive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_stock_intearactive"
+        android:layout_below="@id/topbar"
+        />
+
+</RelativeLayout>

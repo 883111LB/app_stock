@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:paddingTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.cvicse.stock.portfolio.SortTextView
+            android:id="@+id/stev_price"
+            android:paddingLeft="33dp"
+            android:paddingRight="33dp"
+            android:layout_alignParentLeft="true"
+            android:text="价格"
+            android:textColor="?attr/item_time_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.cvicse.stock.portfolio.SortTextView
+            android:id="@+id/stev_volume"
+            android:paddingLeft="33dp"
+            android:paddingRight="33dp"
+            android:layout_alignParentRight="true"
+            android:textColor="?attr/item_time_text_color"
+            android:text="成交量"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_below="@+id/stev_volume"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="bottom"
+            android:background="@color/bg_black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+    <com.cvicse.stock.pulltorefresh.PullToRefreshListView
+        android:id="@+id/prlsv_stock_more_price"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

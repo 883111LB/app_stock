@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sl_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rag_bottom"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:id="@+id/lly_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lly_title"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:textColor="@color/colorPrimary"
+                >
+            </LinearLayout>
+
+            <com.cvicse.stock.view.CHScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+
+                >
+                <LinearLayout
+                    android:id="@+id/lly_chl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                </LinearLayout>
+            </com.cvicse.stock.view.CHScrollView>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/in_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/radio_layout"
+        />
+</RelativeLayout>

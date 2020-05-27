@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/basic"
+        android:text="基本情况"
+        style="@style/f10_title_text" />
+    <TextView
+        android:id="@+id/companyInfoDate"
+        android:layout_toRightOf="@id/basic"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line1"
+        android:layout_below="@id/companyInfoDate"
+        style="@style/f10_underline" />
+    <TextView
+        android:id="@+id/chiname"
+        android:text="公司名称    "
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_chiname"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/chiname"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/provincename"
+        android:text="注册地址    "
+        android:layout_below="@id/chiname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_provincename"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/provincename"
+        android:layout_below="@id/tev_chiname"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/legalrepr"
+        android:text="董事长        "
+        android:layout_below="@id/tev_provincename"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_legalrepr"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/legalrepr"
+        android:layout_below="@id/tev_provincename"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/regaddress"
+        android:text="董    秘        "
+        android:layout_below="@id/legalrepr"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_regaddress"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/regaddress"
+        android:layout_below="@id/legalrepr"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/bsecretarymail"
+        android:text="董秘邮箱    "
+        android:layout_below="@id/regaddress"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_bsecretarymail"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/bsecretarymail"
+        android:layout_below="@id/tev_regaddress"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/listingdate"
+        android:text="上市时间    "
+        android:layout_below="@id/bsecretarymail"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_listingdate"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/listingdate"
+        android:layout_below="@id/tev_bsecretarymail"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/listoprice"
+        android:text="首日开盘价"
+        android:layout_below="@id/listingdate"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/tev_listoprice"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/listoprice"
+        android:layout_below="@id/tev_listingdate"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/infoname"
+        android:text="所属行业    "
+        android:layout_below="@id/listoprice"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_infoname"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/infoname"
+        android:layout_below="@id/tev_listoprice"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/regcapital"
+        android:text="发行价        "
+        android:layout_below="@id/tev_infoname"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_regcapital"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/regcapital"
+        android:layout_below="@id/tev_infoname"
+        style="@style/f10_content_text" />
+    <!-- 质押比 -->
+    <TextView
+        android:id="@+id/pledgeratio"
+        android:text="质押比        "
+        android:layout_below="@id/regcapital"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/tev_pledgeratio"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/pledgeratio"
+        android:layout_below="@id/tev_regcapital"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/coreBusiness"
+        android:layout_marginTop="5dp"
+        android:text="主营业务"
+        android:layout_below="@id/pledgeratio"
+        style="@style/f10_title_text" />
+    <TextView
+        android:id="@+id/tev_coreBusinessDate"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tev_pledgeratio"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line2"
+        android:layout_marginTop="5.0dp"
+        android:layout_below="@id/tev_coreBusinessDate"
+        style="@style/f10_underline" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_main_bussiness"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/f10_profile_line2" />
+    <TextView
+        android:id="@+id/leaderPerson"
+        android:layout_marginTop="5dp"
+        android:text="公司高管"
+        android:layout_below="@id/lel_main_bussiness"
+        style="@style/f10_title_text" />
+    <TextView
+        android:id="@+id/leaderPersonInfo"
+        android:layout_below="@id/lel_main_bussiness"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line3"
+        android:layout_marginTop="10.0dp"
+        android:layout_below="@id/leaderPersonInfo"
+        style="@style/f10_underline" />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/holder_name"
+        android:text="  姓名"
+        android:layout_below="@id/f10_profile_line3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/duty"
+        android:text="职务"
+        android:layout_toRightOf="@id/holder_name"
+        android:layout_below="@id/f10_profile_line3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/rembeftax"
+        android:text="薪酬"
+        android:layout_toRightOf="@id/duty"
+        android:layout_below="@id/f10_profile_line3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/holdefamt"
+        android:text="持股数"
+        android:layout_toRightOf="@id/rembeftax"
+        android:layout_below="@id/f10_profile_line3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+  <!--  <ListView
+        android:id="@+id/lsv_leader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/holdefamt"
+        />-->
+
+    <LinearLayout
+           android:orientation="vertical"
+           android:id="@+id/lel_leader"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@id/holdefamt" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_stock_summary_expt_proindic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/background_color"
+    tools:context="com.cvicse.stock.markets.ui.stockdetail.StockExptProindicActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_toolbar"
+        ptr:text_title="年报预披露"
+        ptr:src_left="@drawable/common_return_back_arrow"
+        ptr:textColor_title="?attr/text_toolbar_title_color"
+        ptr:filtercolor="?attr/filtercolor_toolbar"
+        android:background="?attr/bg_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/lly_expt_proindic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_expt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="业绩预告"/>
+        <Button
+            android:id="@+id/btn_proindic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="业绩公告"/>
+    </LinearLayout>
+
+    <ViewStub
+        android:id="@+id/vs_expt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout="@layout/layout_expt"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_below="@id/lly_expt_proindic"
+        />
+
+    <ViewStub
+        android:id="@+id/vs_proindic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout="@layout/layout_proindic"
+        android:layout_below="@id/lly_expt_proindic"
+        />
+
+</RelativeLayout>

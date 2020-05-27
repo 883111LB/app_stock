@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/tev_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_25"
+        android:layout_margin="@dimen/default_5"
+        android:gravity="center"
+        android:textSize="@dimen/font_16"
+        android:textColor="?attr/markert_group_text_color"
+        android:text="每日额度"
+        />
+    <FrameLayout
+        android:id="@+id/frl_amount_more"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/default_25"
+        android:layout_margin="@dimen/default_5"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/img_more"
+            android:src="@drawable/img_stock_more"
+           />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tev_amount"
+        >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                style="@style/Text_hk_amount"
+                android:layout_marginTop="0dp"/>
+            <TextView
+                android:text="沪港通"
+                style="@style/Text_hk_amount"/>
+
+            <TextView
+                android:text="深港通"
+                style="@style/Text_hk_amount"/>
+
+            <TextView
+                android:text="沪股通"
+                style="@style/Text_hk_amount"/>
+
+            <TextView
+                android:text="深股通"
+                android:layout_marginBottom="@dimen/default_5"
+                style="@style/Text_hk_amount"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="初始额度"
+                style="@style/Text_hk_amount"
+                android:layout_marginTop="0dp"
+                />
+
+            <TextView
+                android:id="@+id/tev_initial_hhkg"
+                style="@style/Text_white_21"/>
+
+            <TextView
+                android:id="@+id/tev_initial_shkg"
+                style="@style/Text_white_21"/>
+
+            <TextView
+                android:id="@+id/tev_initial_hg"
+                style="@style/Text_white_21"/>
+            <TextView
+                android:id="@+id/tev_initial_sg"
+                android:layout_marginBottom="@dimen/default_5"
+                style="@style/Text_white_21"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="剩余额度"
+                style="@style/Text_hk_amount"
+                android:layout_marginTop="0dp"
+                />
+
+            <TextView
+                android:id="@+id/tev_remain_hhkg"
+                style="@style/Text_white_21"/>
+
+            <TextView
+                android:id="@+id/tev_remain_shkg"
+                style="@style/Text_white_21"/>
+
+            <TextView
+                android:id="@+id/tev_remain_hg"
+                style="@style/Text_white_21"/>
+            <TextView
+                android:id="@+id/tev_remain_sg"
+                android:layout_marginBottom="@dimen/default_5"
+                style="@style/Text_white_21"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="状态"
+                style="@style/Text_hk_amount"
+                android:layout_marginTop="0dp"/>
+
+            <TextView
+                android:id="@+id/tev_status_hhkg"
+                style="@style/Text_white_21"/>
+            <TextView
+                android:id="@+id/tev_status_shkg"
+                style="@style/Text_white_21"/>
+            <TextView
+                android:id="@+id/tev_status_hg"
+                style="@style/Text_white_21"/>
+            <TextView
+                android:id="@+id/tev_status_sg"
+                android:layout_marginBottom="@dimen/default_5"
+                style="@style/Text_white_21"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

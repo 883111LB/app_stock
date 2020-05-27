@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    tools:context=".portfolio.activity.RecentlyActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="要约收购"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:src_right_1="@drawable/navigationbar_button_search"
+        android:background="?attr/bg_toolbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!--<TextView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:gravity="center"-->
+            <!--android:text="名称" />-->
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tev_name"
+                android:text="证券名称"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_14"
+                style="@style/rankging_text_18"
+                />
+        </LinearLayout>
+
+        <com.cvicse.stock.view.CHScrollView
+            android:id="@+id/scroll_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="50dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tev_offer_id"
+                    android:text="收购编码↑"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/font_14"
+                    style="@style/rankging_text_18"
+                    android:layout_width="100dp"/>
+
+                <TextView
+                    android:id="@+id/tev_offer_name"
+                    android:text="收购人名称"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:textSize="@dimen/font_14"
+                    style="@style/rankging_text_18"
+                    android:layout_width="100dp"/>
+
+                <TextView
+                    android:id="@+id/tev_price"
+                    android:text="收购价格"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:textSize="@dimen/font_14"
+                    style="@style/rankging_text_18"
+                    android:layout_width="100dp"/>
+
+                <TextView
+                    android:id="@+id/tev_start_date"
+                    android:text="收购起始日"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:textSize="@dimen/font_14"
+                    style="@style/rankging_text_18"
+                    android:layout_width="100dp"/>
+
+                <TextView
+                    android:id="@+id/tev_end_date"
+                    android:text="收购截止日"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:textSize="@dimen/font_14"
+                    style="@style/rankging_text_18"
+                    android:layout_width="100dp"/>
+
+            </LinearLayout>
+        </com.cvicse.stock.view.CHScrollView>
+
+    </LinearLayout>
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshHSListView
+        android:id="@+id/lsv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent">
+
+    </com.cvicse.stock.pulltorefresh.PullToRefreshHSListView>
+
+</LinearLayout>

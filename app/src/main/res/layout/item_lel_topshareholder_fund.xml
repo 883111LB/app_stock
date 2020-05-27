@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_shname"
+        android:text="人均持股金额(元)"
+        style="@style/f10_content_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_sholderrto"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        style="@style/f10_content_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_shcurchg"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        style="@style/f10_content_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

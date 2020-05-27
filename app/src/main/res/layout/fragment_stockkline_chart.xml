@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/markert_chart_bg"
+    android:layout_width="match_parent"
+    android:layout_height="250dip">
+    <LinearLayout
+        android:id="@+id/lel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tev_ma_1"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/font_11"
+            android:textColor="@color/text_blue"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tev_ma_2"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/font_11"
+            android:textColor="@color/text_blue"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tev_ma_3"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/font_11"
+            android:textColor="@color/text_blue"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginRight="5.0dp"
+            android:background="@drawable/stock_tech_chart_button_bg"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="#ff9a9a9a"
+            android:textSize="10.0dp"/>
+    </LinearLayout>
+    <com.cvicse.stock.chart.ui.StockTechChart
+        android:layout_below="@+id/lel_top"
+        android:id="@+id/stc_kline"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/lel_chose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.cvicse.stock.chart.view.KChoseView
+        android:id="@+id/lel_chose"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/lel_top"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

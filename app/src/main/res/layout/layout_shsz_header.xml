@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cvicse.stock.view.DivideViewPager
+        android:id="@+id/vip_sh"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/tev_up_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="@dimen/default_5"
+            android:drawablePadding="@dimen/default_5"
+            android:drawableLeft="@drawable/up"
+            android:textColor="?attr/style_market_key_text_color"
+            android:text="上涨 -- 家"
+            />
+        <TextView
+            android:id="@+id/tev_same_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/default_5"
+            android:drawablePadding="@dimen/default_5"
+            android:drawableLeft="@drawable/same_arrow"
+            android:textColor="?attr/style_market_key_text_color"
+            android:text="平盘 -- 家"
+            />
+        <TextView
+            android:id="@+id/tev_down_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/default_5"
+            android:drawablePadding="@dimen/default_5"
+            android:drawableLeft="@drawable/down"
+            android:textColor="?attr/style_market_key_text_color"
+            android:text="下跌 -- 家"
+            />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_calendar"
+            android:gravity="center_horizontal"
+            android:tag="1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.cvicse.stock.view.ColorImageView
+                android:id="@+id/img_calendar"
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:src="@drawable/img_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_calendarname"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/img_calendar"
+                android:text="新股日历"
+                android:textColor="?attr/text_withe_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_newstock"
+                android:gravity="center"
+                android:textSize="@dimen/font_small"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/text_black_light"
+                android:layout_below="@id/tev_calendarname"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_line"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_bnd_calendar"
+            android:gravity="center_horizontal"
+            android:tag="1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.cvicse.stock.view.ColorImageView
+                android:id="@+id/img_bnd_calendar"
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:src="@drawable/img_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_bnd_calendarname"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/img_bnd_calendar"
+                android:text="新债日历"
+                android:textColor="?attr/text_withe_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_bnd_newstock"
+                android:gravity="center"
+                android:textSize="@dimen/font_small"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/text_black_light"
+                android:layout_below="@id/tev_bnd_calendarname"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_line"/>
+        <RelativeLayout
+            android:id="@+id/rel_fund"
+            android:tag="1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.cvicse.stock.view.ColorImageView
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:id="@+id/img_fund"
+                android:src="@drawable/img_fund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_fundname"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/img_fund"
+                android:text="基金"
+                android:textColor="?attr/text_withe_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_source"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:text="由上证所提供"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/text_black_light"
+                android:layout_below="@id/tev_fundname"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_line"/>
+        <RelativeLayout
+            android:id="@+id/rel_data_center"
+            android:tag="1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.cvicse.stock.view.ColorImageView
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:id="@+id/img_data_center"
+                android:src="@drawable/data_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tev_data_center"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/img_data_center"
+                android:text="数据中心"
+                android:textColor="?attr/text_withe_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/bg_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

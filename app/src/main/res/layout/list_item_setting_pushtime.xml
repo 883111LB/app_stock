@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:orientation="horizontal"
+     android:layout_width="match_parent"
+     android:descendantFocusability="blocksDescendants"
+     android:gravity="center"
+    android:background="?attr/setting_item_bg"
+     android:layout_height="45dp">
+
+    <!--blocksDescendants将item布局中的其他所有控件都设置为不能自动获取焦点-->
+
+    <TextView
+        android:id="@+id/tev_push_time"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        tools:text="07:30 -- 09:00"
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/item_context_text_color"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_gravity="center"
+        android:layout_width="1dp"
+        android:layout_height="40dp"/>
+
+    <Button
+        android:id="@+id/btn_delete_pushtime"
+        android:text="删除"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/font_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

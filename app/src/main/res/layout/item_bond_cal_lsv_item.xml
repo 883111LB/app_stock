@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tev_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/item_context_text_color"
+            tools:text="--"
+            android:textSize="@dimen/font_16"
+            />
+
+        <TextView
+            android:id="@+id/tev_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="--"
+            android:textSize="@dimen/font_11"
+            android:textColor="?attr/item_sub_text_color"/>
+    </LinearLayout>
+
+ <LinearLayout
+     android:id="@+id/lly_stock"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tev_stock_company"
+            tools:text="&#45;&#45;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_16"
+            android:textColor="?attr/item_context_text_color"/>
+
+        <TextView
+            android:id="@+id/tev_stock_code"
+            tools:text="&#45;&#45;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_11"
+            android:textColor="?attr/item_sub_text_color"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tev_price"
+        tools:text="13.81"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_21"
+        android:textColor="?attr/item_context_text_color"/>
+
+    <TextView
+        android:id="@+id/tev_listing_date"
+        android:text="-"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="@dimen/font_16"
+        android:textColor="?attr/item_context_text_color"/>
+
+</LinearLayout>

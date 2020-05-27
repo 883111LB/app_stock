@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lel_market_ordinary"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:background="?attr/markert_detail_top_bg">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="7dp"
+        android:paddingRight="2dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/style_market_key"
+                android:text="涨停" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_daily_limit_value"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/style_market_key"
+                android:text="跌停" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_drop_limit_value"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/style_market_key"
+                android:text="总股本" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_total_share_capital"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/style_market_key"
+                android:text="流通股本" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_circulating_capital"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tev_pre"
+                style="@style/style_market_key"
+                android:text="昨收" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_preclose"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_preSettlement"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="昨结算"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_preSettlement"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_preDelta"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="昨虚实"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_preDelta"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_entrustDiff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:text="委差"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_entrustDiff"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_hvalue"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <TextView
+                android:text="H股市值"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_total_hkvalue"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_posDiff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="仓差"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_posDiff"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_cdd"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="可取日"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_cdd"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_bcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                style="@style/style_market_key"
+                android:text="买撤笔" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_bcc"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_scc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                style="@style/style_market_key"
+                android:text="卖撤笔" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_scc"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/style_market_key"
+                android:text="实占天" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_cd"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRSecuritiesConversionBase"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="基础转换基数"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRSecuritiesConversionBase"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRListingDate"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="上市日期"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRListingDate"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRFirstDayReferencePrice"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="首日参考价"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRFirstDayReferencePrice"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRFlowStartDate"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="起始日"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRFlowStartDate"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRFlowEndDate"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="终止日"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRFlowEndDate"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_DR"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="沪伦通标识"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DR"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_afterHoursVolume"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后成交量"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursVolume"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upf"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盈利状态"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_upf"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upDownLimitType"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="涨跌限制标识"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_upDownLimitType"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_impliedVolatility"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="隐含波动率"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_impliedVolatility"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_leverageRatio"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="杠杆率"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_leverageRatio"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_theoreticalPrice"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="理论价"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_theoreticalPrice"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_theta"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="theta"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_theta"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_longName"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="中文证券简称长"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_longName"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="2dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="外盘"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_external_disk"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="内盘"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_Internal_disk"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="总市值"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_total_marketvalue"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="流通市值"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_market_capitalization"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="均价"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_average_price"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="报告期"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_ePRSRP"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_settlement"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="今结算"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_settlement"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_currDelta"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="今虚实"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_currDelta"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_bcn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                style="@style/style_market_key"
+                android:text="买撤量" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_bcn"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_scn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <TextView
+                style="@style/style_market_key"
+                android:text="卖撤量" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_scn"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_rpd"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="可用日"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_rpd"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_changeBP"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="最新价涨跌BP"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_changeBP"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRSubjectClosingReferencePrice"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="标的收盘参考价"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRSubjectClosingReferencePrice"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_DRStockCode"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="基础代码"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRStockCode"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRStockName"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="基础名称"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRStockName"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_subscribeUpperLimit"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="申报上限"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_subscribeUpperLimit"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_afterHoursAmount"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后成交额"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursAmount"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vote"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="投票权差异"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_vote"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_inValue"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="内在价值"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_inValue"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_premiumRate"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="溢价率"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_premiumRate"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_delta"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="delta"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_delta"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gramma"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="gramma"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_gramma"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_limitPriceUpperLimit"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="限价申报数量上限"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_limitPriceUpperLimit"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="委比"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_commissioned_proportion"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="量比"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_volume_proportion"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="市盈(动)"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_market_profit"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="市盈(静)"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_pe2"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="振幅"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_amplitude"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="每股收益"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_earningsPerShare"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_position_chg"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="日增"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_position_chg"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_openInterest"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="持仓量"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_openInterest"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                style="@style/style_market_key"
+                android:text="买撤额" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_bca"
+                android:text="--" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_sca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                style="@style/style_market_key"
+                android:text="卖撤额" />
+            <com.cvicse.stock.view.AutofitTextView
+                style="@style/style_market_value"
+                android:id="@+id/tev_sca"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_rp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="回购期"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_rp"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRCurrentShare"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="当前份额"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRCurrentShare"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRPreviousClosingShare"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="前收盘份额"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRPreviousClosingShare"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRConversionBase"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="转换基数"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRConversionBase"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRDepositoryInstitutionCode"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="存托代码"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRDepositoryInstitutionCode"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_DRDepositoryInstitutionName"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="存托名称"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_DRDepositoryInstitutionName"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <!--科创板
+        -->
+
+        <LinearLayout
+            android:id="@+id/ll_subscribeLowerLimit"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="申报下限"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_subscribeLowerLimit"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_afterHoursTransactionNumber"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后成交笔数"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursTransactionNumber"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_afterHoursWithdrawBuyCount"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后撤买笔数"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursWithdrawBuyCount"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_afterHoursWithdrawBuyVolume"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后撤买数量"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursWithdrawBuyVolume"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_afterHoursWithdrawSellCount"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后撤卖笔数"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursWithdrawSellCount"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_afterHoursWithdrawSellVolume"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后撤卖数量"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursWithdrawSellVolume"
+                android:text="--"
+                style="@style/style_market_value" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_afterHoursBuyVolume"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后委托买量"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursBuyVolume"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_afterHoursSellVolume"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="盘后委托卖量"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_afterHoursSellVolume"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_issuedCapital"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="发行资本"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_issuedCapital"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="股票状态"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_status"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_timeValue"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="时间价值"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_timeValue"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exerciseWay"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="行权方式"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_exerciseWay"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_realLeverage"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="真实杠杆"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_realLeverage"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_rho"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="rho"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_rho"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vega"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="vega"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_vega"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_limitPriceLowerLimit"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:text="限价申报数量下限"
+                style="@style/style_market_key" />
+            <com.cvicse.stock.view.AutofitTextView
+                android:id="@+id/tev_limitPriceLowerLimit"
+                android:text="--"
+                style="@style/style_market_value" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

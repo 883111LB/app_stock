@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingLeft="16dp"
+                android:text="申购进程"
+                android:textColor="?attr/text_withe_black"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="30dp"/>
+            <LinearLayout
+                android:id="@+id/lly_sgjc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+
+            <!--<TextView
+                android:paddingLeft="16dp"
+                android:text="发行资料"
+                android:textColor="?attr/text_withe_black"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:id="@+id/lly_fxzl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />-->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

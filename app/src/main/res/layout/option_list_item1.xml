@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:descendantFocusability="blocksDescendants"
+     android:orientation="horizontal"
+     android:tag="1">
+
+    <LinearLayout
+        android:id="@+id/lnl_name"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tev_name"
+            android:textColor="?attr/item_main_text_color"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text_white_16"/>
+
+        <TextView
+            android:id="@+id/tev_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnl_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tev_lastPrice"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_changeRate"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_change"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tev_buyprices"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_sellprices"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_volume"
+                android:gravity="center"
+                android:layout_width="78dp"
+                style="@style/Text_white_18"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tev_amount"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+            <TextView
+                android:id="@+id/tev_openinterest"
+                android:gravity="center"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                style="@style/Text_white_18"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>

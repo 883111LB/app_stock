@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background_color">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="设置"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="行情设置"
+                android:textColor="?attr/setting_main_text_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_refreshrate"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:text="行情刷新频率"/>
+
+                <ImageView
+                    android:id="@+id/img_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_refreshrate"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_indicator"
+                    tools:text="不刷新"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_requestmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:id="@+id/img_mode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_requestmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_mode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level设置"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_alignBaseline="@+id/tev_requestmode"
+                    android:layout_alignBottom="@+id/tev_requestmode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/textView3"/>
+
+            </RelativeLayout>
+            <!-- 境外权限设置 -->
+            <RelativeLayout
+                android:id="@+id/rel_ollevel"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:id="@+id/img_ollevel"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_ollevel"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_ollevel"
+                    tools:text="oll1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="境外权限设置"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_alignBaseline="@+id/tev_ollevel"
+                    android:layout_alignBottom="@+id/tev_ollevel"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+            <!--F10 数据源-->
+            <RelativeLayout
+                android:id="@+id/rel_datasource"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="F10数据源"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_datasource"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_datasource"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_datasource"
+                    tools:text="港澳"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--港股权限设置-->
+            <RelativeLayout
+                android:id="@+id/rel_hk_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="港股权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_hk_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_hk_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_hk_levelmode"
+                    tools:text="HK10"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <!--港股指数权限设置-->
+            <RelativeLayout
+                android:id="@+id/rel_hkzs_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="港股指数权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_hkzs_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_hkzs_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_hkzs_levelmode"
+                    tools:text="无权限"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--中金所-->
+            <RelativeLayout
+                android:id="@+id/rel_cff_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中金所权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_cff_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_cff_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_cff_levelmode"
+                    tools:text="CFF_LEVEL_1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--大商所-->
+            <RelativeLayout
+                android:id="@+id/rel_dce_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大商所权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_dce_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_dce_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_dce_levelmode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--郑商所-->
+            <RelativeLayout
+                android:id="@+id/rel_zce_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="郑商所权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_zce_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_zce_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_zce_levelmode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--上期所-->
+            <RelativeLayout
+                android:id="@+id/rel_shfe_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上期所权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_shfe_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_shfe_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_shfe_levelmode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--上期所原油-->
+            <RelativeLayout
+                android:id="@+id/rel_ine_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上期所原油权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_ine_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_ine_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_ine_levelmode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--全球-->
+            <RelativeLayout
+                android:id="@+id/rel_gi_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全球权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_gi_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_gi_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_gi_levelmode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--外汇-->
+            <RelativeLayout
+                android:id="@+id/rel_fe_levelmode"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="外汇权限设置"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_fe_levelmode"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_fe_levelmode"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_fe_levelmode"
+                    tools:text="level-1"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="其他"
+                android:textColor="?attr/setting_main_text_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_timeout_reminder"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="超时提醒"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_timeout_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_timeout_reminder"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_timeout_indicator"
+                    tools:text="8秒"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_push_time"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推送时间段"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_pushtime_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_push_time"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_pushtime_indicator"
+                    tools:text="9:30---15:00"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_login_ip"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用IP"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_ip_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_login_ip"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_ip_indicator"
+                    tools:text="192.168.132.159"
+                    android:textColor="@color/text_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="系统设置"
+                android:textColor="?attr/setting_main_text_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_skin_type"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="换肤"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_skin_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_skin_type"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_skin_indicator"
+                    tools:text="日间模式"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_cache_size"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清除缓存"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_clear_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_cache_size"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_clear_indicator"
+                    tools:text="0 M"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_upload_net"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+                <ImageView
+                    android:id="@+id/img_upload_indicator"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tev_net_size"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_upload_indicator"
+                    tools:text="0 M"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_version"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="版本号"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+              <!--  <ImageView
+                    android:id="@+id/img_version"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>-->
+
+                <TextView
+                    android:id="@+id/tev_version"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <!-- 重新认证 -->
+            <RelativeLayout
+                android:id="@+id/rel_forceauth"
+                android:background="?attr/setting_item_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重新认证"
+                    android:textColor="?attr/setting_item_text_color"/>
+
+              <!--  <ImageView
+                    android:id="@+id/img_version"
+                    android:src="@drawable/ic_right_indicator"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>-->
+
+                <TextView
+                    android:id="@+id/tev_forceauth"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="?attr/setting_item_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

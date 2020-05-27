@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cvicse.stock.view.PressedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    tools:context="com.cvicse.stock.markets.ui.SHQQActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="最近浏览"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/lel_option"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_weight="1.2"
+            android:layout_width="0dp"
+            android:textColor="?attr/item_main_text_color"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tev_lastPrice"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="?attr/item_main_text_color"/>
+
+        <TextView
+            android:id="@+id/tev_change"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="?attr/item_main_text_color"/>
+
+        <TextView
+            android:id="@+id/tev_changerate"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="?attr/item_main_text_color"/>
+
+        <ImageView
+            android:id="@+id/right_arraow"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/common_return_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+    <RadioGroup
+        android:id="@+id/rdg_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@color/bg_shqq"
+        android:padding="1dp"
+        android:orientation="horizontal">
+        
+        <RadioButton
+            android:id="@+id/tev_tpice"
+            android:button="@null"
+            android:textColor="?attr/five_detail_textcolor_selector"
+            android:background="?attr/stock_radio_button_bg"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="T型报价"
+            android:layout_margin="1dp"
+            android:checked="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:id="@+id/tev_allqq"
+            android:layout_margin="1dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:button="@null"
+            android:textColor="?attr/five_detail_textcolor_selector"
+            android:background="?attr/stock_radio_button_bg"
+            android:text="全部期权"
+            android:checked="false"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:id="@+id/tev_buyqq"
+            android:text="认购期权"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:button="@null"
+            android:textColor="?attr/five_detail_textcolor_selector"
+            android:checked="false"
+            android:background="?attr/stock_radio_button_bg"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:id="@+id/tev_rgqq"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:button="@null"
+            android:background="?attr/stock_radio_button_bg"
+            android:textColor="?attr/five_detail_textcolor_selector"
+            android:layout_margin="1dp"
+            android:checked="false"
+            android:text="认沽期权"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<RelativeLayout
+        android:id="@+id/lel_datachooce"
+        android:layout_width="match_parent"
+        android:background="@color/bg_shqq_p"
+        android:paddingLeft="10dp"
+        android:layout_height="35dp">
+        <TextView
+            android:id="@+id/tev_strdata"
+            android:text="到期日期"
+            android:textColor="@color/tev_shqq"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tev_data"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tev_strdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tev_left_day"
+            android:layout_centerVertical="true"
+            android:textColor="@color/tev_shqq"
+            android:layout_toRightOf="@+id/tev_data"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/common_return_right_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/bg_shqq_q"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="认购"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="认沽"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/bg_shqq_q"
+            android:orientation="horizontal">
+
+            <com.cvicse.stock.view.CHScrollView
+                android:id="@+id/item_scroll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <com.cvicse.stock.view.PressedLinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/parm_44"
+                        android:textColor="@color/text_blue2"
+                        android:text="持仓量"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/parm_55"
+                        android:text="金额"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/parm_66"
+                        android:text="总量"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/parm_77"
+                        android:gravity="center"
+                        android:textColor="@color/text_blue2"
+                        android:text="卖价"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/parm_88"
+                        android:text="买价"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/parm_99"
+                        android:text="涨跌"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/parm_100"
+                        android:text="涨幅"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/parm_111"
+                        android:text="最新"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </com.cvicse.stock.view.PressedLinearLayout>
+            </com.cvicse.stock.view.CHScrollView>
+
+
+            <TextView
+                android:id="@+id/parm_3"
+                android:text="行权价"
+                android:textColor="@color/text_blue2"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <com.cvicse.stock.view.CHScrollView
+                android:id="@+id/item_scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <com.cvicse.stock.view.PressedLinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/parm_4"
+                        android:text="最新"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/parm_5"
+                        android:text="涨幅"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/parm_6"
+                        android:text="涨跌"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/parm_7"
+                        android:text="买价"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/parm_8"
+                        android:text="卖价"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/parm_9"
+                        android:text="总量"
+                        android:gravity="center"
+                        android:textColor="@color/text_blue2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/parm_10"
+                        android:text="金额"
+                        android:gravity="center"
+                        android:textColor="@color/text_blue2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/parm_11"
+                        android:text="持仓量"
+                        android:textColor="@color/text_blue2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+            </com.cvicse.stock.view.PressedLinearLayout>
+            </com.cvicse.stock.view.CHScrollView>
+        </LinearLayout>
+
+
+        <com.cvicse.stock.pulltorefresh.PullToRefreshListView
+            android:id="@+id/ptrlst_shqq"
+            android:background="@color/bg_shqq_unselected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.cvicse.stock.pulltorefresh.PullToRefreshListView>
+    </LinearLayout>-->
+
+</com.cvicse.stock.view.PressedLinearLayout>

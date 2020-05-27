@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background_color"
+    >
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="股东深度挖掘"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+
+    <TextView
+        android:id="@+id/tev_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/titlebar_vip_bg_img"
+        android:drawablePadding="8dp"
+        android:textSize="@dimen/font_15"
+        android:textColor="?attr/item_context_text_color"
+        android:text="海航旅游集团有限公司"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/calendar_disable_color"
+        >
+        <TextView
+            android:text="日期"
+            style="@style/f10_share"
+            />
+        <TextView
+            android:text="股票"
+            style="@style/f10_share"
+            />
+
+        <com.cvicse.stock.view.CHScrollView
+            android:id="@+id/scroll_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="市值(万元)"
+                    style="@style/f10_share"
+                    />
+                <TextView
+                    android:text="持股(万股)"
+                    style="@style/f10_share"
+                    />
+                <TextView
+                    android:text="增减持(万股)"
+                    style="@style/f10_share"
+                    />
+                <TextView
+                    android:text="股份类型"
+                    style="@style/f10_share"
+                    />
+            </LinearLayout>
+        </com.cvicse.stock.view.CHScrollView>
+
+    </LinearLayout>
+    <com.cvicse.stock.pulltorefresh.PullToRefreshHSListView
+        android:id="@+id/lsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent">
+    </com.cvicse.stock.pulltorefresh.PullToRefreshHSListView>
+
+    <TextView
+        android:id="@+id/tev_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/font_15"
+        android:textColor="?attr/item_context_text_color"
+        android:text="没有更多的数据了"
+        />
+</LinearLayout>

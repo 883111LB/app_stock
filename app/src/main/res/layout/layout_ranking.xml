@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/lly_sort"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:text="名称" />
+
+        <com.cvicse.stock.view.CHScrollView
+            android:id="@+id/scroll_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="50dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/lly_sort_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </com.cvicse.stock.view.CHScrollView>
+
+    </LinearLayout>
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshHSListView
+        android:id="@+id/lsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent"
+        >
+    </com.cvicse.stock.pulltorefresh.PullToRefreshHSListView>
+</merge>

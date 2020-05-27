@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fund_net_worth"
+        android:text="基金净值"
+        style="@style/f10_title_text" />
+    <TextView
+        android:layout_toRightOf="@id/fund_net_worth"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line1"
+        android:layout_below="@id/fund_net_worth"
+        style="@style/f10_underline" />
+    <TextView
+        android:gravity="left"
+        android:id="@+id/holder_name"
+        android:text="时间"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/duty"
+        android:text="累计净值"
+        android:layout_toRightOf="@+id/holder_name"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/rembeftax"
+        android:text="单位净值"
+        android:layout_toRightOf="@+id/duty"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/holdefamt"
+        android:text="净值涨跌额"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/rembeftax"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/holdefamt" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/lel_value"
+        android:id="@+id/lel_fund_net_worth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/fund_dividends"
+            android:layout_below="@+id/lel_fund_net_worth"
+            android:text="基金分红"
+            style="@style/f10_title_text" />
+        <TextView
+            android:layout_below="@+id/lel_fund_net_worth"
+            android:layout_toRightOf="@id/fund_dividends"
+            style="@style/f10_date_text" />
+        <View
+            android:id="@+id/f10_profile_line2"
+            android:layout_below="@id/fund_dividends"
+            style="@style/f10_underline" />
+        <TextView
+            android:id="@+id/dividend_instructions"
+            android:text="分配说明"
+            android:layout_below="@id/f10_profile_line2"
+            style="@style/f10_content_text" />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_dividend_instructions"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/dividend_instructions"
+            android:layout_below="@id/f10_profile_line2"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:id="@+id/issue_day"
+            android:text="红利发放日"
+            android:layout_below="@id/dividend_instructions"
+            style="@style/f10_content_text" />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_issue_day"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/dividend_instructions"
+            android:layout_below="@id/dividend_instructions"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+        <TextView
+            android:id="@+id/transfer_share_date"
+            android:text="红利转结份额日"
+            android:layout_below="@id/issue_day"
+            style="@style/f10_content_text" />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_transfer_share_date"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/transfer_share_date"
+            android:layout_below="@id/issue_day"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+        <TextView
+            android:id="@+id/ex_dividend_date"
+            android:text="除息日"
+            android:layout_below="@id/transfer_share_date"
+            style="@style/f10_content_text" />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_ex_dividend_date"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/ex_dividend_date"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/transfer_share_date"
+            style="@style/f10_content_text" />
+        <TextView
+            android:id="@+id/progress_description"
+            android:text="进展说明"
+            android:layout_below="@id/ex_dividend_date"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_progress_description"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/progress_description"
+            android:layout_below="@id/ex_dividend_date"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+
+
+        <TextView
+            android:id="@+id/publishdate"
+            android:text="公布日期"
+            android:layout_below="@id/progress_description"
+            style="@style/f10_content_text" />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_publishdate"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/publishdate"
+            android:layout_below="@id/progress_description"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:id="@+id/equity_registration_date"
+            android:text="权益登记日"
+            android:layout_below="@id/publishdate"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_equity_registration_date"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/equity_registration_date"
+            android:layout_below="@id/tev_publishdate"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:id="@+id/unit_send"
+            android:text="每10份基金单位派现"
+            android:layout_below="@id/equity_registration_date"
+            style="@style/f10_content_text" />
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_unit_send"
+            android:layout_marginLeft="10dp"
+            android:text="一"
+            android:layout_toRightOf="@id/unit_send"
+            android:layout_below="@id/equity_registration_date"
+            android:layout_alignParentRight="true"
+            style="@style/f10_content_text" />
+</RelativeLayout>

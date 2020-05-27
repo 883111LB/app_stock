@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="margin_markets">
+        <item>沪</item>
+        <item>深</item>
+        <item>沪深</item>
+    </array>
+</resources>

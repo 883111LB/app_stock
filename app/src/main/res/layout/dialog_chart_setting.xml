@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/img_dialog_bg"
+        android:layout_width="300dp"
+        android:layout_height="350dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#ff4a4a4a"
+                android:gravity="center"
+                android:id="@id/title"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="均线设置" />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:background="@drawable/img_close"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:background="#ffffffff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:textSize="15sp"
+                    android:textColor="#ff4a4a4a"
+                    android:gravity="center"
+                    android:id="@+id/edt_day"
+                    android:background="@drawable/img_box"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="\ 5"
+                    android:inputType="number" />
+
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="#ff4a4a4a"
+                    android:id="@+id/tev_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="周期均线"
+                    android:layout_toRightOf="@id/edt_day"
+                    android:layout_centerVertical="true" />
+
+                <com.cvicse.stock.view.ToggleButton
+                    android:id="@+id/tbtn_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/img_check_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:src="@drawable/btn_greypoint" />
+                    <ImageView
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/btn_bluepoint" />
+                </com.cvicse.stock.view.ToggleButton>
+            </RelativeLayout>
+
+            <View
+                android:background="#ffdbdbdb"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:textSize="15sp"
+                    android:textColor="#ff4a4a4a"
+                    android:gravity="center"
+                    android:id="@+id/edt_week"
+                    android:background="@drawable/img_box"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="\ 10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="#ff4a4a4a"
+                    android:id="@+id/tev_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="周期均线"
+                    android:layout_toRightOf="@id/edt_week"
+                    android:layout_centerVertical="true" />
+
+                <com.cvicse.stock.view.ToggleButton
+                    android:id="@+id/tbtn_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/img_check_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:src="@drawable/btn_greypoint" />
+                    <ImageView
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/btn_bluepoint" />
+                    </com.cvicse.stock.view.ToggleButton>
+            </RelativeLayout>
+
+            <View
+                android:background="#ffdbdbdb"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <EditText
+                    android:textSize="15sp"
+                    android:textColor="#ff4a4a4a"
+                    android:gravity="center"
+                    android:id="@+id/edt_month"
+                    android:background="@drawable/img_box"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="\ 30"
+                    android:inputType="number" />
+
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="#ff4a4a4a"
+                    android:id="@+id/tev_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="周期均线"
+                    android:layout_toRightOf="@id/edt_month"
+                    android:layout_centerVertical="true" />
+
+                <com.cvicse.stock.view.ToggleButton
+                    android:id="@+id/tbtn_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/img_check_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:src="@drawable/btn_greypoint" />
+                    <ImageView
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3.0dip"
+                        android:src="@drawable/btn_bluepoint" />
+                </com.cvicse.stock.view.ToggleButton>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="#fff0eff5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#ff4a4a4a"
+                    android:text="复权"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <com.cvicse.base.widget.ExtendedRadioGroup
+                android:id="@+id/erdg_right_type"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:tag="1_2_1"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:background="@drawable/bg_chose_selector"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip" />
+                    <TextView
+                        android:textSize="15.0sp"
+                        android:textColor="#ff4a4a4a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="不复权" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lel_before"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:tag="1_2_1"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:background="@drawable/bg_chose_selector"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip" />
+                    <TextView
+                        android:id="@+id/tev_before"
+                        android:textSize="15.0sp"
+                        android:textColor="#ff4a4a4a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="前复权" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lel_behind"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:tag="1_2_1"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:background="@drawable/bg_chose_selector"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip" />
+                    <TextView
+                        android:id="@+id/tev_behind"
+                        android:textSize="15.0sp"
+                        android:textColor="#ff4a4a4a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="后复权" />
+                </LinearLayout>
+            </com.cvicse.base.widget.ExtendedRadioGroup>
+        </LinearLayout>
+
+        <View
+            android:background="#ffdbdbdb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:id="@+id/lly_sure"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#ff0074e1"
+                android:gravity="center"
+                android:id="@+id/tev_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="确定"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

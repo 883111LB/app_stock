@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    >
+    <TextView
+        android:id="@+id/tev_shname"
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="一"
+        android:textColor="@color/colorPrimary"
+        style="@style/f10_content_text"
+        />
+
+    <TextView
+        android:id="@+id/tev_sholderamt"
+        android:gravity="right"
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        style="@style/f10_content_text"
+        />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_sholderrto"
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        style="@style/f10_content_text"
+        />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_shcurchg"
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        style="@style/f10_content_text"
+        />
+</LinearLayout>

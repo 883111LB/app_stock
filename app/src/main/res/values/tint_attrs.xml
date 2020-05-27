@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="background_color" format="color|reference" />
+
+    <attr name="bottom_bar_up_color" format="color|reference"/>
+    <attr name="bottom_bar_down_color" format="color|reference"/>
+
+    <attr name="filtercolor_portfolio" format="color|reference" />
+    <attr name="filtercolor_common" format="color|reference" />
+    <attr name="filtercolor_toolbar" format="color|reference" />
+    <attr name="text_color" format="color|reference" />
+    <attr name="text_withe_black" format="color|reference" />
+    <attr name="text_toolbar_title_color" format="reference|color" />
+    <attr name="bg_toolbar" format="reference|color" />
+    <attr name="item_selector" format="reference" />
+    <attr name="item_divider_bg" format="color|reference" />
+    <attr name="radiobutton_text_color" format="reference|color"/>
+    <attr name="tablayout_tabIndicatorColor" format="color|reference" />
+    <attr name="tablayout_tabSelectedTextColor" format="color|reference" />
+    <attr name="tablayout_tabTextColor" format="color|reference" />
+
+    <attr name="news_report_tablayout_bg" format="color|reference" />
+
+
+    <attr name="news_tablayout_tabIndicatorColor" format="color|reference" />
+    <attr name="news_tablayout_tabSelectedTextColor" format="color|reference" />
+    <attr name="news_tablayout_tabTextColor" format="color|reference" />
+
+    <attr name="item_main_text_color" format="color|reference" />
+    <attr name="item_sub_text_color" format="color|reference" />
+    <attr name="item_context_text_color" format="color|reference" />
+    <attr name="item_time_text_color" format="color|reference" />
+    <attr name="bg_portfolio_center" format="color|reference" />
+    <attr name="bg_portfolio_top" format="color|reference" />
+    <attr name="text_portfolio_top" format="color|reference" />
+
+
+    <attr name="setting_main_text_color" format="color|reference" />
+    <attr name="setting_main_bg" format="color|reference" />
+    <attr name="setting_item_text_color" format="color|reference" />
+    <attr name="setting_item_bg" format="color|reference" />
+
+
+    <attr name="markert_group_bg" format="reference|color"/>
+    <attr name="markert_group_text_color" format="reference|color"/>
+
+    <attr name="markert_item_detail_text_color" format="color|reference" />
+    <attr name="markert_item_grd_bg" format="reference|color"/>
+    <attr name="markert_fragment_bg" format="reference|color"/>
+    <attr name="markert_tablayout_bg" format="reference|color"/>
+
+    <attr name="markert_detail_top_bg" format="reference|color"/>
+
+    <attr name="style_market_key_text_color" format="reference|color"/>
+    <attr name="style_market_value_text_color" format="reference|color"/>
+
+    <attr name="f10_content_text_color" format="reference|color"/>
+    <attr name="Text_white_15_text_color" format="reference|color"/>
+    <attr name="Text_white_15_text_color_toolbar" format="reference|color"/>
+    <attr name="search_editview_bg" format="reference"/>
+    <attr name="search_editview_text_color" format="reference|color"/>
+    <attr name="Text_stock_more_text_color" format="reference|color"/>
+
+    <attr name="markert_chart_bg" format="reference|color"/>
+
+    <attr name="filtercolor_setting" format="reference|color"/>
+
+    <attr name="stock_radio_button_bg" format="reference"/>
+    <attr name="five_detail_textcolor_selector" format="reference"/>
+
+    <attr name="chart_type_bg" format="reference|color"/>
+    <attr name="chart_type_text" format="reference|color"/>
+
+    <attr name="shqq_q_bg" format="reference|color"/>
+
+    <!--所属板块 边框背景色-->
+    <attr name="markert_plate_border_bg" format="reference|color"/>
+    <!--资金流向-->
+    <attr name="markert_cash_border_bg" format="reference|color"/>
+</resources>

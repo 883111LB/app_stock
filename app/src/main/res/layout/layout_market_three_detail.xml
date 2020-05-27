@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="?attr/markert_detail_top_bg"
+              android:layout_height="wrap_content">
+    <FrameLayout
+        android:paddingRight="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="涨家数"
+            android:textSize="@dimen/font_16"
+            android:textColor="?attr/style_market_key_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tev_up_num"
+            android:layout_gravity="right"
+            android:text="--"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/text_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingRight="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="平家数"
+            android:textSize="@dimen/font_16"
+            android:textColor="?attr/style_market_key_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tev_nomarl_num"
+            android:layout_gravity="right"
+            android:text="--"
+            android:textSize="@dimen/font_16"
+            android:textColor="?attr/style_market_key_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingRight="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="跌家数"
+            android:textSize="@dimen/font_16"
+            android:textColor="?attr/style_market_key_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tev_down_num"
+            android:layout_gravity="right"
+            android:text="--"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/text_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

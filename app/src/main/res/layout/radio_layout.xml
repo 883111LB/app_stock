@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/rag_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <RadioButton
+            android:id="@+id/rab_all"
+            android:text="最新"
+            android:checked="true"
+            android:textColor="@color/finance_textcolor_selector"
+            style="@style/f10_finance_detail"
+            />
+        <RadioButton
+            android:id="@+id/rab_four"
+            android:text="年报"
+            android:textColor="@color/finance_textcolor_selector"
+            style="@style/f10_finance_detail"
+            />
+        <RadioButton
+            android:id="@+id/rab_two"
+            android:text="中报"
+            android:textColor="@color/finance_textcolor_selector"
+            style="@style/f10_finance_detail"
+            />
+        <RadioButton
+            android:id="@+id/rab_one"
+            android:text="一季报"
+            android:textColor="@color/finance_textcolor_selector"
+            style="@style/f10_finance_detail"
+            />
+        <RadioButton
+            android:id="@+id/rab_three"
+            android:text="三季报"
+            android:textColor="@color/finance_textcolor_selector"
+            style="@style/f10_finance_detail"
+            />
+    </RadioGroup>
+</merge>

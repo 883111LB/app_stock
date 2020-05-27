@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.cvicse.stock">
+    android:sharedUserId="android.uid.system"
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <!--
+    網路定位 & GPS定位權限
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- log權限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <!-- GPS定位權限 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="icon,label,theme">
+
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Kszc56WEg9rWoTzVPVV0RA34EF4dUUeX"/>
+
+        <!-- 谷歌地图 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBaNzwgCaN1R_aSe6P3YGevJ2theIdz-d4"/>
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 启动页注册 -->
+        <activity android:name=".MainActivity"/>
+        <!-- 资讯详情页注册 -->
+        <activity android:name=".news.ui.NewsDetailActivity"/>
+        <!-- 个人设置相关activity注册 -->
+        <activity android:name=".personal.SettingDetailActivity"/>
+        <activity android:name=".personal.RefreshRateActivity"/>
+        <activity android:name=".personal.SettingRequestModeActivity"/>
+        <!-- <activity android:name=".personal.KLineSetActivity" /> -->
+        <activity android:name=".personal.SettingTimeoutReminderActivity"/>
+        <activity android:name=".personal.SettingPushTimeActivity"/>
+        <activity android:name=".personal.SettingLoginIPShowActivity"/>
+        <activity android:name=".personal.SettingChangeSkinActivity"/>
+        <activity android:name=".personal.SettingDataSourceActivity"/>
+        <activity android:name=".markets.ui.RankingListActivity"/>
+        <activity android:name=".portfolio.activity.NewsAndReportActivity"/>
+        <activity android:name=".seachstock.SearchHistoryActivity"/>
+        <activity android:name=".portfolio.activity.ReportActivity"/>
+        <activity android:name=".portfolio.activity.StockDetailActivity"/>
+        <activity android:name=".portfolio.activity.RecentlyActivity"/>
+        <activity android:name=".portfolio.activity.StockEditActivity"/>
+        <activity android:name=".markets.ui.SectionMoreActivity"/>
+        <activity android:name=".markets.ui.SectionDetailActivity"/>
+        <activity android:name=".markets.ui.HKTMoreActivity"/>
+        <activity android:name=".markets.ui.SHQQActivity"/>
+        <activity android:name=".markets.ui.SHSZfundActivity"/>
+        <activity android:name=".markets.ui.StockDetailActivity"/>
+        <!-- android:configChanges="screenSize|keyboardHidden|orientation" -->
+
+        <activity android:name=".markets.ui.MarketsNewStockCalendarActivity"/>
+        <activity android:name=".markets.ui.new_ui.MarketsNewStockCalendarActivityNew"/>
+        <activity android:name=".markets.ui.CalendarDayActivity"/>
+        <activity android:name=".markets.ui.NewStockDetailActivity"/>
+        <activity android:name=".markets.ui.new_ui.NewStockDetailActivityNew"/>
+        <activity android:name=".markets.ui.stockdetail.StockShareIinvholdchgActivity"/>
+        <activity
+            android:name=".markets.ui.StockDetailLandActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="landscape"/>
+
+        <!--  -->
+        <activity
+            android:name=".markets.ui.new_ui.StockDetailLandActivityNew"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".markets.ui.StockMoreDetailActivity"/>
+        <activity android:name=".markets.ui.OptionListActivity"/>
+        <!-- 中金所 -->
+        <activity android:name=".personal.SettingCffModeActivity"/>
+        <!-- 港股 -->
+        <activity android:name=".personal.SettingHKModeActivity"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
+        <!-- 文件下载 -->
+        <receiver android:name=".portfolio.util.DownloadCompleteReceiver"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+            android:name=".markets.ui.stockdetail.StockFinanceActivity"
+            android:label="@string/title_activity_stock_finance_detail"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".markets.ui.stockdetail.StockFinanceDetailActivity"/>
+        <activity android:name=".markets.ui.stockdetail.StockSummaryBigEventActivity"/>
+        <activity android:name=".markets.ui.stockdetail.StockExptProindicActivity"></activity>
+        <activity android:name=".markets.ui.BondTradingDayActivity"/>
+        <activity android:name=".markets.ui.BondNewSharesCalActivity"/>
+        <activity android:name=".markets.ui.BondShareIPODetailActivity"/>
+        <activity android:name=".markets.ui.AHQuoteListActivity">
+        </activity>
+        <activity android:name=".markets.ui.DRQuoteListActivity"></activity>
+        <activity android:name=".markets.ui.stockdetail.SectionMainNetInflowActivity">
+        </activity>
+        <activity android:name=".markets.ui.RankingListFuturesActivity">
+        </activity>
+        <activity android:name=".markets.ui.DataCenterActivity">
+        </activity>
+        <activity android:name=".markets.ui.stockdetail.MarginTradingActivity">
+        </activity>
+        <activity android:name=".markets.ui.stockdetail.PriceAnalysisActivity">
+        </activity>
+
+        <activity android:name=".personal.SettingDCEModeActivity"/>
+        <activity android:name=".personal.SettingZCEModeActivity"/>
+        <activity android:name=".personal.SettingGIModeActivity"/>
+        <activity android:name=".personal.SettingFEModeActivity"/>
+        <activity android:name=".personal.SettingSHFEModeActivity"/>
+        <activity android:name=".personal.SettingINEModeActivity"/>
+        <!-- 港股指数权限设置 -->
+        <activity android:name=".personal.SettingHKZSModeActivity" />
+        <!-- 复盘涨跌 -->
+        <activity android:name=".markets.ui.stockdetail.ReplayActivity" />
+        <!-- 要约排序页 -->
+        <activity android:name=".markets.ui.yaoyue.YYActivity" />
+        <!-- 要约详情页 -->
+        <activity android:name=".markets.ui.yaoyue.YYInfoActivity" />
+        <!-- 次新股 -->
+        <activity android:name=".markets.ui.subnewstock.SubNewStockActivity" />
+        <!-- 次新债 -->
+        <activity android:name=".markets.ui.subnewbondstock.SubNewBondStockActivity" />
+        <!-- 大商所、郑商所期权 -->
+        <activity android:name=".markets.ui.other_option.DCEOption1Activity" />
+        <!-- 集合竞价设置 -->
+        <activity android:name=".chart.ui.setting.BidSetting"
+        android:theme="@style/dialog_style"/>
+        <!-- 排序（全部字段） -->
+        <activity android:name=".markets.ui.RankingListAllActivity" />
+        <!-- 境外权限设置 -->
+        <activity android:name=".personal.SettingOLLActivity" />
+        <!-- 沪深港通 -->
+        <activity android:name=".markets.ui.hkt.HKTAvtivity" />
+    </application>
+
+</manifest>

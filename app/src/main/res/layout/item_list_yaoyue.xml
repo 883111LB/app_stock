@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:tag="1"
+    >
+    <!--android:background="@drawable/item_bg_recently_selector"-->
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color" />
+
+        <TextView
+            android:id="@+id/tev_code"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tev_offerId"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+
+        <TextView
+            android:id="@+id/tev_offerName"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+
+        <TextView
+            android:id="@+id/tev_price"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+
+        <TextView
+            android:id="@+id/tev_startDate"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+
+        <TextView
+            android:id="@+id/tev_endDate"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+    </LinearLayout>
+</LinearLayout>

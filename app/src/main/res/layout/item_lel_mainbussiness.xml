@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tev_bussiness_nature"
+        tools:text="每股指标"
+        android:layout_below="@id/f10_finance_line1"
+        android:layout_alignParentLeft="true"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:id="@+id/operrevenue"
+        android:layout_marginLeft="10dp"
+        android:text="营业收入"
+        android:layout_below="@id/tev_bussiness_nature"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_operrevenue"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/operrevenue"
+        android:layout_below="@id/tev_bussiness_nature"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/oprtcast"
+        android:layout_marginLeft="10dp"
+        android:text="营业成本（元）"
+        android:layout_below="@id/operrevenue"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_oprtcast"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/oprtcast"
+        android:layout_below="@id/operrevenue"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/operprofit"
+        android:layout_marginLeft="10dp"
+        android:text="营业利润（元）"
+        android:layout_below="@id/oprtcast"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_operprofit"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/operprofit"
+        android:layout_below="@id/oprtcast"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/operrevennuetotor"
+        android:layout_marginLeft="10dp"
+        android:text="占总营业收入比例"
+        android:layout_below="@id/operprofit"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_operrevennuetotor"
+        android:layout_marginLeft="15dp"
+        android:text="一"
+        android:layout_toRightOf="@id/operrevennuetotor"
+        android:layout_below="@id/operprofit"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+</RelativeLayout>

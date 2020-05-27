@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog">
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="选择到期日期"
+            android:textSize="@dimen/font_large"
+            android:textColor="@color/bg_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+      <RadioGroup
+          android:id="@+id/rg_data"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:orientation="vertical">
+
+        <!--  <RadioButton
+              android:id="@+id/time_1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/font_19"
+              android:layout_marginTop="10dp"
+              android:drawablePadding="30dp"
+              android:text="2017年2月" />
+
+          <RadioButton
+              android:id="@+id/time_2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/font_19"
+              android:layout_marginTop="10dp"
+              android:drawablePadding="30dp"
+              android:text="2017年3月" />
+
+          <RadioButton
+              android:id="@+id/time_3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:textSize="@dimen/font_19"
+              android:drawablePadding="30dp"
+              android:text="2017年6月" />
+
+          <RadioButton
+              android:id="@+id/time_4"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:textSize="@dimen/font_19"
+              android:drawablePadding="30dp"
+              android:text="2017年9月" />-->
+
+
+      </RadioGroup>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

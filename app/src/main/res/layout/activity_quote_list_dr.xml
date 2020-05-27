@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    tools:context="com.cvicse.stock.markets.ui.AHQuoteListActivity">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="DR溢价"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:src_right_1="@drawable/navigationbar_button_search"
+        android:background="?attr/bg_toolbar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:text="证券名称" />
+        <com.cvicse.stock.view.CHScrollView
+            android:id="@+id/scroll_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="50dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tev_code_DR"
+                    android:text="证券代码"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_lastPrice_DR"
+                    android:text="最新价"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_preClosePrice_DR"
+                    android:text="前收盘价"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_changeRate_DR"
+                    android:text="涨幅"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_codeBase_DR"
+                    android:text="基础证券代码"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_nameBase_DR"
+                    android:text="基础证券名称"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_lastPriceBase_DR"
+                    android:text="基础证券前最新价"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_preClosePriceBase_DR"
+                    android:text="基础证券前收盘价"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tev_changeRateBase_DR"
+                    android:text="基础证券涨幅"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/tev_dateTimeBase_DR"-->
+                    <!--android:text="基础证券行情时间"-->
+                    <!--android:textColor="@color/appoint_font_color_gray"-->
+                    <!--android:layout_width="80dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"/>-->
+                <TextView
+                    android:id="@+id/tev_preMium_DR"
+                    android:text="溢价"
+                    android:textColor="@color/appoint_font_color_gray"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </com.cvicse.stock.view.CHScrollView>
+
+    </LinearLayout>
+
+    <com.cvicse.stock.pulltorefresh.PullToRefreshHSListView
+        android:id="@+id/lsv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent"/>
+
+</LinearLayout>

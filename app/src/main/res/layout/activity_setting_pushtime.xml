@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:orientation="vertical"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+    android:background="?attr/background_color">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="推送时间"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:src_right_1="@drawable/personal_plus_selector"
+        android:background="?attr/bg_toolbar" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="时间段设置："
+        android:textSize="@dimen/font_large"
+        android:textColor="?attr/setting_main_text_color"/>
+
+    <ListView
+        android:id="@+id/lsv_push_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="?attr/item_divider_bg"
+        android:dividerHeight="2dp">
+    </ListView>
+
+    <FrameLayout
+        android:id="@+id/frl_default_remind"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tev_default_show"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="点击右上角+,添加时间段"
+            android:textSize="@dimen/font_large"
+            android:textColor="?attr/text_withe_black"/>
+
+    </FrameLayout>
+
+</LinearLayout>

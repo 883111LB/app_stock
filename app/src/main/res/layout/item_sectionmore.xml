@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tev_n"
+                android:text="板块名称"
+                style="@style/Text_white_16"
+                />
+            <TextView
+                android:id="@+id/tev_scode"
+                android:text="板块代码"
+                style="@style/Text_gray_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tev_lzgn"
+            android:text="领涨股"
+            style="@style/Text_white_16"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tev_jzf"
+            android:text="均涨幅↓"
+            style="@style/Text_white_18"
+            />
+        <TextView
+            android:id="@+id/tev_ggzf"
+            android:text="领涨幅"
+            style="@style/Text_white_18"
+            />
+        <TextView
+            android:id="@+id/tev_zcje"
+            android:text="总成交额"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_ggzfb"
+            android:text="涨股比"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_hsl"
+            android:text="换手率"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_qzf"
+            android:text="权涨幅"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_zljlr"
+            android:text="主力净入"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_zlzjlr"
+            android:text="主力资入"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_zlzjlc"
+            android:text="主力资出"
+            style="@style/Text_white_18"
+            />
+
+        <TextView
+            android:id="@+id/tev_zlzjjlr5"
+            android:text="5日主力资净入"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_zlzjjlr10"
+            android:text="10日主力资净入"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_hot"
+            android:text="热度值"
+            android:visibility="gone"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_present"
+            android:text="现手"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_totalHand"
+            android:text="总手"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_limitUpCount"
+            android:text="涨停家数"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_limitDownCount"
+            android:text="跌停家数"
+            style="@style/Text_white_18_2"
+            />
+    </LinearLayout>
+</LinearLayout>

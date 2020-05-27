@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <View
+            android:id="@+id/lst_view"
+            android:layout_weight="0.2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#d90302"
+            />
+        <TextView
+            android:id="@+id/lst_name"
+            android:text="超大"
+            style="@style/Text_bg_tl"
+            />
+        <TextView
+            android:id="@+id/lst_buy"
+            android:text="&#45;&#45;"
+            style="@style/Text_bg_tl2"
+            />
+        <TextView
+            android:id="@+id/lst_buy_per"
+            android:text="0%"
+            style="@style/Text_bg_tl3"
+            />
+</LinearLayout>

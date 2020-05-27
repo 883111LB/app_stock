@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants"
+              android:tag="1"
+              android:orientation="horizontal">
+    <!--android:background="@drawable/item_bg_recently_selector"-->
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color" />
+
+        <TextView
+            android:id="@+id/tev_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!-- 昨收 -->
+        <TextView
+            android:id="@+id/tev_prev_close"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 开盘 -->
+        <TextView
+            android:id="@+id/tev_open"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 最高 -->
+        <TextView
+            android:id="@+id/tev_high"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 最低 -->
+        <TextView
+            android:id="@+id/tev_low"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 最新 -->
+        <TextView
+            android:id="@+id/tev_last"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 均价 -->
+        <TextView
+            android:id="@+id/tev_avg"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 涨跌 -->
+        <TextView
+            android:id="@+id/tev_change"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 涨跌幅 -->
+        <TextView
+            android:id="@+id/tev_chg_rate"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 成交量 -->
+        <TextView
+            android:id="@+id/tev_volume"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 成交金额 -->
+        <TextView
+            android:id="@+id/tev_amount"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 当前成交量 -->
+        <TextView
+            android:id="@+id/tev_now_vol"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 内盘 -->
+        <TextView
+            android:id="@+id/tev_sell_vol"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 外盘 -->
+        <TextView
+            android:id="@+id/tev_buy_vol"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 交易日 -->
+        <TextView
+            android:id="@+id/tev_tradingday"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 结算组代码 -->
+        <TextView
+            android:id="@+id/tev_settlementGroupID"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 结算编号 -->
+        <TextView
+            android:id="@+id/tev_settlementID"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 昨结算 -->
+        <TextView
+            android:id="@+id/tev_preSettlement"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 昨持仓量 -->
+        <TextView
+            android:id="@+id/tev_preOpenInterest"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 持仓量 -->
+        <TextView
+            android:id="@+id/tev_opt"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 日增 -->
+        <TextView
+            android:id="@+id/tev_position_chg"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 今收盘价 -->
+        <TextView
+            android:id="@+id/tev_close"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 今结算价 -->
+        <TextView
+            android:id="@+id/tev_settlement"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 涨停价 -->
+        <TextView
+            android:id="@+id/tev_upperLimit"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 跌停价 -->
+        <TextView
+            android:id="@+id/tev_downLimit"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 昨虚实度 -->
+        <TextView
+            android:id="@+id/tev_preDelta"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 今虚实度 -->
+        <TextView
+            android:id="@+id/tev_currDelta"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 最后修改毫秒 -->
+        <TextView
+            android:id="@+id/tev_updateMillisec"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 类型 -->
+        <TextView
+            android:id="@+id/tev_type"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 标的现价 -->
+        <TextView
+            android:id="@+id/tev_underlyingLastPx"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 标的昨收 -->
+        <TextView
+            android:id="@+id/tev_underlyingPreClose"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 标的涨跌 -->
+        <TextView
+            android:id="@+id/tev_underlyingchg"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 交易状态 -->
+        <TextView
+            android:id="@+id/tev_tradeStatus"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- change1 -->
+        <TextView
+            android:id="@+id/tev_change1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 振幅 -->
+        <TextView
+            android:id="@+id/tev_amp_rate"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 仓差 -->
+        <TextView
+            android:id="@+id/tev_posDiff"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 期权类型 -->
+        <TextView
+            android:id="@+id/tev_callOrPut"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 行权价 -->
+        <TextView
+            android:id="@+id/tev_excercisePx"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 溢价率 -->
+        <TextView
+            android:id="@+id/tev_premiumRate"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 剩余天数 -->
+        <TextView
+            android:id="@+id/tev_remainingDays"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 隐含波动率 -->
+        <TextView
+            android:id="@+id/tev_impliedVolatility"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 无风险利率 -->
+        <TextView
+            android:id="@+id/tev_riskFreeInterestRate"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 风险指标 -->
+        <TextView
+            android:id="@+id/tev_riskIndicator"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 杠杆比率 -->
+        <TextView
+            android:id="@+id/tev_leverageRatio"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 交割点数 -->
+        <TextView
+            android:id="@+id/tev_intersectionNum"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 委差 -->
+        <TextView
+            android:id="@+id/tev_entrustDiff"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 委比 -->
+        <TextView
+            android:id="@+id/tev_entrustRatio"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 期现差 -->
+        <TextView
+            android:id="@+id/tev_currDiff"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 标的品种 -->
+        <TextView
+            android:id="@+id/tev_underlyingType"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 交割日期 -->
+        <TextView
+            android:id="@+id/tev_deliveryDay"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 委买 -->
+        <TextView
+            android:id="@+id/tev_totalBid"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 委卖 -->
+        <TextView
+            android:id="@+id/tev_totalAsk"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 买1价 -->
+        <TextView
+            android:id="@+id/tev_bidpx1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 买1量 -->
+        <TextView
+            android:id="@+id/tev_bidvol1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 卖1价 -->
+        <TextView
+            android:id="@+id/tev_askpx1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+        <!-- 卖1量 -->
+        <TextView
+            android:id="@+id/tev_askvol1"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            style="@style/Text_white_18_2"/>
+
+    </LinearLayout>
+</LinearLayout>

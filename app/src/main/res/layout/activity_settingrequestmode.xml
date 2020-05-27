@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:background="?attr/background_color"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="请求方式"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:is_back="false"
+        android:background="?attr/bg_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_firstmode"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="level-1"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_selectfirst"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_secondmode"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="level-2"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_sectedsecond"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_L1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="L1"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_L1"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_SHL2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="SHL2"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_SHL2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_SZL2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="SZL2"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_SZL2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_OLL1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="oll1"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_OLL1"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_olshl1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="olshl1"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_olshl1"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_olszl1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="olszl1"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_olszl1"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_OLSHL2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="olshl2"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_OLSHL2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_OLSZL2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="olszl2"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_OLSZL2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

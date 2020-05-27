@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/background_color"
+    android:orientation="vertical">
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="个股搜索"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+   <!--
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/lel_searchbox_input"
+        android:background="?attr/search_editview_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:baselineAligned="false">
+        <FrameLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="25dip"
+            android:layout_width="44dip"
+            android:layout_height="44dp">
+            <ImageView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/img_search_query"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:src="@drawable/search_status"
+                android:scaleType="centerInside" />
+            <ProgressBar
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/pgb_loading"
+                android:visibility="gone"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                style="?android:attr/progressBarStyleSmall" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_height="44dp"
+            android:layout_weight="1">
+            <com.cvicse.stock.seachstock.SerachEditView
+                android:textColor="?attr/search_editview_text_color"
+                android:ellipsize="start"
+                android:paddingLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/edt_serach"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionSearch" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/lel_searchbar_clear"
+            android:layout_width="44dp"
+            android:layout_height="44dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_searchbar_clear"
+                android:visibility="invisible"
+                android:layout_width="12dip"
+                android:layout_height="12dip"
+                android:src="@drawable/search_clear"  />
+        </LinearLayout>
+    </LinearLayout>-->
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/layout_search"/>
+
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lsv_search"
+            android:visibility="gone"
+            android:dividerHeight="1dp"
+            android:divider="@color/text_black_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+        <LinearLayout
+            android:id="@+id/lel_history"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lsv_search_history"
+                android:dividerHeight="1dp"
+                android:divider="@color/text_black_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+            <TextView
+                android:text="历史搜索记录"
+                android:textColor="?attr/item_time_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

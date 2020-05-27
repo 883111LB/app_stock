@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_last_changedate"
+        android:text="时间"
+        style="@style/f10_date_text2"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tev_totalshare"
+        android:text="总股本(股)"
+        android:singleLine="true"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tev_alistedshare"
+        android:text="流通A股(股)"
+        android:singleLine="true"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_amount"
+        android:text="数量"
+        android:singleLine="true"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_constedsc_"
+        android:text="变动原因"
+        style="@style/f10_content_text"
+        android:layout_weight="1"
+        android:layout_width="0dp"/>
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        android:background="?attr/bg_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="?attr/setting_item_bg">
+
+                <TextView
+                    android:paddingLeft="16dp"
+                    android:text="申购进程"
+                    android:textColor="?attr/text_withe_black"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"/>
+
+            </FrameLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp"
+                android:id="@+id/lsv_sgprocess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.cvicse.stock.view.ListViewForScrollView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="?attr/setting_item_bg">
+
+                <TextView
+                    android:paddingLeft="16dp"
+                    android:text="发行资料"
+                    android:textColor="?attr/text_withe_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"/>
+            </FrameLayout>
+
+            <com.cvicse.stock.view.ListViewForScrollView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp"
+                android:id="@+id/lsv_fxdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.cvicse.stock.view.ListViewForScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

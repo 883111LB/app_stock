@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_10"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:text="所属板块"
+            style="@style/style_market_pk"
+            />
+        <TextView
+            android:id="@+id/tev_setting"
+            android:layout_width="wrap_content"
+            style="@style/style_market_pk"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:text="设置"/>
+    </RelativeLayout>
+    <View
+        style="@style/f10_pk_underline"
+        />
+    <include layout="@layout/layout_plate"/>
+
+    <TextView
+        android:text="成交统计"
+        android:layout_marginTop="10dp"
+        style="@style/style_market_pk"
+        />
+    <View
+        style="@style/f10_pk_underline"
+        />
+    <include layout="@layout/layout_turnover"/>
+
+    <TextView
+        android:text="资金流向"
+        android:layout_marginTop="10dp"
+        style="@style/style_market_pk"
+        />
+    <View
+        style="@style/f10_pk_underline"
+        />
+
+    <include layout="@layout/layout_cash_flow"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:background="?attr/background_color"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_title="中金所权限设置"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:src_left="@drawable/common_return_back_arrow"
+        app:is_back="false"
+        android:background="?attr/bg_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_cff_firstmode"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="CFF_LEVEL_1"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_cff_selectfirst"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_cff_secondmode"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="?attr/setting_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="CFF_LEVEL_2"
+            android:textColor="?attr/setting_item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.cvicse.stock.view.ColorImageView
+            android:id="@+id/img_cff_sectedsecond"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_selected"
+            app:filtercolor="?attr/filtercolor_setting"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

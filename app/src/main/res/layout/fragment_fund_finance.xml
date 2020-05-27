@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/basic"
+        android:text="基金财务"
+        style="@style/f10_title_text" />
+    <TextView
+        android:id="@+id/companyInfoDate"
+        android:layout_toRightOf="@id/basic"
+        style="@style/f10_date_text" />
+    <View
+        android:id="@+id/f10_profile_line1"
+        android:layout_below="@id/companyInfoDate"
+        style="@style/f10_underline" />
+    <TextView
+        android:id="@+id/publishdate"
+        android:text="公布日期"
+        android:layout_below="@id/f10_profile_line1"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_publishdate"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/publishdate"
+        android:layout_below="@id/f10_profile_line1"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/enddate"
+        android:text="期末日期"
+        android:layout_below="@id/publishdate"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_enddate"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/publishdate"
+        android:layout_below="@id/publishdate"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/netincome_unit"
+        android:text="单位净收益"
+        android:layout_below="@id/enddate"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netincome_unit"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/netincome_unit"
+        android:layout_below="@id/enddate"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/netassets_unit"
+        android:text="单位资产净值"
+        android:layout_below="@id/netincome_unit"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netassets_unit"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/netassets_unit"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/netincome_unit"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/netincome"
+        android:text="净收益"
+        android:layout_below="@id/netassets_unit"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netincome"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/netincome"
+        android:layout_below="@id/netassets_unit"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/custodian"
+        android:text="资产净值"
+        android:layout_below="@id/netincome"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_custodian"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/custodian"
+        android:layout_below="@id/netincome"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+    <TextView
+        android:id="@+id/netgrowthrate"
+        android:text="净值增长率"
+        android:layout_below="@id/custodian"
+        style="@style/f10_content_text" />
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_netgrowthrate"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/netgrowthrate"
+        android:layout_below="@id/custodian"
+        android:layout_alignParentRight="true"
+        style="@style/f10_content_text" />
+</RelativeLayout>

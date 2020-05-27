@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:tag="1"
+    android:orientation="horizontal">
+    <!--android:background="@drawable/item_bg_recently_selector"-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/tev_date"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color" />
+
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tev_date"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tev_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_toRightOf="@id/tev_date"
+            android:layout_below="@id/tev_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/font_14"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tev_holdamt"
+            android:text="市值(万元)"
+            style="@style/Text_white_18_2"
+            />
+
+        <TextView
+            android:id="@+id/tev_holdqty"
+            android:text="持股(万股)"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_holdqtysumchg"
+            android:text="增减持(万股)"
+            style="@style/Text_white_18_2"
+            />
+        <TextView
+            android:id="@+id/tev_setypename"
+            android:text="股份类型"
+            style="@style/Text_white_18_2"
+            />
+    </LinearLayout>
+</LinearLayout>

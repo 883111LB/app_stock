@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:tag="1"
+    >
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:maxLines="1"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color" />
+
+        <TextView
+            android:id="@+id/tev_id"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_gravity="center_horizontal"
+            android:maxLines="1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tev_lastPrice"
+            style="@style/Text_white_18_2"/>
+
+        <TextView
+            android:id="@+id/tev_changeRate"
+            style="@style/Text_white_18_2"/>
+
+        <TextView
+            android:id="@+id/tev_change"
+            style="@style/Text_white_18_2" />
+
+        <TextView
+            android:id="@+id/tev_volume"
+            style="@style/Text_white_18_2"/>
+
+        <TextView
+            android:id="@+id/tev_amount"
+            style="@style/Text_white_18_2"/>
+
+        <TextView
+            android:id="@+id/tev_closePrice"
+            style="@style/Text_white_18_2"/>
+
+        <TextView
+            android:id="@+id/tev_highPrice"
+            style="@style/Text_white_18_2"/>
+
+        <TextView
+            android:id="@+id/tev_lowPrice"
+            style="@style/Text_white_18_2"/>
+
+    </LinearLayout>
+</LinearLayout>

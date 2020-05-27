@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">上证测试</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="picker_title">%1$s:%2$s---------%3$s:%4$s</string>
+    <string name="avgcorerevenue">主营收入</string>
+    <string name="avgprofit">净利润</string>
+    <string name="avgshare">人均流通股数</string>
+    <string name="avgsharem">人均持股金额(元)</string>
+    <string name="back">返回</string>
+    <string name="basiceps">每股收益</string>
+    <string name="basiceps_">基本每股收益</string>
+    <string name="bdzh">绑定账号</string>
+    <string name="bj">编辑</string>
+    <string name="blistedshare">已上市流通B股</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="buyamountfina">融资买入额(元)</string>
+    <string name="buydate">交易日期</string>
+    <string name="bvps">每股净资产</string>
+    <string name="cancel">取消</string>
+    <string name="captitalreserveps">每股资本公积金</string>
+    <string name="cashequinetincr">现金及现金等价净增额</string>
+    <string name="cashlist">现金流量表</string>
+    <string name="change">变动</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="chiname">公司名称</string>
+    <string name="chinameabbr">研究机构</string>
+    <string name="clean_history">history</string>
+    <string name="close">关闭</string>
+    <string name="closingprice">股价(元)</string>
+
+    <string name="overtime_title">超时时间</string>
+    <string name="payamountfina">融资偿还额(元)</string>
+    <string name="paydebt">偿债能力</string>
+    <string name="payvolstock">融券偿还量(股)</string>
+    <string name="pctoftotalsh">较上期变化</string>
+    <string name="percent">占比</string>
+    <string name="perstockindex">每股指标</string>
+
+    <string name="alistedshare">已上市流通A股</string>
+    <string name="amount">数值(股)</string>
+    <string name="amountfina">融资余额(元)</string>
+    <string name="amountstock">融券余额(元)</string>
+    <string name="annuroe">净资产收益率</string>
+
+    <string name="predict">最近六个月,共有%1$s家机构对%2$s业绩做出预测</string>
+    <string name="predict_value">预测数据</string>
+    <string name="prod_id">CHI</string>
+    <string name="product_type">100002</string>
+    <string name="profitTelent">盈利能力</string>
+    <string name="profitmargin">销售净利率</string>
+    <string name="profitmargin_">销售净利率</string>
+
+    <string name="netassetyoy">净资产同比增长</string>
+    <string name="netcashflowfina">筹资现金流量净额</string>
+    <string name="netcashflowinv">投资现金流量净额</string>
+    <string name="netcashflowoper">经营现金流量净额</string>
+    <string name="netcashflowoperps">每股经营性现金流</string>
+    <string name="netcashflowoperps_">每股现金流</string>
+    <string name="netcashflowoperyoy">经营活动现金流量净额同比增长</string>
+    <string name="netcashflowps">每股经营性现金流量净额</string>
+    <string name="neteps">每股收益</string>
+    <string name="netprofit">净利润</string>
+    <string name="netprofitcutparentcom">扣非净利润</string>
+    <string name="netprofitcutparentcomyoy">扣非净利润同比增</string>
+    <string name="netprofitparentcom">净利润</string>
+    <string name="netprofitparentcomyoy">净利润同比增</string>
+    <string name="netprofitparentcomyoy_">净利润同比增长</string>
+
+    <string name="reserveps">每股公积金</string>
+    <string name="retainedearningps">每股未分配利润</string>
+    <string name="revelist">利润表</string>
+    <string name="right_triangle">〓</string>
+    <string name="roa_ebit">总资产报酬率</string>
+    <string name="roeyoy">净资产收益(摊薄)同比增长</string>
+
+    <string name="currentratio">流动比率</string>
+    <string name="cutbasiceps">扣非每股收益</string>
+    <string name="debtlist">资产负债表</string>
+
+    <string name="grossprofitmargin">毛利率（％）</string>
+    <string name="grossprofitmargin_">销售毛利率</string>
+    <string name="grow">成长能力</string>
+
+    <string name="operate">营运能力</string>
+    <string name="opercost">营业成本 (元)</string>
+    <string name="operprofit">营业利润</string>
+    <string name="operprofityoy">营业利润同比增长</string>
+    <string name="operrevenuetotor">占总营业收入比例</string>
+    <string name="operrevenueyoy_">营业收入同比增长</string>
+
+    <string name="tltota">资产负债率</string>
+    <string name="totalasset">资产合计</string>
+    <string name="totalassetturnover">总资产周转率</string>
+    <string name="totalassetyoy">总资产同比增长</string>
+    <string name="totalliab">负债合计</string>
+    <string name="totaloperincomeps">每股息税前利润</string>
+    <string name="totaloperrevenue">营业收入</string>
+    <string name="totalsh">股东人数</string>
+    <string name="totalshare">总股本</string>
+    <string name="totalshare_">总股本(股)</string>
+    <string name="totalsharel">流通股份合计</string>
+    <string name="totalsharel_">流通股份合计</string>
+    <string name="totalsharer">限售流通股份</string>
+    <string name="totalshareul">未流通股份</string>
+    <string name="totalshareur">已上市流通股份</string>
+    <string name="totalshequity">所有者权益合计</string>
+
+    <string name="sellvolstock">融券卖出量(股)</string>
+
+
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+    <string name="sunday">日</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="t_d_a_t">后天</string>
+    <string name="order_day">\n预订日</string>
+    <string name="title_activity_stock_finance_detail">StockFinanceDetailActivity</string>
+</resources>

@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_stockShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/stockShare"
+            android:text="股本结构"
+            style="@style/f10_title_text" />
+
+        <TextView
+            android:id="@+id/stockShareInfoDate"
+            android:layout_toRightOf="@id/stockShare"
+            style="@style/f10_date_text" />
+
+        <View
+            android:id="@+id/f10_holder_line1"
+            android:layout_below="@id/stockShareInfoDate"
+            style="@style/f10_underline" />
+
+        <TextView
+            android:id="@+id/holder_name"
+            android:text="股份流通受限表"
+            android:layout_below="@id/f10_holder_line1"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/duty"
+            android:text="数值(股)"
+            android:layout_toRightOf="@id/holder_name"
+            android:layout_below="@id/f10_holder_line1"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/rembeftax"
+            android:text="占比"
+            android:layout_toRightOf="@id/duty"
+            android:layout_below="@id/f10_holder_line1"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holdefamt"
+            android:text="已上市流通股份"
+            android:layout_below="@id/holder_name"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_totalshareur"
+            android:text="一"
+            android:layout_toRightOf="@id/holdefamt"
+            android:layout_below="@id/duty"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_urratio"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_totalshareur"
+            android:layout_below="@id/rembeftax"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder5"
+            android:text="未流通股份"
+            android:layout_below="@id/holdefamt"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_totalshareul"
+            android:text="一"
+            android:layout_toRightOf="@id/holder5"
+            android:layout_below="@id/tev_totalshareur"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_ulratio"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_totalshareul"
+            android:layout_below="@id/tev_urratio"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder6"
+            android:text="总股本"
+            android:layout_below="@id/holder5"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_totalshare"
+            android:text="一"
+            android:layout_toRightOf="@id/holder6"
+            android:layout_below="@id/tev_totalshareul"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_totalsharePercent"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_totalshare"
+            android:layout_below="@id/tev_ulratio"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder7"
+            android:text="流通股份分布表"
+            android:layout_below="@id/holder6"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/holder8"
+            android:text="数值(股)"
+            android:layout_toRightOf="@id/holder7"
+            android:layout_below="@id/tev_totalshare"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/holder9"
+            android:text="占比"
+            android:layout_toRightOf="@id/holder8"
+            android:layout_below="@id/tev_totalsharePercent"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder10"
+            android:text="已上市流通A股"
+            android:layout_below="@id/holder7"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_alistedshare"
+            android:text="一"
+            android:layout_toRightOf="@id/holder10"
+            android:layout_below="@id/holder8"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_aratio"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_alistedshare"
+            android:layout_below="@id/holder9"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder11"
+            android:text="已上市流通B股"
+            android:layout_below="@id/holder10"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_blistedshare"
+            android:text="一"
+            android:layout_toRightOf="@id/holder11"
+            android:layout_below="@id/tev_alistedshare"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_bratio"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_blistedshare"
+            android:layout_below="@id/tev_aratio"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder12"
+            android:text="境外上市流通股"
+            android:layout_below="@id/holder11"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_htotalshare"
+            android:text="一"
+            android:layout_toRightOf="@id/holder12"
+            android:layout_below="@id/tev_blistedshare"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_hratio"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_htotalshare"
+            android:layout_below="@id/tev_bratio"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder13"
+            android:text="流通股份合计"
+            android:layout_below="@id/holder12"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_totalsharel_"
+            android:text="一"
+            android:layout_toRightOf="@id/holder13"
+            android:layout_below="@id/tev_htotalshare"
+            style="@style/f10_content_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/tev_totalsharel_Percent"
+            android:text="一"
+            android:layout_toRightOf="@id/tev_totalsharel_"
+            android:layout_below="@id/tev_hratio"
+            style="@style/f10_content_text" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/stockShareChange"
+        android:layout_marginTop="5dp"
+        android:text="股本变动"
+        android:layout_below="@id/rel_stockShare"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:id="@+id/stockShareChangeInfo"
+        android:layout_toRightOf="@id/stockShareChange"
+        android:layout_below="@id/rel_stockShare"
+        android:layout_alignParentRight="true"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/f10_holder_line2"
+        android:layout_marginTop="5.0dp"
+        android:layout_below="@id/stockShareChangeInfo"
+        style="@style/f10_underline" />
+
+    <LinearLayout
+        android:id="@+id/lel_gbbd"
+        android:layout_below="@id/f10_holder_line2"
+        android:layout_alignParentRight="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:id="@+id/holder14"
+            android:text="时间"
+            android:layout_below="@id/f10_holder_line2"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:id="@+id/holder15"
+            android:text="总股本"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/holder14"
+            android:layout_below="@id/f10_holder_line2"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:id="@+id/holder16"
+            android:text="方向"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/holder15"
+            android:layout_below="@id/f10_holder_line2"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="right"
+            android:id="@+id/holder28"
+            android:text="数量"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/holder16"
+            android:layout_below="@id/f10_holder_line2"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="right"
+            android:id="@+id/holder17"
+            android:text="原因"
+            android:layout_toRightOf="@id/holder28"
+            android:layout_below="@id/f10_holder_line2"
+            android:layout_alignParentRight= "false"
+            style="@style/f10_date_text" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_stockshare_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lel_gbbd" />
+
+    <TextView
+        android:id="@+id/shareHolderHistory"
+        android:text="股东变动"
+        android:layout_below="@id/lel_stockshare_change"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:id="@+id/shareHolderHistoryInfoDate"
+        android:layout_toRightOf="@id/shareHolderHistory"
+        android:layout_below="@id/lel_stockshare_change"
+        android:layout_alignParentRight="true"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/f10_holder_line3"
+        android:layout_below="@id/shareHolderHistoryInfoDate"
+        style="@style/f10_underline" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/holder18"
+        android:layout_below="@id/f10_holder_line3"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_enddate_1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/holder18"
+        android:layout_below="@id/f10_holder_line3"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_enddate_2"
+        android:text="一"
+        android:layout_toRightOf="@id/tev_enddate_1"
+        android:layout_below="@id/f10_holder_line3"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/title1"
+        android:text="股东人数"
+        android:layout_below="@id/holder18"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_totalsh_1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/title1"
+        android:layout_below="@id/tev_enddate_1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_totalsh_2"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/tev_totalsh_1"
+        android:layout_below="@id/tev_enddate_2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/title2"
+        android:text="较上期变化"
+        android:layout_below="@id/title1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_pctoftotalsh_1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/title2"
+        android:layout_below="@id/tev_totalsh_1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_pctoftotalsh_2"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/tev_pctoftotalsh_1"
+        android:layout_below="@id/tev_totalsh_2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/title3"
+        android:text="人均流通股数"
+        android:layout_below="@id/title2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_avgshare_1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/title3"
+        android:layout_below="@id/tev_pctoftotalsh_1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_avgshare_2"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/tev_avgshare_1"
+        android:layout_below="@id/tev_pctoftotalsh_2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/title4"
+        android:text="股价(元)"
+        android:layout_below="@id/title3"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_closingprice_1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/title4"
+        android:layout_below="@id/tev_avgshare_1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_closingprice_2"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/tev_closingprice_1"
+        android:layout_below="@id/tev_avgshare_2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/title5"
+        android:text="人均持股金额(元)"
+        android:layout_below="@id/title4"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_avgsharem_1"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/title5"
+        android:layout_below="@id/tev_closingprice_1"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_avgsharem_2"
+        android:layout_marginLeft="10dp"
+        android:text="一"
+        android:layout_toRightOf="@id/tev_avgsharem_1"
+        android:layout_below="@id/tev_closingprice_2"
+        style="@style/f10_content_text" />
+
+    <TextView
+        android:id="@+id/topLiqui"
+        android:layout_marginTop="5dp"
+        android:text="最新自然人持股"
+        android:layout_below="@id/title5"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_topLiquidShareHolder"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/topLiqui"
+        android:layout_below="@id/title5"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/f10_holder_line4"
+        android:layout_below="@id/tev_topLiquidShareHolder"
+        style="@style/f10_underline" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/holder19"
+        android:text="名称"
+        android:layout_below="@id/f10_holder_line4"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/holderamt"
+        android:text="持股"
+        android:layout_toRightOf="@id/holder19"
+        android:layout_below="@id/f10_holder_line4"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:id="@+id/holderrto"
+        android:gravity="right"
+        android:text="占比"
+        android:layout_toRightOf="@id/holderamt"
+        android:layout_below="@id/f10_holder_line4"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:id="@+id/holder21"
+        android:gravity="right"
+        android:text="增减"
+        android:layout_toRightOf="@id/holderrto"
+        android:layout_below="@id/f10_holder_line4"
+        style="@style/f10_date_text" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_topliquid_shareholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/holder19" />
+
+    <TextView
+        android:id="@+id/topShareHolder"
+        android:layout_marginTop="5dp"
+        android:text="最新机构持股"
+        android:layout_below="@id/lel_topliquid_shareholder"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_topShareHolder"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/topShareHolder"
+        android:layout_below="@id/lel_topliquid_shareholder"
+        style="@style/f10_date_text" />
+
+    <View
+        android:id="@+id/f10_holder_line5"
+        android:layout_below="@id/topShareHolder"
+        style="@style/f10_underline" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/holder22"
+        android:text="名称"
+        android:layout_below="@id/f10_holder_line5"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/holderamt2"
+        android:text="持股"
+        android:layout_toRightOf="@id/holder22"
+        android:layout_below="@id/f10_holder_line5"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/holder23"
+        android:text="占比"
+        android:layout_toRightOf="@id/holderamt2"
+        android:layout_below="@id/f10_holder_line5"
+        android:layout_alignParentRight="false"
+        style="@style/f10_date_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/holder24"
+        android:text="增减"
+        android:layout_toRightOf="@id/holder23"
+        android:layout_below="@id/f10_holder_line5"
+        style="@style/f10_date_text" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lel_TopShareHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/holder22" />
+
+
+    <TextView
+        android:id="@+id/fundShareHolder"
+        android:layout_marginTop="5dp"
+        android:text="最新基金持股"
+        android:layout_below="@id/lel_TopShareHolder"
+        style="@style/f10_title_text" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/tev_fundShareHolderInfo"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/fundShareHolder"
+        android:layout_below="@id/lel_TopShareHolder"
+        style="@style/f10_date_text" />
+
+
+    <View
+        android:id="@+id/f10_holder_line6"
+        android:layout_below="@id/tev_fundShareHolderInfo"
+        style="@style/f10_underline" />
+
+        <TextView
+            android:gravity="left"
+            android:id="@+id/holder25"
+            android:text="名称"
+            android:layout_below="@id/f10_holder_line6"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/holder26"
+            android:text="持股(股)"
+            android:layout_toRightOf="@id/holder25"
+            android:layout_below="@id/f10_holder_line6"
+            android:layout_alignParentRight="false"
+            style="@style/f10_date_text" />
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/holder27"
+            android:text="占比"
+            android:layout_toRightOf="@id/holder26"
+            android:layout_below="@id/f10_holder_line6"
+            style="@style/f10_date_text" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/lel_FundShareHolderInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/holder25" />
+
+</RelativeLayout>

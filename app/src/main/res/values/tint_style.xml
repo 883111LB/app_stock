@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tint_defalut">
+        <item name="background_color">@color/bg_toolbar_color</item>
+        <item name="bottom_bar_up_color">@drawable/toolsbar_txt_color</item>
+        <item name="bottom_bar_down_color">@drawable/toolsbar_txt_color</item>
+        <item name="text_withe_black">@color/text_white</item>
+        <item name="text_toolbar_title_color">@color/text_white</item>
+        <item name="bg_toolbar">@color/bg_toolbar_color</item>
+        <item name="filtercolor_portfolio">@android:color/transparent</item>
+        <item name="filtercolor_common">#1f60c5</item>
+        <item name="filtercolor_toolbar">@android:color/transparent</item>
+        <item name="tablayout_tabIndicatorColor">#1f60c5</item>
+        <item name="tablayout_tabSelectedTextColor">#1f60c5</item>
+        <item name="tablayout_tabTextColor">#5f6062</item>
+        <item name="news_tablayout_tabIndicatorColor">#1f60c5</item>
+        <item name="news_tablayout_tabSelectedTextColor">#1f60c5</item>
+        <item name="news_tablayout_tabTextColor">#5f6062</item>
+
+        <item name="item_divider_bg">@android:color/transparent</item>
+        <item name="item_selector">@drawable/tev_selector</item>
+        <item name="item_main_text_color">#fbffff</item>
+        <item name="item_sub_text_color">#4e5357</item>
+        <item name="item_context_text_color">#e1e5e8</item>
+        <item name="item_time_text_color">#4e5357</item>
+        <item name="bg_portfolio_center">#ff161a20</item>
+        <item name="bg_portfolio_top">@color/bg_toolbar_color</item>
+        <item name="text_portfolio_top">#c7cccf</item>
+
+
+        <item name="setting_main_text_color">#59666f</item>
+        <item name="setting_main_bg">#0f1418</item>
+        <item name="setting_item_text_color">#ebf0f4</item>
+        <item name="setting_item_bg">#262b2f</item>
+
+
+        <item name="markert_group_bg">#1a1f24</item>
+        <item name="markert_group_text_color">#e1e1e1</item>
+        <item name="markert_item_grd_bg">#101419</item>
+        <item name="markert_fragment_bg">#161a20</item>
+        <item name="markert_item_detail_text_color">@color/text_gray_light</item>
+        <item name="markert_tablayout_bg">#1d2228</item>
+        <item name="markert_detail_top_bg">@color/bg_black_light_color</item>
+        <item name="radiobutton_text_color">@color/five_detail_textcolor_selector</item>
+        <item name="style_market_key_text_color">#ff646a6d</item>
+        <item name="style_market_value_text_color">@color/white</item>
+
+        <item name="f10_content_text_color">@color/stock_f10_content_text_color</item>
+        <item name="Text_white_15_text_color">@color/white</item>
+        <item name="search_editview_bg">@drawable/shape_search</item>
+        <item name="search_editview_text_color">@color/white</item>
+        <item name="Text_stock_more_text_color">@color/white</item>
+        <item name="markert_chart_bg">@color/bg_black</item>
+
+        <item name="filtercolor_setting">@android:color/transparent</item>
+        <item name="stock_radio_button_bg">@drawable/stock_radio_button_bg</item>
+        <item name="five_detail_textcolor_selector">@color/five_detail_textcolor_selector</item>
+
+        <item name="chart_type_bg">@color/menubarbackground</item>
+        <item name="chart_type_text">@color/text_gray</item>
+        <item name="shqq_q_bg">@color/bg_shqq_q</item>
+
+        <!--所属板块-->
+        <!--<item name="markert_plate_border_bg">@drawable/shape_bg_gray_plate</item>-->
+        <item name="markert_plate_border_bg">#414548</item>
+
+        <!--资金流向-->
+        <item name="markert_cash_border_bg">@color/bg_toolbar_color</item>
+
+    </style>
+
+    <style name="tint_white">
+        <item name="background_color">#F3F3F3</item>
+        <item name="bottom_bar_up_color">@drawable/toolsbar_txt_withe_color</item>
+        <item name="bottom_bar_down_color">@drawable/toolsbar_txt_withe_color</item>
+        <item name="text_withe_black">#323232</item>
+        <item name="text_toolbar_title_color">@color/text_white</item>
+        <item name="bg_toolbar">#E51c24</item>
+
+        <item name="filtercolor_portfolio">#e93232</item>
+        <item name="filtercolor_common">#e93232</item>
+        <item name="filtercolor_toolbar">#ffffff</item>
+        <item name="tablayout_tabIndicatorColor">#e93030</item>
+        <item name="tablayout_tabSelectedTextColor">#e93030</item>
+        <item name="tablayout_tabTextColor">#323232</item>
+        <item name="news_tablayout_tabIndicatorColor">#ffffff</item>
+        <item name="news_tablayout_tabSelectedTextColor">#ffffff</item>
+        <item name="news_tablayout_tabTextColor">#ffffff</item>
+
+        <item name="item_divider_bg">#c8c8c8</item>
+        <item name="item_main_text_color">#323232</item>
+        <item name="item_sub_text_color">#a3a3a3</item>
+        <item name="item_context_text_color">#1b1714</item>
+        <item name="item_time_text_color">#a3a3a3</item>
+        <item name="bg_portfolio_center">#f6f4f1</item>
+        <item name="bg_portfolio_top">#f1eeea</item>
+        <item name="text_portfolio_top">#36302d</item>
+
+        <item name="setting_main_text_color">#666666</item>
+        <item name="setting_main_bg">#f9f7f5</item>
+        <item name="setting_item_text_color">#110d09</item>
+        <item name="setting_item_bg">#ece9e6</item>
+
+
+        <item name="markert_group_bg">#e8e8e8</item>
+        <item name="markert_group_text_color">#323232</item>
+        <item name="markert_item_grd_bg">#f9f7f4</item>
+        <item name="markert_fragment_bg">#f2efeb</item>
+        <item name="markert_item_detail_text_color">#5c5651</item>
+        <item name="markert_tablayout_bg">#e8e8e8</item>
+        <item name="markert_detail_top_bg">#f2efeb</item>
+
+        <item name="style_market_key_text_color">#b4ada9</item>
+        <item name="style_market_value_text_color">#000000</item>
+        <item name="f10_content_text_color">#949494</item>
+        <item name="Text_white_15_text_color">#000000</item>
+        <item name="search_editview_bg">@drawable/shape_search_day</item>
+        <item name="search_editview_text_color">#999999</item>
+        <item name="Text_stock_more_text_color">#666666</item>
+        <item name="markert_chart_bg">@color/white</item>
+
+        <item name="filtercolor_setting">#E51c24</item>
+        <item name="stock_radio_button_bg">@drawable/stock_radio_button_white_bg</item>
+        <item name="five_detail_textcolor_selector">@color/five_detail_textcolor_white_selector</item>
+
+        <item name="chart_type_bg">#e1e1e1</item>
+        <item name="chart_type_text">@color/text_black</item>
+        <item name="shqq_q_bg">#e1e1e1</item>
+
+        <!--所属板块-->
+        <!--<item name="markert_plate_border_bg">@drawable/shape_bg_white_plate</item>-->
+        <item name="markert_plate_border_bg">#ffffff</item>
+        <!--资金流向-->
+        <item name="markert_cash_border_bg">#ececec</item>
+
+    </style>
+</resources>

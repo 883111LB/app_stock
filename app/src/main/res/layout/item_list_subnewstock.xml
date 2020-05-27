@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:tag="1"
+    >
+    <!--android:background="@drawable/item_bg_recently_selector"-->
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tev_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/Text_white_16"
+            android:textColor="?attr/item_context_text_color" />
+
+        <TextView
+            android:id="@+id/tev_code"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/bg_black_light"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!-- 发行价 -->
+        <TextView
+            android:id="@+id/tev_originalPrice"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 最新价 -->
+        <TextView
+            android:id="@+id/tev_lastestPrice"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 发行日期 -->
+        <TextView
+            android:id="@+id/tev_originalData"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 连续涨停天数 -->
+        <TextView
+            android:id="@+id/tev_cLimitedDays"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 累计涨跌幅 -->
+        <TextView
+            android:id="@+id/tev_allRate"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 涨跌额 -->
+        <TextView
+            android:id="@+id/tev_change"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 换手率 -->
+        <TextView
+            android:id="@+id/tev_turnoverRate"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 成交额 -->
+        <TextView
+            android:id="@+id/tev_amount"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 市盈率 -->
+        <TextView
+            android:id="@+id/tev_pe"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="100dp"/>
+        <!-- 总市值 -->
+        <TextView
+            android:id="@+id/tev_totalValue"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="120dp"/>
+        <!-- 流通市值 -->
+        <TextView
+            android:id="@+id/tev_flowValue"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="120dp"/>
+        <!-- 当天涨幅 -->
+        <TextView
+            android:id="@+id/tev_rate"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="120dp"/>
+        <!-- 昨收价 -->
+        <TextView
+            android:id="@+id/tev_preClosePrice"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="120dp"/>
+        <!-- 主力资金净流入 -->
+        <TextView
+            android:id="@+id/tev_mainNetInflow"
+            android:gravity="center"
+            style="@style/rankging_text_18"
+            android:layout_width="120dp"/>
+
+    </LinearLayout>
+</LinearLayout>

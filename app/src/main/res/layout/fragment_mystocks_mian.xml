@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.cvicse.stock.base.ToolBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:text_left="编辑"
+        app:text_title="自选"
+        app:textColor_title="?attr/text_toolbar_title_color"
+        app:filtercolor="?attr/filtercolor_toolbar"
+        app:is_back="false"
+        app:src_right_1="@drawable/navigationbar_button_search"
+        android:background="?attr/bg_toolbar" />
+
+    <LinearLayout
+        android:background="?attr/bg_portfolio_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="1.8">
+            <com.cvicse.base.widget.verticalbanner.VerticalBannerView
+                android:id="@+id/my_maquee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_news"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:tag="1"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.cvicse.stock.view.ColorImageView
+                android:src="@drawable/ico_xinwengonggao"
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="@string/hq_news"
+                android:textColor="?attr/text_portfolio_top"
+                android:textSize="14dip"
+                android:paddingTop="5dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_report"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:tag="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.cvicse.stock.view.ColorImageView
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:src="@drawable/ico_yanjiubaogao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="@string/hq_report"
+                android:textColor="?attr/text_portfolio_top"
+                android:textSize="14dip"
+                android:paddingTop="5dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_browser"
+            android:layout_width="0dp"
+            android:tag="1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.cvicse.stock.view.ColorImageView
+                app:filtercolor="?attr/filtercolor_portfolio"
+                android:src="@drawable/ico_zuijinliulan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="@string/hq_browser"
+                android:textColor="?attr/text_portfolio_top"
+                android:textSize="14dip"
+                android:paddingTop="5dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/list_stock_title"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.cvicse.stock.pulltorefresh.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_list"
+            android:visibility="visible"
+            android:divider="?attr/item_divider_bg"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.cvicse.stock.pulltorefresh.PullToRefreshListView>
+
+        <ImageView
+            android:id="@+id/img_empty"
+            android:src="@drawable/ic_mystocks_listitem_addtips"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

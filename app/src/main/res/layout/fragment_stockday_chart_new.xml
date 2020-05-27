@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/markert_chart_bg"
+    android:layout_width="match_parent"
+    android:layout_height="250dip">
+    <LinearLayout
+        android:id="@+id/lel_top"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tev_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="?attr/text_withe_black"
+            android:textSize="@dimen/font_11"
+            tools:text="--"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="?attr/text_withe_black"
+            android:text="价:"
+            android:textSize="@dimen/font_11"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tev_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_11"
+            android:textColor="?attr/text_withe_black"
+            tools:text="--"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="幅:"
+            android:textSize="@dimen/font_11"
+            android:layout_height="match_parent"
+            android:textColor="?attr/text_withe_black"/>
+        <TextView
+            android:id="@+id/tev_prencet"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_11"
+            android:textColor="?attr/text_withe_black"
+            tools:text="--"
+            android:maxLines="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="?attr/text_withe_black"
+            android:text="均:"
+            android:textSize="@dimen/font_11"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tev_average_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_11"
+            android:maxLines="1"
+            android:textColor="?attr/text_withe_black"
+            tools:text="--"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="?attr/text_withe_black"
+            android:text="量:"
+            android:textSize="@dimen/font_11"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tev_volume"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="?attr/text_withe_black"
+            tools:text="--手"
+            android:maxLines="1"
+            android:textSize="@dimen/font_11"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/lel_top"
+        android:layout_toLeftOf="@+id/rel_right"
+        >
+
+        <!-- <com.cvicse.stock.chart.ui.StockMinuteChart
+               android:id="@+id/stock_minute_chart"
+               android:layout_weight="2"
+               android:layout_width="match_parent"
+               android:layout_height="0dp">
+           </com.cvicse.stock.chart.ui.StockMinuteChart>
+     -->
+        <FrameLayout
+            android:id="@+id/stock_minute_chart_new"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/lel_more"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <RelativeLayout
+    android:id="@+id/rel_right"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/lel_top"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/stock_five_tick_radio"
+        android:layout_width="wrap_content"
+        android:background="@null"
+        android:layout_height="wrap_content"
+        style="@style/stock_mode_radio_group"
+        android:visibility="gone"
+        >
+        <RadioButton
+            android:id="@+id/rdb_five"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:button="@null"
+            android:paddingTop="3dp"
+            android:paddingBottom ="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center"
+            android:text="五档"
+            android:checked="true"
+            style="@style/stock_mode_radio_button" />
+        <RadioButton
+            android:id="@+id/rdb_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="明细"
+            android:gravity="center"
+            android:button="@null"
+            android:paddingTop="3dp"
+            android:paddingBottom ="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            style="@style/stock_mode_radio_button" />
+    </RadioGroup>
+
+    <com.cvicse.stock.chart.view.BestFiveTenView
+        android:id="@+id/bfv_five"
+        android:layout_below="@+id/stock_five_tick_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/stock_five_tick_radio"
+        android:layout_alignEnd="@+id/stock_five_tick_radio"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rel_detail"
+        android:visibility="gone"
+        android:layout_below="@+id/stock_five_tick_radio"
+        android:layout_alignRight="@+id/stock_five_tick_radio"
+        android:layout_alignEnd="@+id/stock_five_tick_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tev_detail_more"
+            android:padding="5dp"
+            android:text="更多成交"
+            android:gravity="center"
+            android:textColor="?attr/text_withe_black"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/lel_chart_detail"
+            android:layout_above="@+id/tev_detail_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>
